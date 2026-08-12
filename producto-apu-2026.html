@@ -468,20 +468,8 @@
   }
   .price-note{ width:100%; color:var(--steel-light); font-size:0.85rem; margin-top:0.2rem; }
 
-  .link-cards{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.4rem 0; }
-  .link-card{
-    display:flex; align-items:center; gap:0.8rem; border:1.5px solid var(--ink); border-radius:6px;
-    padding:1rem 1.2rem; text-decoration:none; color:var(--ink); transition:background 0.15s;
-  }
-  .link-card:hover{ background:var(--cream); }
-  .link-card svg{ flex-shrink:0; color:var(--orange-deep); }
-  .link-card span{ font-size:0.9rem; font-weight:500; }
-  @media (max-width:700px){ .link-cards{ grid-template-columns:1fr; } }
-
-  .p-note-box{
-    background:var(--cream); border-left:3px solid var(--orange); border-radius:0 6px 6px 0;
-    padding:1.2rem 1.4rem; margin:1.4rem 0; font-size:0.94rem; color:#3a3733;
-  }
+  .p-gallery-extra{ margin-top:1.4rem; font-size:0.88rem; color:var(--steel); }
+  .p-gallery-extra a{ color:var(--orange-deep); }
 
   .p-subsection{ padding:0.5rem 0 2.6rem; }
   .p-subsection h2{ font-size:1.4rem; margin-bottom:0.9rem; }
@@ -659,19 +647,32 @@
   </div>
 </section>
 
-<section class="p-subsection">
+<section class="testimonios">
   <div class="wrap">
-    <h2>Actualizaciones 2026</h2>
-    <div class="p-note-box">
-      El cotizador ya incluye la base de datos actualizada con precios de 2026. Con tu compra recibes <strong>actualizaciones gratuitas durante todo el año</strong>: ajustamos los precios según el mercado actual e incorporamos nuevos APU y actividades. Podrás descargarlas desde el mismo enlace que te enviamos. A partir del siguiente año, si deseas continuar recibiendo actualizaciones, el costo es de <strong>$20.000</strong>.
+    <div class="section-head">
+      <span class="eyebrow">Prueba social</span>
+      <h2>Lo que dicen los contratistas que ya la usan</h2>
+      <p>Más de 1.500 usuarios en toda Colombia ya presupuestan con esta base de datos.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <img src="images/7b544dd77e.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
+      </div>
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <img src="images/99c64280b0.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
+      </div>
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNXMr88NSYP/" data-instgrm-version="14" style="margin:0; width:100%;"></blockquote>
+      </div>
     </div>
   </div>
 </section>
+<script async src="//www.instagram.com/embed.js"></script>
 
 <section class="p-subsection">
   <div class="wrap">
-    <h2>¿Aplica para tu proyecto?</h2>
-    <p>Antes de comprar, puedes revisar exactamente qué contiene la base de datos: así se ve por dentro, hoja por hoja.</p>
+    <h2>Así se ve por dentro</h2>
+    <p>Antes de comprar, revisa exactamente qué contiene la base de datos, hoja por hoja.</p>
 
     <div class="gallery-grid">
       <button type="button" class="gallery-thumb" data-index="0">
@@ -696,60 +697,18 @@
       </button>
     </div>
 
-    <p style="margin-top:1.6rem;">También puedes revisar el listado completo de actividades y ejemplos reales de los APU incluidos.</p>
-    <div class="link-cards">
-      <a class="link-card" href="https://1drv.ms/b/c/1b25945fc0ff974a/IQDNBnP9hjusT5v3fipc-cj-AbZ0N2tlos8LZYgfEJyz--o?e=lpsJqo" target="_blank" rel="noopener">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
-        <span>Ver listado completo de actividades (PDF)</span>
-      </a>
-      <a class="link-card" href="https://1drv.ms/b/c/1b25945fc0ff974a/IQBrwkpT6lFzSYny4S6WRpR1AbW3lED4D4sYeBYx8dhrhdY?e=vQ7nQm" target="_blank" rel="noopener">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
-        <span>Ver ejemplos de APU incluidos (PDF)</span>
-      </a>
-    </div>
+    <p class="p-gallery-extra">¿Quieres más detalle? <a href="https://1drv.ms/b/c/1b25945fc0ff974a/IQDNBnP9hjusT5v3fipc-cj-AbZ0N2tlos8LZYgfEJyz--o?e=lpsJqo" target="_blank" rel="noopener">Listado completo de actividades (PDF)</a> &middot; <a href="https://1drv.ms/b/c/1b25945fc0ff974a/IQBrwkpT6lFzSYny4S6WRpR1AbW3lED4D4sYeBYx8dhrhdY?e=vQ7nQm" target="_blank" rel="noopener">Ejemplos de APU incluidos (PDF)</a></p>
   </div>
 </section>
 
-<section class="p-subsection">
+<div class="p-cta-band">
   <div class="wrap">
-    <h2>Dónde estamos y de dónde salen los precios</h2>
-    <p>Estamos en Colombia. Nuestro producto es 100% digital, así que puedes adquirirlo y usarlo desde cualquier ciudad del país sin problema.</p>
-    <p>La base de datos de APU + cotizador está diseñada con valores de referencia a nivel nacional, construidos a partir de análisis en diferentes ciudades, por lo que aplica tanto para obra pública como privada. Solo necesitas un computador o celular con Excel o cualquier hoja de cálculo para empezar a usarla de inmediato.</p>
-    <div class="p-note-box">
-      Sabemos que muchas personas preguntan por oficina física por temas de confianza. Por eso trabajamos con soporte directo, atención personalizada y evidencia real del producto, donde puedes ver exactamente cómo funciona antes de comprar. Ya contamos con clientes en todo el país que usan la herramienta en sus proyectos.
-    </div>
+    <h2>¿Ya viste suficiente?</h2>
+    <p><span style="text-decoration:line-through; color:var(--steel);">$99.000</span> &nbsp; <strong style="color:var(--orange); font-size:1.3rem;">$49.000</strong> &mdash; oferta solo por hoy, pago único.</p>
+    <a href="https://checkout.wompi.co/l/4z3c8P" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
+    <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline" style="color:var(--cream); border-color:var(--cream);" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
   </div>
-</section>
-
-<section class="p-subsection">
-  <div class="wrap">
-    <h2>Cómo usar el archivo</h2>
-    <p>Funciona sin problema en cualquier equipo. El archivo está desarrollado en Excel, pero es totalmente compatible con cualquier programa de hojas de cálculo.</p>
-    <p>Puedes usarlo en computador, portátil o celular, y abrirlo en herramientas como Excel o Google Sheets. No está limitado a un solo dispositivo: trabajas donde quieras, cuando quieras.</p>
-  </div>
-</section>
-
-<section class="testimonios">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Prueba social</span>
-      <h2>Lo que dicen los contratistas que ya la usan</h2>
-      <p>Más de 1.500 usuarios en toda Colombia ya presupuestan con esta base de datos.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card" style="padding:0; overflow:hidden;">
-        <img src="images/7b544dd77e.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
-      </div>
-      <div class="testi-card" style="padding:0; overflow:hidden;">
-        <img src="images/99c64280b0.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
-      </div>
-      <div class="testi-card" style="padding:0; overflow:hidden;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNXMr88NSYP/" data-instgrm-version="14" style="margin:0; width:100%;"></blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-<script async src="//www.instagram.com/embed.js"></script>
+</div>
 
 <section class="p-faq">
   <div class="wrap">
@@ -766,6 +725,22 @@
       <details>
         <summary>¿El archivo viene con el cotizador incluido?</summary>
         <p>Sí. La base de datos incluye un cotizador integrado en Excel: defines las cantidades de tu obra y el archivo calcula el presupuesto por ti.</p>
+      </details>
+      <details>
+        <summary>¿Aplica para cualquier tipo de obra?</summary>
+        <p>Sí. Los precios son de referencia a nivel nacional, construidos a partir de análisis en diferentes ciudades de Colombia, por lo que aplican tanto para obra pública como privada, en cualquier sector.</p>
+      </details>
+      <details>
+        <summary>¿Tienen oficina física?</summary>
+        <p>Somos un producto 100% digital, sin oficina de atención al público. Trabajamos con soporte directo, atención personalizada y evidencia real del producto —revisa la galería más arriba— y ya contamos con clientes en todo el país que usan la herramienta en sus proyectos.</p>
+      </details>
+      <details>
+        <summary>¿En qué dispositivos puedo usarlo?</summary>
+        <p>En cualquier equipo: computador, portátil o celular. El archivo está desarrollado en Excel, pero es totalmente compatible con Google Sheets y otras hojas de cálculo — trabajas donde quieras, cuando quieras.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa con las actualizaciones después del primer año?</summary>
+        <p>Durante 2026 las actualizaciones son gratuitas: ajustamos los precios según el mercado actual e incorporamos nuevos APU y actividades, descargables desde el mismo enlace que te enviamos. A partir del siguiente año, si quieres seguir recibiéndolas, el costo es de $20.000.</p>
       </details>
       <details>
         <summary>¿Tienen garantía de devolución?</summary>
