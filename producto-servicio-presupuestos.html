@@ -411,32 +411,6 @@
 
   section{ scroll-margin-top:80px; }
 
-  /* ---------- MODAL (detalle de producto) ---------- */
-  .modal-overlay{
-    display:none;
-    position:fixed; inset:0; z-index:1000;
-    background:rgba(19,17,16,0.78);
-    padding:2rem 1.2rem;
-    overflow-y:auto;
-  }
-  .modal-overlay.is-open{ display:flex; align-items:flex-start; justify-content:center; }
-  .modal-box{
-    background:var(--paper); border-radius:6px; max-width:640px; width:100%;
-    padding:2.2rem; position:relative; margin:auto;
-  }
-  .modal-close{
-    position:absolute; top:0.9rem; right:0.9rem;
-    background:none; border:none; font-size:1.8rem; line-height:1; color:var(--steel);
-    cursor:pointer; padding:0.2rem 0.5rem;
-  }
-  .modal-close:hover{ color:var(--ink); }
-  .modal-title{ font-size:1.6rem; margin-top:0.3rem; }
-  .modal-video{ position:relative; width:100%; padding-top:56.25%; margin:1.2rem 0; border-radius:4px; overflow:hidden; background:#000; }
-  .modal-video iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
-  .modal-list{ padding-left:1.2rem; color:#3a3733; margin:0 0 1.2rem; }
-  .modal-list li{ margin-bottom:0.4rem; }
-  .modal-actions{ display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:0.6rem; }
-
   .social-icon{ color:var(--cream); opacity:0.85; transition:opacity 0.15s, color 0.15s; display:inline-flex; }
   .social-icon:hover{ opacity:1; color:var(--orange); }
 
@@ -543,25 +517,6 @@
     body{ padding-bottom:64px; }
   }
 
-  /* login placeholder page */
-  .login-wrap{ min-height:70vh; display:flex; align-items:center; justify-content:center; padding:3rem 1.5rem; }
-  .login-card{
-    background:var(--white); border:1.5px solid var(--ink); border-radius:8px; padding:2.4rem;
-    max-width:380px; width:100%; text-align:center;
-  }
-  .login-card img{ height:56px; margin:0 auto 1.2rem; }
-  .login-card h1{ font-size:1.3rem; margin-bottom:0.4rem; }
-  .login-card .login-notice{
-    background:var(--cream); border-left:3px solid var(--orange); border-radius:0 4px 4px 0;
-    padding:0.9rem 1rem; font-size:0.85rem; color:#3a3733; text-align:left; margin:1.2rem 0 1.4rem;
-  }
-  .login-field{ text-align:left; margin-bottom:1rem; }
-  .login-field label{ display:block; font-family:'IBM Plex Mono', monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--steel); margin-bottom:0.35rem; }
-  .login-field input{
-    width:100%; padding:0.7rem 0.9rem; border:1px solid var(--steel-light); border-radius:4px;
-    font-family:'IBM Plex Sans', sans-serif; font-size:0.95rem; background:var(--paper); color:var(--ink);
-  }
-  .login-field input:disabled{ opacity:0.6; cursor:not-allowed; }
 </style>
 </head>
 <body>
@@ -604,9 +559,9 @@
         <a href="https://wa.me/573123305755?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20del%20servicio%20de%20elaboraci%C3%B3n%20de%20presupuestos" class="btn btn-primary" target="_blank" rel="noopener">Solicitar cotización</a>
       </div>
       <div class="trust-strip">
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>+1.500 usuarios en toda Colombia</span>
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Aliados con Noventa Grados desde 2016</span>
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Podemos entregar el mismo día según el alcance</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>+1.500 usuarios en toda Colombia</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Aliados con Noventa Grados desde 2016</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Podemos entregar el mismo día según el alcance</span>
       </div>
     </div>
     <div class="p-hero-media">
