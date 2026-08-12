@@ -516,6 +516,44 @@
   @media (max-width:900px){ .process-grid{ grid-template-columns:1fr 1fr; } }
   @media (max-width:560px){ .process-grid{ grid-template-columns:1fr; } }
 
+  /* ---------- GALERÍA DE VISTA PREVIA ---------- */
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; margin-top:1.4rem;
+  }
+  .gallery-thumb{
+    border:1.5px solid var(--ink); border-radius:var(--radius); overflow:hidden;
+    background:var(--white); cursor:pointer; padding:0; display:flex; flex-direction:column;
+  }
+  .gallery-thumb img{ width:100%; aspect-ratio:4/3.4; object-fit:cover; object-position:top; display:block; transition:transform 0.2s; }
+  .gallery-thumb:hover img{ transform:scale(1.04); }
+  .gallery-thumb span{
+    padding:0.55rem 0.7rem; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em;
+    color:var(--steel); border-top:1px solid var(--steel-light); font-family:'IBM Plex Mono', monospace;
+  }
+  @media (max-width:900px){ .gallery-grid{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:560px){ .gallery-grid{ grid-template-columns:repeat(2,1fr); } }
+
+  .gallery-lightbox{
+    display:none; position:fixed; inset:0; z-index:1000; background:rgba(19,17,16,0.92);
+    padding:2rem 1rem; align-items:center; justify-content:center;
+  }
+  .gallery-lightbox.is-open{ display:flex; }
+  .gallery-lightbox-img{ max-width:min(900px, 90vw); max-height:74vh; object-fit:contain; border-radius:4px; display:block; margin:0 auto; background:var(--white); }
+  .gallery-caption{ text-align:center; color:var(--cream); font-family:'IBM Plex Mono', monospace; font-size:0.82rem; margin-top:1rem; }
+  .gallery-close{
+    position:absolute; top:1.2rem; right:1.4rem; background:none; border:none; color:var(--cream);
+    font-size:2rem; line-height:1; cursor:pointer; padding:0.3rem 0.6rem;
+  }
+  .gallery-close:hover{ color:var(--orange); }
+  .gallery-prev, .gallery-next{
+    position:absolute; top:50%; transform:translateY(-50%); background:none; border:none;
+    color:var(--cream); font-size:2.6rem; line-height:1; cursor:pointer; padding:0.5rem 1rem;
+  }
+  .gallery-prev{ left:0.4rem; }
+  .gallery-next{ right:0.4rem; }
+  .gallery-prev:hover, .gallery-next:hover{ color:var(--orange); }
+  @media (max-width:600px){ .gallery-prev, .gallery-next{ font-size:2rem; padding:0.3rem 0.6rem; } }
+
   /* ---------- STICKY MOBILE CTA ---------- */
   .sticky-cta{ display:none; }
   @media (max-width:760px){
@@ -601,7 +639,7 @@
 
 <div class="wrap">
   <div class="p-video">
-    <iframe src="https://www.youtube.com/embed/-jZD5Gjdvng" title="Base de Datos de APU 2026 + Cotizador" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    <iframe src="https://www.youtube.com/embed/-jZD5Gjdvng" title="Base de Datos de APU 2026 + Cotizador" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -633,7 +671,32 @@
 <section class="p-subsection">
   <div class="wrap">
     <h2>¿Aplica para tu proyecto?</h2>
-    <p>Antes de comprar, puedes revisar exactamente qué contiene la base de datos: el listado completo de actividades y ejemplos reales de los APU incluidos.</p>
+    <p>Antes de comprar, puedes revisar exactamente qué contiene la base de datos: así se ve por dentro, hoja por hoja.</p>
+
+    <div class="gallery-grid">
+      <button type="button" class="gallery-thumb" data-index="0">
+        <img src="images/apu-preview-cotizador.webp" alt="Vista del Cotizador en la Base de Datos de APU 2026">
+        <span>Cotizador</span>
+      </button>
+      <button type="button" class="gallery-thumb" data-index="1">
+        <img src="images/apu-preview-actividades.webp" alt="Vista de Actividades en la Base de Datos de APU 2026">
+        <span>Actividades</span>
+      </button>
+      <button type="button" class="gallery-thumb" data-index="2">
+        <img src="images/apu-preview-apu.webp" alt="Vista de APU en la Base de Datos de APU 2026">
+        <span>APU</span>
+      </button>
+      <button type="button" class="gallery-thumb" data-index="3">
+        <img src="images/apu-preview-apu-auxiliares.webp" alt="Vista de APU Auxiliares en la Base de Datos de APU 2026">
+        <span>APU auxiliares</span>
+      </button>
+      <button type="button" class="gallery-thumb" data-index="4">
+        <img src="images/apu-preview-materiales.webp" alt="Vista de Materiales en la Base de Datos de APU 2026">
+        <span>Materiales</span>
+      </button>
+    </div>
+
+    <p style="margin-top:1.6rem;">También puedes revisar el listado completo de actividades y ejemplos reales de los APU incluidos.</p>
     <div class="link-cards">
       <a class="link-card" href="https://1drv.ms/b/c/1b25945fc0ff974a/IQDNBnP9hjusT5v3fipc-cj-AbZ0N2tlos8LZYgfEJyz--o?e=lpsJqo" target="_blank" rel="noopener">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
@@ -786,6 +849,59 @@
     </div>
   </div>
 </footer>
+
+<div class="gallery-lightbox" id="gallery-lightbox">
+  <button type="button" class="gallery-close" aria-label="Cerrar">&times;</button>
+  <button type="button" class="gallery-prev" aria-label="Anterior">&#8249;</button>
+  <img class="gallery-lightbox-img" src="" alt="">
+  <button type="button" class="gallery-next" aria-label="Siguiente">&#8250;</button>
+  <p class="gallery-caption"></p>
+</div>
+<script>
+(function(){
+  var images = [
+    {src:'images/apu-preview-cotizador.webp', caption:'Cotizador'},
+    {src:'images/apu-preview-actividades.webp', caption:'Actividades'},
+    {src:'images/apu-preview-apu.webp', caption:'APU'},
+    {src:'images/apu-preview-apu-auxiliares.webp', caption:'APU auxiliares'},
+    {src:'images/apu-preview-materiales.webp', caption:'Materiales'}
+  ];
+  var current = 0;
+  var lightbox = document.getElementById('gallery-lightbox');
+  var img = lightbox.querySelector('.gallery-lightbox-img');
+  var caption = lightbox.querySelector('.gallery-caption');
+
+  function show(i){
+    current = (i + images.length) % images.length;
+    img.src = images[current].src;
+    img.alt = images[current].caption;
+    caption.textContent = images[current].caption + ' (' + (current + 1) + '/' + images.length + ')';
+  }
+  function open(i){
+    show(i);
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.gallery-thumb').forEach(function(btn, i){
+    btn.addEventListener('click', function(){ open(i); });
+  });
+  lightbox.querySelector('.gallery-close').addEventListener('click', close);
+  lightbox.querySelector('.gallery-prev').addEventListener('click', function(){ show(current - 1); });
+  lightbox.querySelector('.gallery-next').addEventListener('click', function(){ show(current + 1); });
+  lightbox.addEventListener('click', function(e){ if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', function(e){
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>
 
 <div class="sticky-cta">
   <a href="https://checkout.wompi.co/l/4z3c8P" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
