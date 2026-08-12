@@ -505,6 +505,44 @@
   .p-support-list{ padding-left:1.2rem; color:#3a3733; }
   .p-support-list li{ margin-bottom:0.5rem; }
 
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip{
+    display:flex; flex-wrap:wrap; gap:0.5rem 1.6rem; margin-top:1.4rem;
+  }
+  .trust-strip span{
+    display:flex; align-items:center; gap:0.45rem;
+    font-family:'IBM Plex Mono', monospace; font-size:0.8rem; color:var(--steel-light);
+  }
+  .trust-strip svg{ color:var(--orange); flex-shrink:0; }
+
+  /* ---------- PROCESO ---------- */
+  .process-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; margin:1.4rem 0 0;
+  }
+  .process-step{
+    background:var(--white); border:1.5px solid var(--ink); border-radius:var(--radius);
+    padding:1.4rem 1.2rem;
+  }
+  .process-step .num{
+    font-family:'Oswald', sans-serif; font-size:1.8rem; color:var(--orange); line-height:1; margin-bottom:0.6rem;
+  }
+  .process-step h3{ font-size:1rem; margin-bottom:0.4rem; text-transform:none; letter-spacing:0; }
+  .process-step p{ color:var(--steel); font-size:0.88rem; margin:0; }
+  @media (max-width:900px){ .process-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .process-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .sticky-cta{ display:none; }
+  @media (max-width:760px){
+    .sticky-cta{
+      display:flex; gap:0.6rem; position:fixed; left:0; right:0; bottom:0; z-index:200;
+      background:var(--ink); padding:0.7rem 0.9rem; border-top:3px solid var(--orange);
+      box-shadow:0 -4px 14px rgba(0,0,0,0.25);
+    }
+    .sticky-cta .btn{ flex:1; justify-content:center; font-size:0.78rem; padding:0.8rem 0.6rem; }
+    body{ padding-bottom:64px; }
+  }
+
   /* login placeholder page */
   .login-wrap{ min-height:70vh; display:flex; align-items:center; justify-content:center; padding:3rem 1.5rem; }
   .login-card{
@@ -556,12 +594,63 @@
       <span class="eyebrow">Disponible</span>
       <h1>Servicio de Elaboración de Presupuestos</h1>
       <p class="lead">En Escuela de Contratistas y Noventa Grados elaboramos presupuestos técnicos para obra pública y privada, en cualquier sector: edificaciones, infraestructura, adecuaciones, urbanismo, proyectos comerciales o institucionales.</p>
+
+      <div class="price-block">
+        <span class="price-new" style="font-size:1.8rem;">Desde $5.000</span>
+        <span class="price-note" style="margin-top:0;">por ítem de APU — el valor final depende del alcance y la magnitud de tu proyecto.</span>
+      </div>
+
       <div class="p-hero-ctas">
         <a href="https://wa.me/573123305755?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20del%20servicio%20de%20elaboraci%C3%B3n%20de%20presupuestos" class="btn btn-primary" target="_blank" rel="noopener">Solicitar cotización</a>
+      </div>
+      <div class="trust-strip">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>+1.500 usuarios en toda Colombia</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Aliados con Noventa Grados desde 2016</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Podemos entregar el mismo día según el alcance</span>
       </div>
     </div>
     <div class="p-hero-media">
       <img src="images/f56f15867f.webp" alt="Servicio de Elaboración de Presupuestos">
+    </div>
+  </div>
+</section>
+
+<section class="p-subsection">
+  <div class="wrap">
+    <h2>Cómo funciona</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="num">1</div>
+        <h3>Nos cuentas tu proyecto</h3>
+        <p>Nos compartes planos, alcance, ubicación y fecha límite por WhatsApp.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">2</div>
+        <h3>Te enviamos la cotización</h3>
+        <p>Te damos una propuesta técnica y económica ajustada a tu proyecto, desde $5.000 por ítem de APU.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">3</div>
+        <h3>Confirmas y arrancamos</h3>
+        <p>Con el alcance definido, nuestro equipo —junto con Noventa Grados— empieza a trabajar.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">4</div>
+        <h3>Recibes tu presupuesto</h3>
+        <p>Según el alcance y los entregables de tu proyecto, podemos tenerlo listo el mismo día.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-subsection">
+  <div class="wrap">
+    <div class="aliado-card" style="background:var(--white); border:1.5px solid var(--ink); border-radius:6px;">
+      <img src="images/37475db8c5.webp" alt="Noventa Grados" style="height:40px;">
+      <div>
+        <p style="font-family:'Oswald',sans-serif; font-size:1.1rem; color:var(--ink); margin:0;">Elaborado junto con Noventa Grados</p>
+        <p style="margin:0.3rem 0 0; font-size:0.9rem; color:var(--steel);">Firma de gerencia, consultoría y construcción de proyectos de infraestructura, ingeniería y arquitectura, activa en Colombia desde 2016, para entidades públicas y privadas en todo el país.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -597,6 +686,28 @@
   </div>
 </section>
 
+<section class="testimonios">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Prueba social</span>
+      <h2>Contratistas que ya confían en nosotros</h2>
+      <p>Más de 1.500 usuarios en toda Colombia ya trabajan con Escuela de Contratistas.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <img src="images/7b544dd77e.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
+      </div>
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <img src="images/99c64280b0.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
+      </div>
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNXMr88NSYP/" data-instgrm-version="14" style="margin:0; width:100%;"></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+<script async src="//www.instagram.com/embed.js"></script>
+
 <section class="p-faq">
   <div class="wrap">
     <h2 style="font-size:1.4rem; margin-bottom:1.2rem;">Preguntas frecuentes</h2>
@@ -607,7 +718,11 @@
       </details>
       <details>
         <summary>¿Cuánto cuesta el servicio?</summary>
-        <p>El valor depende del alcance y la información disponible del proyecto. Compártenos tus planos o el alcance por WhatsApp y te enviamos una propuesta técnica y económica ajustada.</p>
+        <p>Elaboramos APU desde $5.000 por ítem. El valor final depende del alcance y la magnitud del proyecto. Compártenos tus planos o el alcance por WhatsApp y te enviamos una propuesta técnica y económica ajustada.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto se demoran en entregar el presupuesto?</summary>
+        <p>El tiempo depende de los entregables y la magnitud del proyecto — en algunos casos podemos entregarte el presupuesto el mismo día. Al cotizarte te damos un plazo claro según tu caso.</p>
       </details>
       <details>
         <summary>¿Qué necesito enviarles para cotizar?</summary>
@@ -624,7 +739,7 @@
 <div class="p-cta-band">
   <div class="wrap">
     <h2>Cotiza tu proyecto ahora.</h2>
-    <p>Cuéntanos de tu obra y te damos una respuesta rápida por WhatsApp.</p>
+    <p>Desde $5.000 por ítem de APU — cuéntanos de tu obra y te damos una respuesta rápida por WhatsApp.</p>
     <a href="https://wa.me/573123305755?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20del%20servicio%20de%20elaboraci%C3%B3n%20de%20presupuestos" class="btn btn-primary" target="_blank" rel="noopener">Solicitar cotización</a>
   </div>
 </div>
@@ -665,5 +780,9 @@
     </div>
   </div>
 </footer>
+
+<div class="sticky-cta">
+  <a href="https://wa.me/573123305755?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20del%20servicio%20de%20elaboraci%C3%B3n%20de%20presupuestos" class="btn btn-primary" target="_blank" rel="noopener">Solicitar cotización</a>
+</div>
 </body>
 </html>

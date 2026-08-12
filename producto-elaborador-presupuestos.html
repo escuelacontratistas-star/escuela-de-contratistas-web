@@ -505,6 +505,28 @@
   .p-support-list{ padding-left:1.2rem; color:#3a3733; }
   .p-support-list li{ margin-bottom:0.5rem; }
 
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip{
+    display:flex; flex-wrap:wrap; gap:0.5rem 1.6rem; margin-top:1.4rem;
+  }
+  .trust-strip span{
+    display:flex; align-items:center; gap:0.45rem;
+    font-family:'IBM Plex Mono', monospace; font-size:0.8rem; color:var(--steel-light);
+  }
+  .trust-strip svg{ color:var(--orange); flex-shrink:0; }
+
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .sticky-cta{ display:none; }
+  @media (max-width:760px){
+    .sticky-cta{
+      display:flex; gap:0.6rem; position:fixed; left:0; right:0; bottom:0; z-index:200;
+      background:var(--ink); padding:0.7rem 0.9rem; border-top:3px solid var(--orange);
+      box-shadow:0 -4px 14px rgba(0,0,0,0.25);
+    }
+    .sticky-cta .btn{ flex:1; justify-content:center; font-size:0.78rem; padding:0.8rem 0.6rem; }
+    body{ padding-bottom:64px; }
+  }
+
   /* login placeholder page */
   .login-wrap{ min-height:70vh; display:flex; align-items:center; justify-content:center; padding:3rem 1.5rem; }
   .login-card{
@@ -558,6 +580,10 @@
       <p class="lead">La herramienta que estamos construyendo para automatizar el presupuesto completo de tu obra: cantidades, APU y presupuesto final en un solo flujo, sin depender de armar todo a mano en Excel.</p>
       <div class="p-hero-ctas">
         <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20ser%20de%20los%20primeros%20en%20probar%20el%20Elaborador%20de%20Presupuestos" class="btn btn-dark" target="_blank" rel="noopener">Quiero probarlo primero</a>
+      </div>
+      <div class="trust-strip">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Construido por el equipo detrás de la Base de Datos de APU 2026</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Ya usada por +1.500 contratistas en toda Colombia</span>
       </div>
     </div>
     <div class="p-hero-media">
@@ -637,5 +663,9 @@
     </div>
   </div>
 </footer>
+
+<div class="sticky-cta">
+  <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20ser%20de%20los%20primeros%20en%20probar%20el%20Elaborador%20de%20Presupuestos" class="btn btn-primary" target="_blank" rel="noopener">Quiero probarlo primero</a>
+</div>
 </body>
 </html>

@@ -505,6 +505,44 @@
   .p-support-list{ padding-left:1.2rem; color:#3a3733; }
   .p-support-list li{ margin-bottom:0.5rem; }
 
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip{
+    display:flex; flex-wrap:wrap; gap:0.5rem 1.6rem; margin-top:1.4rem;
+  }
+  .trust-strip span{
+    display:flex; align-items:center; gap:0.45rem;
+    font-family:'IBM Plex Mono', monospace; font-size:0.8rem; color:var(--steel-light);
+  }
+  .trust-strip svg{ color:var(--orange); flex-shrink:0; }
+
+  /* ---------- PROCESO ---------- */
+  .process-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; margin:1.4rem 0 0;
+  }
+  .process-step{
+    background:var(--white); border:1.5px solid var(--ink); border-radius:var(--radius);
+    padding:1.4rem 1.2rem;
+  }
+  .process-step .num{
+    font-family:'Oswald', sans-serif; font-size:1.8rem; color:var(--orange); line-height:1; margin-bottom:0.6rem;
+  }
+  .process-step h3{ font-size:1rem; margin-bottom:0.4rem; text-transform:none; letter-spacing:0; }
+  .process-step p{ color:var(--steel); font-size:0.88rem; margin:0; }
+  @media (max-width:900px){ .process-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .process-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .sticky-cta{ display:none; }
+  @media (max-width:760px){
+    .sticky-cta{
+      display:flex; gap:0.6rem; position:fixed; left:0; right:0; bottom:0; z-index:200;
+      background:var(--ink); padding:0.7rem 0.9rem; border-top:3px solid var(--orange);
+      box-shadow:0 -4px 14px rgba(0,0,0,0.25);
+    }
+    .sticky-cta .btn{ flex:1; justify-content:center; font-size:0.78rem; padding:0.8rem 0.6rem; }
+    body{ padding-bottom:64px; }
+  }
+
   /* login placeholder page */
   .login-wrap{ min-height:70vh; display:flex; align-items:center; justify-content:center; padding:3rem 1.5rem; }
   .login-card{
@@ -567,6 +605,11 @@
       <div class="p-hero-ctas">
         <a href="https://checkout.wompi.co/l/4z3c8P" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
         <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+      </div>
+      <div class="trust-strip">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>+1.500 usuarios en toda Colombia</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Pago único, sin suscripciones</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>Soporte directo con el equipo</span>
       </div>
     </div>
     <div class="p-hero-media">
@@ -642,6 +685,28 @@
   </div>
 </section>
 
+<section class="testimonios">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Prueba social</span>
+      <h2>Lo que dicen los contratistas que ya la usan</h2>
+      <p>Más de 1.500 usuarios en toda Colombia ya presupuestan con esta base de datos.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <img src="images/7b544dd77e.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
+      </div>
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <img src="images/99c64280b0.webp" alt="Comentarios de clientes en Instagram sobre Escuela de Contratistas" style="width:100%; display:block;">
+      </div>
+      <div class="testi-card" style="padding:0; overflow:hidden;">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNXMr88NSYP/" data-instgrm-version="14" style="margin:0; width:100%;"></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+<script async src="//www.instagram.com/embed.js"></script>
+
 <section class="p-faq">
   <div class="wrap">
     <h2 style="font-size:1.4rem; margin-bottom:1.2rem;">Preguntas frecuentes</h2>
@@ -657,6 +722,10 @@
       <details>
         <summary>¿El archivo viene con el cotizador incluido?</summary>
         <p>Sí. La base de datos incluye un cotizador integrado en Excel: defines las cantidades de tu obra y el archivo calcula el presupuesto por ti.</p>
+      </details>
+      <details>
+        <summary>¿Tienen garantía de devolución?</summary>
+        <p>Al ser un archivo digital que se entrega de inmediato, no manejamos devoluciones de dinero. Lo que sí tienes es soporte directo y real: si te queda alguna duda o algo no te funciona, nos escribes por WhatsApp y te ayudamos hasta resolverlo.</p>
       </details>
       <details>
         <summary>Tengo problemas para descargar el archivo desde OneDrive</summary>
@@ -736,5 +805,10 @@
     </div>
   </div>
 </footer>
+
+<div class="sticky-cta">
+  <a href="https://checkout.wompi.co/l/4z3c8P" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
+  <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline" style="color:var(--cream); border-color:var(--cream);" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 </body>
 </html>
