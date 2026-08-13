@@ -140,6 +140,7 @@
     font-family:'Inter', sans-serif;
     font-weight:700;
     font-size:1rem;
+    line-height:1.2;
     color:var(--ink);
   }
   .flag-co{ border-radius:2px; flex-shrink:0; }
@@ -262,9 +263,9 @@
 
   .feature-row{
     display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;
-    padding:2.8rem 0; border-top:1px solid var(--steel-light);
+    padding:2.8rem 0; border-top:2px solid var(--steel-light);
   }
-  .feature-row:last-child{ border-bottom:1px solid var(--steel-light); }
+  .feature-row:last-child{ border-bottom:2px solid var(--steel-light); }
   .feature-row.reverse .feature-media{ order:2; }
   .feature-row.reverse .feature-body{ order:1; }
   .feature-media{
@@ -310,13 +311,14 @@
     display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;
   }
   .beneficio{
-    border-left:3px solid var(--orange); padding:0.7rem 0 0.7rem 1rem;
+    display:flex; align-items:flex-start; gap:0.7rem; padding:0.4rem 0;
   }
+  .beneficio svg{ color:var(--orange-deep); flex-shrink:0; margin-top:0.25rem; }
   .beneficio p{ margin:0; font-size:0.94rem; color:var(--steel); }
 
   .colombia-map{ text-align:center; }
-  .colombia-map svg{ width:100%; max-width:320px; height:auto; }
-  .co-outline{ fill:none; stroke:#C9C6D6; stroke-width:1.6; stroke-dasharray:5 4; }
+  .colombia-map svg{ width:100%; max-width:420px; height:auto; }
+  .co-outline{ fill:none; stroke:var(--orange-deep); stroke-width:2.2; stroke-dasharray:5 4; }
   .co-cities circle{ fill:var(--orange); }
   .co-sanandres{ fill:none; stroke:var(--orange); stroke-width:1.5; }
   .co-sanandres-line{ stroke:#C9C6D6; stroke-width:1; stroke-dasharray:2 2; }
@@ -439,9 +441,28 @@
   }
   .trust-strip svg{ color:var(--orange); flex-shrink:0; }
 
+  /* ---------- PQRS ---------- */
+  .pqrs{ padding:1rem 0 3rem; }
+  .pqrs-form{ max-width:640px; }
+  .pqrs-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-bottom:1.4rem; }
+  .pqrs-field-full{ grid-column:1 / -1; }
+  .pqrs-field label{
+    display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:0.85rem;
+    color:var(--ink); margin-bottom:0.4rem;
+  }
+  .pqrs-field input, .pqrs-field select, .pqrs-field textarea{
+    width:100%; padding:0.75rem 1rem; border:1.5px solid var(--steel-light); border-radius:14px;
+    font-family:'Inter',sans-serif; font-size:0.95rem; color:var(--ink); background:#fff;
+  }
+  .pqrs-field input:focus, .pqrs-field select:focus, .pqrs-field textarea:focus{
+    outline:none; border-color:var(--orange);
+  }
+  .pqrs-field textarea{ resize:vertical; }
+  @media (max-width:600px){ .pqrs-grid{ grid-template-columns:1fr; } }
+
   /* ---------- STAT CALLOUT ---------- */
   .stat-callout{
-    display:inline-flex; align-items:baseline; gap:0.6rem; margin-top:0.4rem;
+    display:inline-flex; align-items:center; gap:0.6rem; margin-top:0.4rem;
     padding:0.9rem 1.4rem; background:#fff; border-radius:var(--radius);
     box-shadow:0 10px 28px rgba(32,35,43,0.07);
   }
@@ -453,16 +474,16 @@
 
 <div class="social-rail">
   <a href="https://www.instagram.com/escuelacontratistas/" target="_blank" rel="noopener" aria-label="Instagram">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
   </a>
   <a href="https://www.facebook.com/profile.php?id=61578532108345" target="_blank" rel="noopener" aria-label="Facebook">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
   </a>
   <a href="https://www.youtube.com/@EscuelaContratistas" target="_blank" rel="noopener" aria-label="YouTube">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
   </a>
   <a href="mailto:contacto@escueladecontratistas.co" aria-label="Correo">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
   </a>
   <span class="social-rail-line"></span>
 </div>
@@ -541,7 +562,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Lo que puedes usar hoy</h2>
-      <p>Herramientas construidas desde la práctica de presupuestar y ejecutar obra, no desde una plantilla descargada de internet.</p>
+      <p>Cada herramienta responde a un problema concreto del contratista colombiano: presupuestos poco confiables, tiempos perdidos y decisiones sin respaldo técnico. Las desarrollamos desde la obra real, no desde un escritorio, con el rigor que exige manejar el dinero de un proyecto.</p>
     </div>
 
     <div class="feature-row">
@@ -551,7 +572,7 @@
       <div class="feature-body">
         <span class="status status-ok">Disponible</span>
         <h3>Base de Datos de APU 2026</h3>
-        <p>Miles de análisis de precios unitarios organizados en Excel, listos para presupuestar cualquier tipo de obra en Colombia. Precios de mercado actualizados, sin fórmulas ocultas ni letra pequeña.</p>
+        <p>Más de 2.200 análisis de precios unitarios (APU) organizados en un cotizador de Excel, listos para presupuestar cualquier tipo de obra en Colombia. Incluye el libro "Cómo Presupuestar su Proyecto", el Agente IA de presupuestos, acceso a la Red de Contratistas y actualizaciones gratuitas durante todo 2026 — precios de mercado reales, sin fórmulas ocultas ni letra pequeña.</p>
         <div class="feature-ctas">
           <a href="producto-apu-2026.html" class="btn btn-outline">Ver detalles</a>
           <a href="https://checkout.wompi.co/l/4z3c8P" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
@@ -603,28 +624,28 @@
   <div class="wrap">
     <div class="section-head">
       <h2>La red de contratistas más grande, completa y útil del país.</h2>
-      <p>La Red de Contratistas nace de la confianza que construimos día a día con Escuela de Contratistas: un espacio nacional donde contratistas, profesionales independientes y empresas del sector se encuentran para resolver necesidades reales, no solo para compartir precios. Aquí se comparten oportunidades de trabajo, se resuelven dudas técnicas y se abren alianzas comerciales. Si eres contratista, aquí creces acompañado. Si tienes una empresa, aquí encuentras un canal directo hacia contratistas en todo el país.</p>
+      <p>La Red de Contratistas nace de la confianza que construimos día a día: un espacio donde contratistas, profesionales independientes y empresas del sector se encuentran para resolver necesidades reales. Aquí se comparten oportunidades de trabajo, se resuelven dudas técnicas y se abren alianzas comerciales. Si eres contratista, aquí creces acompañado. Si tienes una empresa, aquí encuentras un canal directo hacia contratistas en todo el país.</p>
     </div>
 
     <div class="red-grid">
       <div class="beneficios">
-        <div class="beneficio"><p>Precios y contenido exclusivo de la red</p></div>
-        <div class="beneficio"><p>Oportunidades de trabajo y mano de obra calificada</p></div>
-        <div class="beneficio"><p>Contacto directo con aliados y proveedores</p></div>
-        <div class="beneficio"><p>Espacio para resolver dudas técnicas entre contratistas</p></div>
-        <div class="beneficio"><p>Beneficios y descuentos de nuestros aliados</p></div>
-        <div class="beneficio"><p>Visibilidad ante contratistas de todo el país</p></div>
+        <div class="beneficio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><p>Precios y contenido exclusivo de la red</p></div>
+        <div class="beneficio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><p>Oportunidades de trabajo y mano de obra calificada</p></div>
+        <div class="beneficio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><p>Contacto directo con aliados y proveedores</p></div>
+        <div class="beneficio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><p>Espacio para resolver dudas técnicas entre contratistas</p></div>
+        <div class="beneficio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><p>Beneficios y descuentos de nuestros aliados</p></div>
+        <div class="beneficio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg><p>Visibilidad ante contratistas de todo el país</p></div>
       </div>
 
       <div class="colombia-map">
-        <svg viewBox="0 0 420 480" role="img" aria-label="Mapa de Colombia con presencia de la red en todo el territorio nacional, incluido San Andrés">
+        <svg viewBox="0 0 420 480" role="img" aria-label="Mapa de Colombia con presencia de la red en todo el territorio nacional">
           <path class="co-outline" d="M181.6,352.4 L170.4,346.2 L157.6,337.6 L150.1,341.7 L127.9,338.1 L121.5,326.8 L116.7,327.2 L90.5,312.3 L86.9,304.2 L96.7,302.2 L95.5,289.1 L101.7,279.6 L114.6,277.9 L125.7,261.4 L135.7,247.7 L126.0,241.5 L131.0,226.3 L125.1,202.3 L130.7,195.5 L126.6,173.3 L116.0,159.4 L119.3,146.7 L127.7,148.5 L132.7,140.8 L126.6,125.3 L129.8,121.5 L143.3,122.3 L162.9,104.1 L173.7,101.3 L174.0,92.6 L178.8,70.5 L193.8,58.4 L210.3,57.9 L212.4,52.4 L232.9,54.6 L253.5,41.4 L263.7,35.5 L276.3,22.9 L285.6,24.5 L292.5,31.4 L287.4,40.2 L270.6,44.6 L263.9,57.7 L253.8,65.2 L246.2,74.9 L243.0,93.6 L235.7,108.9 L249.3,110.7 L252.6,122.7 L258.4,128.4 L260.5,139.0 L257.3,148.7 L258.3,154.1 L264.7,156.3 L270.9,165.4 L304.6,162.9 L319.8,166.3 L338.2,188.8 L348.8,186.0 L367.7,187.4 L382.6,184.4 L391.8,188.9 L387.1,203.0 L381.3,211.8 L379.2,230.6 L384.5,248.0 L391.9,255.7 L392.8,261.6 L379.6,274.6 L389.1,280.4 L396.0,289.5 L404.0,315.6 L399.1,318.9 L394.0,303.4 L386.7,295.1 L378.0,304.1 L327.0,303.6 L327.4,319.9 L342.7,322.6 L341.8,332.7 L336.6,330.0 L321.8,334.3 L321.7,353.3 L333.3,362.8 L337.4,377.8 L336.8,389.2 L325.0,460.9 L311.9,447.0 L304.1,446.4 L321.0,419.8 L301.0,407.5 L285.2,409.8 L275.8,405.2 L261.4,412.2 L241.9,408.9 L226.5,381.4 L214.3,374.7 L206.0,362.3 L188.6,349.9 Z"/>
           <g class="co-cities">
-            <circle cx="324.0" cy="458.8" r="3"/><circle cx="176.6" cy="185.0" r="3"/><circle cx="302.4" cy="162.9" r="3"/><circle cx="197.1" cy="61.4" r="3"/><circle cx="177.9" cy="76.5" r="3"/><circle cx="234.1" cy="203.6" r="3"/><circle cx="177.9" cy="215.8" r="3"/><circle cx="175.3" cy="306.2" r="3"/><circle cx="259.5" cy="208.7" r="3"/><circle cx="149.2" cy="284.5" r="3"/><circle cx="237.1" cy="74.6" r="3"/><circle cx="147.9" cy="199.4" r="3"/><circle cx="168.3" cy="119.5" r="3"/><circle cx="215.7" cy="225.1" r="3"/><circle cx="376.6" cy="247.3" r="3"/><circle cx="253.1" cy="281.2" r="3"/><circle cx="184.0" cy="271.8" r="3"/><circle cx="246.2" cy="46.3" r="3"/><circle cx="212.3" cy="54.2" r="3"/><circle cx="227.3" cy="240.0" r="3"/><circle cx="131.7" cy="316.7" r="3"/><circle cx="256.6" cy="142.0" r="3"/><circle cx="148.3" cy="318.4" r="3"/><circle cx="173.6" cy="229.8" r="3"/><circle cx="173.2" cy="222.6" r="3"/><circle cx="240.6" cy="162.1" r="3"/><circle cx="181.0" cy="104.9" r="3"/><circle cx="185.3" cy="232.3" r="3"/><circle cx="151.3" cy="258.1" r="3"/><circle cx="316.1" cy="315.6" r="3"/><circle cx="388.0" cy="186.5" r="3"/>
-            <circle cx="16" cy="19.1" r="3"/>
+            <circle cx="324.0" cy="458.8" r="4"/><circle cx="176.6" cy="185.0" r="4"/><circle cx="302.4" cy="162.9" r="4"/><circle cx="197.1" cy="61.4" r="4"/><circle cx="177.9" cy="76.5" r="4"/><circle cx="234.1" cy="203.6" r="4"/><circle cx="177.9" cy="215.8" r="4"/><circle cx="175.3" cy="306.2" r="4"/><circle cx="259.5" cy="208.7" r="4"/><circle cx="149.2" cy="284.5" r="4"/><circle cx="237.1" cy="74.6" r="4"/><circle cx="147.9" cy="199.4" r="4"/><circle cx="168.3" cy="119.5" r="4"/><circle cx="215.7" cy="225.1" r="4"/><circle cx="376.6" cy="247.3" r="4"/><circle cx="253.1" cy="281.2" r="4"/><circle cx="184.0" cy="271.8" r="4"/><circle cx="246.2" cy="46.3" r="4"/><circle cx="212.3" cy="54.2" r="4"/><circle cx="227.3" cy="240.0" r="4"/><circle cx="131.7" cy="316.7" r="4"/><circle cx="256.6" cy="142.0" r="4"/><circle cx="148.3" cy="318.4" r="4"/><circle cx="173.6" cy="229.8" r="4"/><circle cx="173.2" cy="222.6" r="4"/><circle cx="240.6" cy="162.1" r="4"/><circle cx="181.0" cy="104.9" r="4"/><circle cx="185.3" cy="232.3" r="4"/><circle cx="151.3" cy="258.1" r="4"/><circle cx="316.1" cy="315.6" r="4"/><circle cx="388.0" cy="186.5" r="4"/>
+            <circle cx="16" cy="19.1" r="4"/>
           </g>
         </svg>
-        <p class="co-caption">Presencia en todo el territorio nacional, incluido San Andrés y Providencia</p>
+        <p class="co-caption">Presencia en todo el territorio nacional</p>
       </div>
     </div>
 
@@ -683,6 +704,14 @@
   </div>
 </section>
 
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Testimonios</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
 <section class="testimonios">
   <div class="wrap">
     <div class="section-head">
@@ -703,6 +732,64 @@
   </div>
 </section>
 <script async src="//www.instagram.com/embed.js"></script>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">PQRS</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
+<section id="pqrs" class="pqrs">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Peticiones, quejas, reclamos y sugerencias</h2>
+      <p>¿Tienes una petición, queja, reclamo o sugerencia? Cuéntanos y te respondemos directamente a tu correo.</p>
+    </div>
+    <form id="pqrs-form" class="pqrs-form">
+      <div class="pqrs-grid">
+        <div class="pqrs-field">
+          <label for="pqrs-nombre">Nombre completo</label>
+          <input type="text" id="pqrs-nombre" name="nombre" required>
+        </div>
+        <div class="pqrs-field">
+          <label for="pqrs-correo">Correo electrónico</label>
+          <input type="email" id="pqrs-correo" name="correo" required>
+        </div>
+        <div class="pqrs-field">
+          <label for="pqrs-tipo">Tipo de solicitud</label>
+          <select id="pqrs-tipo" name="tipo" required>
+            <option value="Petición">Petición</option>
+            <option value="Queja">Queja</option>
+            <option value="Reclamo">Reclamo</option>
+            <option value="Sugerencia">Sugerencia</option>
+          </select>
+        </div>
+        <div class="pqrs-field pqrs-field-full">
+          <label for="pqrs-mensaje">Mensaje</label>
+          <textarea id="pqrs-mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</section>
+<script>
+(function(){
+  var form = document.getElementById('pqrs-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre = document.getElementById('pqrs-nombre').value;
+    var correo = document.getElementById('pqrs-correo').value;
+    var tipo = document.getElementById('pqrs-tipo').value;
+    var mensaje = document.getElementById('pqrs-mensaje').value;
+    var subject = encodeURIComponent('PQRS - ' + tipo + ' de ' + nombre);
+    var body = encodeURIComponent('Tipo: ' + tipo + '\n' + 'Nombre: ' + nombre + '\n' + 'Correo: ' + correo + '\n\n' + 'Mensaje:\n' + mensaje);
+    window.location.href = 'mailto:contacto@escueladecontratistas.co?subject=' + subject + '&body=' + body;
+  });
+})();
+</script>
 
 <footer>
   <div class="wrap">

@@ -140,6 +140,7 @@
     font-family:'Inter', sans-serif;
     font-weight:700;
     font-size:1rem;
+    line-height:1.2;
     color:var(--ink);
   }
   .flag-co{ border-radius:2px; flex-shrink:0; }
@@ -182,6 +183,25 @@
   }
 
   /* ---------- COTA / dimension-line divider (signature element) ---------- */
+  .cota{
+    display:flex; align-items:center; gap:1rem;
+    max-width:var(--max); margin:0 auto; padding:0 1.5rem;
+  }
+  .cota-line{ flex:1; height:1px; background:var(--steel-light); position:relative; }
+  .cota-line::before{
+    content:''; position:absolute; top:-5px; width:1px; height:11px; background:var(--steel-light);
+  }
+  .cota-line.left::before{ right:0; }
+  .cota-line.right::before{ left:0; }
+  .cota-label{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.75rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--steel);
+    white-space:nowrap;
+  }
   .cota-section{ padding:2.6rem 0; }
 
   section{ scroll-margin-top:80px; }
@@ -231,7 +251,8 @@
   .p-features{ padding:1rem 0 3rem; }
   .p-features h2{ font-size:1.5rem; margin-bottom:1.2rem; }
   .p-feature-list{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; padding:0; margin:0; list-style:none; }
-  .p-feature-list li{ border-left:3px solid var(--orange); padding:0.7rem 0 0.7rem 1rem; color:var(--steel); }
+  .p-feature-list li{ display:flex; align-items:flex-start; gap:0.7rem; padding:0.5rem 0; color:var(--steel); }
+  .p-feature-list li svg{ color:var(--orange-deep); flex-shrink:0; margin-top:0.25rem; }
   @media (max-width:700px){ .p-feature-list{ grid-template-columns:1fr; } }
 
   .p-cta-band{
@@ -355,16 +376,16 @@
 <body>
 <div class="social-rail">
   <a href="https://www.instagram.com/escuelacontratistas/" target="_blank" rel="noopener" aria-label="Instagram">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
   </a>
   <a href="https://www.facebook.com/profile.php?id=61578532108345" target="_blank" rel="noopener" aria-label="Facebook">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
   </a>
   <a href="https://www.youtube.com/@EscuelaContratistas" target="_blank" rel="noopener" aria-label="YouTube">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
   </a>
   <a href="mailto:contacto@escueladecontratistas.co" aria-label="Correo">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
   </a>
   <span class="social-rail-line"></span>
 </div>
@@ -418,6 +439,14 @@
   </div>
 </section>
 
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Cómo funciona</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
 <section class="p-subsection">
   <div class="wrap">
     <h2>Cómo funciona</h2>
@@ -462,15 +491,15 @@
   <div class="wrap">
     <h2>Te podemos apoyar con</h2>
     <ul class="p-feature-list">
-      <li>Revisión y análisis de planos</li>
-      <li>Memorias de cantidades de obra</li>
-      <li>Análisis de Precios Unitarios (APU)</li>
-      <li>Listado de precios unitarios</li>
-      <li>Presupuesto general consolidado</li>
-      <li>Estructuración para licitaciones</li>
-      <li>Desarrollo desde fase de diseño, si el proyecto aún no está completamente definido</li>
-      <li>Programación de obra</li>
-      <li>Flujos de caja</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Revisión y análisis de planos</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Memorias de cantidades de obra</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Análisis de Precios Unitarios (APU)</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Listado de precios unitarios</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Presupuesto general consolidado</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Estructuración para licitaciones</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Desarrollo desde fase de diseño, si el proyecto aún no está completamente definido</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Programación de obra</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Flujos de caja</li>
     </ul>
   </div>
 </section>
@@ -480,14 +509,22 @@
     <h2>Qué necesitamos para cotizarte</h2>
     <p>El valor del servicio depende del nivel de información disponible y del alcance requerido. Para enviarte una propuesta técnica y económica ajustada, compártenos la información que tengas del proyecto:</p>
     <ul class="p-feature-list">
-      <li>Planos del proyecto</li>
-      <li>Alcance del trabajo</li>
-      <li>Ubicación de la obra</li>
-      <li>Fecha límite de entrega</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Planos del proyecto</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Alcance del trabajo</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Ubicación de la obra</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Fecha límite de entrega</li>
     </ul>
     <p style="margin-top:1rem;">Si no tienes toda la información aún, cuéntanos lo que sepas y te orientamos sobre cómo avanzar.</p>
   </div>
 </section>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Prueba social</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
 
 <section class="testimonios">
   <div class="wrap">
@@ -510,6 +547,14 @@
   </div>
 </section>
 <script async src="//www.instagram.com/embed.js"></script>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Preguntas frecuentes</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
 
 <section class="p-faq">
   <div class="wrap">

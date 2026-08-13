@@ -118,6 +118,8 @@
   .btn-dark:hover{ background:#000; transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,0.22);}
   .btn-outline{ background:#fff; color:var(--ink); border-color:var(--steel-light);}
   .btn-outline:hover{ background:var(--bg-soft); transform:translateY(-2px);}
+  .btn-outline-dark{ background:transparent; color:#fff; border-color:rgba(255,255,255,0.55);}
+  .btn-outline-dark:hover{ background:rgba(255,255,255,0.12); transform:translateY(-2px);}
   .btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible{
     outline:3px solid var(--orange-deep); outline-offset:2px;
   }
@@ -140,6 +142,7 @@
     font-family:'Inter', sans-serif;
     font-weight:700;
     font-size:1rem;
+    line-height:1.2;
     color:var(--ink);
   }
   .flag-co{ border-radius:2px; flex-shrink:0; }
@@ -250,7 +253,8 @@
   .p-features{ padding:1rem 0 3rem; }
   .p-features h2{ font-size:1.5rem; margin-bottom:1.2rem; }
   .p-feature-list{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; padding:0; margin:0; list-style:none; }
-  .p-feature-list li{ border-left:3px solid var(--orange); padding:0.7rem 0 0.7rem 1rem; color:var(--steel); }
+  .p-feature-list li{ display:flex; align-items:flex-start; gap:0.7rem; padding:0.5rem 0; color:var(--steel); }
+  .p-feature-list li svg{ color:var(--orange-deep); flex-shrink:0; margin-top:0.25rem; }
   @media (max-width:700px){ .p-feature-list{ grid-template-columns:1fr; } }
 
   .p-cta-band{
@@ -291,8 +295,17 @@
   }
   .price-note{ width:100%; color:var(--steel-light); font-size:0.85rem; margin-top:0.2rem; }
 
-  .p-gallery-extra{ margin-top:1.4rem; font-size:0.88rem; color:var(--steel); }
-  .p-gallery-extra a{ color:var(--orange-deep); }
+  .p-gallery-extra{ margin-top:1.6rem; }
+  .p-gallery-extra p{ margin:0 0 0.8rem; font-size:0.92rem; color:var(--steel); }
+  .doc-links{ display:flex; flex-wrap:wrap; gap:0.8rem; }
+  .doc-link{
+    display:inline-flex; align-items:center; gap:0.6rem;
+    background:#fff; border:1.5px solid var(--steel-light); border-radius:var(--radius-pill);
+    padding:0.7rem 1.3rem; text-decoration:none; color:var(--ink);
+    font-weight:600; font-size:0.92rem; transition:transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+  }
+  .doc-link svg{ color:var(--orange-deep); flex-shrink:0; }
+  .doc-link:hover{ border-color:var(--orange); transform:translateY(-2px); box-shadow:0 10px 20px rgba(32,35,43,0.08); }
 
   .p-subsection{ padding:0.5rem 0 2.6rem; }
   .p-subsection h2{ font-size:1.4rem; margin-bottom:0.9rem; }
@@ -408,16 +421,16 @@
 <body>
 <div class="social-rail">
   <a href="https://www.instagram.com/escuelacontratistas/" target="_blank" rel="noopener" aria-label="Instagram">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
   </a>
   <a href="https://www.facebook.com/profile.php?id=61578532108345" target="_blank" rel="noopener" aria-label="Facebook">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
   </a>
   <a href="https://www.youtube.com/@EscuelaContratistas" target="_blank" rel="noopener" aria-label="YouTube">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
   </a>
   <a href="mailto:contacto@escueladecontratistas.co" aria-label="Correo">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
   </a>
   <span class="social-rail-line"></span>
 </div>
@@ -449,7 +462,7 @@
     <div>
       <span class="eyebrow">Oferta por tiempo limitado</span>
       <h1>Base de Datos de APU 2026 + Cotizador de Presupuestos</h1>
-      <p class="lead">En Escuela de Contratistas desarrollamos el sistema más completo para elaborar presupuestos de construcción en Colombia: más de 2.200 precios unitarios actualizados a 2026, listos para usar en un cotizador de Excel.</p>
+      <p class="lead">En Escuela de Contratistas desarrollamos el sistema más completo para elaborar presupuestos de construcción en Colombia: más de 2.200 análisis de precios unitarios (APU) actualizados a 2026, organizados en un cotizador de Excel que calcula tu presupuesto automáticamente a partir de las cantidades de tu obra. El paquete incluye materiales, mano de obra, equipos y rendimientos en cada APU, el libro "Cómo Presupuestar su Proyecto", el Agente IA de presupuestos, acceso al grupo privado de la Red de Contratistas y actualizaciones gratuitas durante todo el año.</p>
 
       <div class="price-block">
         <span class="price-old">$99.000</span>
@@ -480,21 +493,37 @@
   </div>
 </div>
 
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Qué incluye</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
 <section class="p-features">
   <div class="wrap">
     <h2>Qué incluye</h2>
     <ul class="p-feature-list">
-      <li>Cotizador en Excel descargable, editable y con fórmulas</li>
-      <li>Base de datos con más de 2.200 precios unitarios (APU) para todo tipo de obra</li>
-      <li>Precios actualizados a 2026, estandarizados para todas las regiones de Colombia</li>
-      <li>Materiales, mano de obra, equipos y rendimientos en cada APU</li>
-      <li>Libro "Cómo Presupuestar su Proyecto"</li>
-      <li>Agente IA para elaboración de presupuestos, gratis por tiempo limitado</li>
-      <li>Acceso al grupo privado de la Red de Contratistas de Colombia</li>
-      <li>Actualizaciones gratuitas durante todo 2026</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Cotizador en Excel descargable, editable y con fórmulas</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Base de datos con más de 2.200 precios unitarios (APU) para todo tipo de obra</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Precios actualizados a 2026, estandarizados para todas las regiones de Colombia</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Materiales, mano de obra, equipos y rendimientos en cada APU</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Libro "Cómo Presupuestar su Proyecto"</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Agente IA para elaboración de presupuestos, gratis por tiempo limitado</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Acceso al grupo privado de la Red de Contratistas de Colombia</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Actualizaciones gratuitas durante todo 2026</li>
     </ul>
   </div>
 </section>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Prueba social</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
 
 <section class="testimonios">
   <div class="wrap">
@@ -518,6 +547,14 @@
 </section>
 <script async src="//www.instagram.com/embed.js"></script>
 
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Vista previa</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
 <section class="p-subsection">
   <div class="wrap">
     <h2>Así se ve por dentro</h2>
@@ -525,7 +562,7 @@
 
     <div class="gallery-grid">
       <button type="button" class="gallery-thumb" data-index="0">
-        <img src="images/apu-preview-cotizador-v2.webp" alt="Vista del Cotizador en la Base de Datos de APU 2026">
+        <img src="images/apu-preview-cotizador-v3.webp" alt="Vista del Cotizador en la Base de Datos de APU 2026">
         <span>Cotizador</span>
       </button>
       <button type="button" class="gallery-thumb" data-index="1">
@@ -546,7 +583,19 @@
       </button>
     </div>
 
-    <p class="p-gallery-extra">¿Quieres más detalle? <a href="https://1drv.ms/b/c/1b25945fc0ff974a/IQDNBnP9hjusT5v3fipc-cj-AbZ0N2tlos8LZYgfEJyz--o?e=lpsJqo" target="_blank" rel="noopener">Listado completo de actividades (PDF)</a> &middot; <a href="https://1drv.ms/b/c/1b25945fc0ff974a/IQBrwkpT6lFzSYny4S6WRpR1AbW3lED4D4sYeBYx8dhrhdY?e=vQ7nQm" target="_blank" rel="noopener">Ejemplos de APU incluidos (PDF)</a></p>
+    <div class="p-gallery-extra">
+      <p>¿Quieres revisar más a fondo antes de comprar? Descarga estos documentos de muestra:</p>
+      <div class="doc-links">
+        <a class="doc-link" href="https://1drv.ms/b/c/1b25945fc0ff974a/IQDNBnP9hjusT5v3fipc-cj-AbZ0N2tlos8LZYgfEJyz--o?e=lpsJqo" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+          Listado completo de actividades (PDF)
+        </a>
+        <a class="doc-link" href="https://1drv.ms/b/c/1b25945fc0ff974a/IQBrwkpT6lFzSYny4S6WRpR1AbW3lED4D4sYeBYx8dhrhdY?e=vQ7nQm" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+          Ejemplos de APU incluidos (PDF)
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -555,7 +604,15 @@
     <h2>¿Ya viste suficiente?</h2>
     <p><span style="text-decoration:line-through; color:var(--steel);">$99.000</span> &nbsp; <strong style="color:var(--orange); font-size:1.3rem;">$49.000</strong> &mdash; oferta solo por hoy, pago único.</p>
     <a href="https://checkout.wompi.co/l/4z3c8P" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
-    <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline" style="color:var(--cream); border-color:var(--cream);" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+    <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline-dark" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+  </div>
+</div>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Preguntas frecuentes</span>
+    <div class="cota-line right"></div>
   </div>
 </div>
 
@@ -633,7 +690,7 @@
     <h2>Deja de cotizar a ojo.</h2>
     <p><span style="text-decoration:line-through; color:var(--steel);">$99.000</span> &nbsp; <strong style="color:var(--orange); font-size:1.3rem;">$49.000</strong> &mdash; oferta solo por hoy, pago único.</p>
     <a href="https://checkout.wompi.co/l/4z3c8P" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
-    <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline" style="color:var(--cream); border-color:var(--cream);" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+    <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline-dark" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
   </div>
 </div>
 
@@ -684,7 +741,7 @@
 <script>
 (function(){
   var images = [
-    {src:'images/apu-preview-cotizador-v2.webp', caption:'Cotizador'},
+    {src:'images/apu-preview-cotizador-v3.webp', caption:'Cotizador'},
     {src:'images/apu-preview-actividades.webp', caption:'Actividades'},
     {src:'images/apu-preview-apu.webp', caption:'APU'},
     {src:'images/apu-preview-apu-auxiliares.webp', caption:'APU auxiliares'},
