@@ -1,0 +1,18 @@
+# Escuela de Contratistas
+
+> Escuela de Contratistas es una empresa colombiana que ofrece formación práctica, herramientas y servicios para contratistas de construcción en Colombia: bases de datos de precios unitarios (APU), elaboración de presupuestos técnicos y una red de contratistas a nivel nacional.
+
+Escuela de Contratistas no vende un solo producto: combina herramientas descargables, un servicio de elaboración de presupuestos con aliados técnicos, y una comunidad (Red de Contratistas) donde contratistas, profesionales independientes y empresas del sector comparten oportunidades, resuelven dudas técnicas y generan alianzas comerciales.
+
+## Productos y servicios
+
+- [Base de Datos de APU 2026 + Cotizador](https://escueladecontratistas.co/producto-apu-2026): más de 2.200 análisis de precios unitarios actualizados a 2026, con cotizador integrado en Excel que calcula el presupuesto a partir de las cantidades de la obra. Pago único, entrega inmediata.
+- [Servicio de Elaboración de Presupuestos](https://escueladecontratistas.co/producto-servicio-presupuestos): elaboración de presupuestos técnicos a la medida, en alianza con Noventa Grados, para obra pública y privada en cualquier sector de Colombia. Desde $5.000 por ítem de APU.
+- [Elaborador de Presupuestos Completo](https://escueladecontratistas.co/producto-elaborador-presupuestos): herramienta en desarrollo (próximamente) que automatiza cantidades, APU y presupuesto final en un solo flujo, conectada con la Base de Datos de APU 2026.
+
+## Empresa
+
+- [Página principal](https://escueladecontratistas.co/): quiénes somos, productos, Red de Contratistas y sección de PQRS.
+- Contacto: contacto@escueladecontratistas.co
+- WhatsApp: +57 314 341 5975
+- Cobertura: toda Colombia (areaServed: CO)

@@ -41,6 +41,22 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Cómo recibo la Base de Datos de APU 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Después del pago, recibes el archivo de Excel por WhatsApp o correo, listo para usar. Si compras por Wompi, te contactamos para confirmar la entrega."}},
+    {"@type": "Question", "name": "¿Qué medios de pago aceptan?", "acceptedAnswer": {"@type": "Answer", "text": "Tarjeta de crédito, débito, PSE y Nequi a través de nuestra pasarela Wompi. También puedes coordinar el pago directamente por WhatsApp."}},
+    {"@type": "Question", "name": "¿El archivo viene con el cotizador incluido?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La base de datos incluye un cotizador integrado en Excel: defines las cantidades de tu obra y el archivo calcula el presupuesto por ti."}},
+    {"@type": "Question", "name": "¿Aplica para cualquier tipo de obra?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Los precios son de referencia a nivel nacional, construidos a partir de análisis en diferentes ciudades de Colombia, por lo que aplican tanto para obra pública como privada, en cualquier sector."}},
+    {"@type": "Question", "name": "¿Tienen oficina física?", "acceptedAnswer": {"@type": "Answer", "text": "Somos un producto 100% digital, sin oficina de atención al público. Trabajamos con soporte directo, atención personalizada y evidencia real del producto, y ya contamos con clientes en todo el país que usan la herramienta en sus proyectos."}},
+    {"@type": "Question", "name": "¿En qué dispositivos puedo usarlo?", "acceptedAnswer": {"@type": "Answer", "text": "En cualquier equipo: computador, portátil o celular. El archivo está desarrollado en Excel, pero es totalmente compatible con Google Sheets y otras hojas de cálculo."}},
+    {"@type": "Question", "name": "¿Qué pasa con las actualizaciones después del primer año?", "acceptedAnswer": {"@type": "Answer", "text": "Durante 2026 las actualizaciones son gratuitas: ajustamos los precios según el mercado actual e incorporamos nuevos APU y actividades. A partir del siguiente año, si quieres seguir recibiéndolas, el costo es de $20.000."}},
+    {"@type": "Question", "name": "¿Tienen garantía de devolución?", "acceptedAnswer": {"@type": "Answer", "text": "Al ser un archivo digital que se entrega de inmediato, no manejamos devoluciones de dinero. Lo que sí tienes es soporte directo y real: si te queda alguna duda o algo no te funciona, nos escribes por WhatsApp y te ayudamos hasta resolverlo."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -264,6 +280,28 @@
   .p-cta-band p{ color:var(--steel-light); margin-bottom:1.4rem; }
   .p-cta-band .btn{ margin:0 0.4rem; }
 
+  .tldr{ background:var(--bg-soft); border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.4rem 1.6rem; margin:1.8rem 0 0; max-width:760px; }
+  .tldr-label{ font-family:'Inter',sans-serif; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange-deep); margin-bottom:0.6rem; display:block; }
+  .tldr ul{ margin:0; padding-left:1.2rem; }
+  .tldr li{ font-size:0.94rem; color:var(--text); margin-bottom:0.35rem; }
+  .tldr li:last-child{ margin-bottom:0; }
+  .share-btn{ display:inline-flex; align-items:center; gap:0.4rem; background:none; border:1.5px solid var(--steel-light); border-radius:var(--radius-pill); padding:0.5rem 1rem; font-family:'Inter',sans-serif; font-weight:600; font-size:0.85rem; color:var(--ink); cursor:pointer; }
+  .share-btn:hover{ background:var(--bg-soft); }
+  .compare-wrap{ overflow-x:auto; margin-top:1.6rem; }
+  .compare-table{ width:100%; border-collapse:collapse; font-size:0.92rem; min-width:480px; }
+  .compare-table th, .compare-table td{ padding:0.75rem 1rem; text-align:left; border-bottom:1px solid var(--steel-light); }
+  .compare-table th{ font-family:'Inter',sans-serif; font-weight:700; color:var(--ink); }
+  .compare-table td:first-child{ color:var(--steel); font-weight:600; }
+  .compare-table td:nth-child(2){ color:var(--steel); }
+  .compare-table td:nth-child(3){ color:var(--orange-deep); font-weight:600; }
+  .p-related{ padding:2.4rem 0; border-top:1px solid var(--steel-light); }
+  .p-related h2{ font-size:1.1rem; margin-bottom:1rem; }
+  .p-related-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+  .p-related-card{ display:block; background:#fff; border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.2rem 1.4rem; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
+  .p-related-card:hover{ box-shadow:0 10px 24px rgba(32,35,43,0.08); transform:translateY(-2px); }
+  .p-related-card strong{ display:block; font-size:0.98rem; margin-bottom:0.3rem; }
+  .p-related-card span{ font-size:0.85rem; color:var(--steel); }
+  @media (max-width:600px){ .p-related-grid{ grid-template-columns:1fr; } }
   .p-faq{ padding:3rem 0 3.5rem; }
   .faq-list{ max-width:760px; }
   details{
@@ -488,6 +526,22 @@
 </section>
 
 <div class="wrap">
+  <div class="tldr">
+    <span class="tldr-label">En resumen</span>
+    <ul>
+      <li>Más de 2.200 análisis de precios unitarios (APU) actualizados a 2026, listos para usar en cualquier obra de Colombia.</li>
+      <li>Incluye cotizador integrado en Excel: pones las cantidades de tu obra y calcula el presupuesto automáticamente.</li>
+      <li>Pago único de $49.000 (oferta), sin suscripciones. Incluye el libro "Cómo Presupuestar su Proyecto", el Agente IA y acceso a la Red de Contratistas.</li>
+      <li>Entrega inmediata por WhatsApp o correo después del pago.</li>
+    </ul>
+  </div>
+  <button type="button" class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard.writeText(location.href);this.textContent='Enlace copiado';}">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-3.9M8.6 13.5l6.8 3.9"/></svg>
+    Compartir
+  </button>
+</div>
+
+<div class="wrap">
   <div class="p-video">
     <iframe src="https://www.youtube.com/embed/-jZD5Gjdvng" title="Base de Datos de APU 2026 + Cotizador" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
@@ -514,6 +568,20 @@
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Acceso al grupo privado de la Red de Contratistas de Colombia</li>
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Actualizaciones gratuitas durante todo 2026</li>
     </ul>
+
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th></th><th>Sin la Base de Datos</th><th>Con la Base de Datos de APU 2026</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Precios unitarios</td><td>Investigar y armar cada APU desde cero</td><td>Más de 2.200 APU listos para usar</td></tr>
+          <tr><td>Cálculo del presupuesto</td><td>Fórmulas manuales en Excel</td><td>Cotizador automático: pones las cantidades y calcula</td></tr>
+          <tr><td>Actualización de precios</td><td>Depende de que la actualices tú</td><td>Actualizaciones gratuitas durante 2026</td></tr>
+          <tr><td>Soporte</td><td>Ninguno</td><td>Soporte técnico 24/7 por WhatsApp</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -693,6 +761,22 @@
     <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20Base%20de%20Datos%20de%20APU%202026" class="btn btn-outline-dark" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
   </div>
 </div>
+
+<section class="p-related">
+  <div class="wrap">
+    <h2>También te puede interesar</h2>
+    <div class="p-related-grid">
+      <a href="producto-servicio-presupuestos.html" class="p-related-card">
+        <strong>Servicio de Elaboración de Presupuestos</strong>
+        <span>¿Prefieres que te lo hagamos nosotros? Cotiza tu presupuesto con nuestro equipo.</span>
+      </a>
+      <a href="producto-elaborador-presupuestos.html" class="p-related-card">
+        <strong>Elaborador de Presupuestos Completo</strong>
+        <span>La herramienta que automatiza cantidades, APU y presupuesto final. Próximamente.</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">

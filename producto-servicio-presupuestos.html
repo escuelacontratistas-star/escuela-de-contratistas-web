@@ -41,6 +41,19 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Aplica para cualquier tipo de obra?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Trabajamos presupuestos para edificaciones, infraestructura, adecuaciones, urbanismo, proyectos comerciales e institucionales, tanto públicos como privados."}},
+    {"@type": "Question", "name": "¿Cuánto cuesta el servicio?", "acceptedAnswer": {"@type": "Answer", "text": "Elaboramos APU desde $5.000 por ítem. El valor final depende del alcance y la magnitud del proyecto. Compártenos tus planos o el alcance por WhatsApp y te enviamos una propuesta técnica y económica ajustada."}},
+    {"@type": "Question", "name": "¿Cuánto se demoran en entregar el presupuesto?", "acceptedAnswer": {"@type": "Answer", "text": "El tiempo depende de los entregables y la magnitud del proyecto — en algunos casos podemos entregarte el presupuesto el mismo día. Al cotizarte te damos un plazo claro según tu caso."}},
+    {"@type": "Question", "name": "¿Qué necesito enviarles para cotizar?", "acceptedAnswer": {"@type": "Answer", "text": "Idealmente los planos del proyecto, el alcance del trabajo, la ubicación y la fecha límite de entrega. Si no los tienes todos, cuéntanos lo que sepas y te orientamos."}},
+    {"@type": "Question", "name": "¿Pueden trabajar proyectos que aún no están en fase de diseño?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, podemos apoyar el desarrollo desde la fase de diseño si el proyecto aún no está completamente definido."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -262,6 +275,21 @@
   .p-cta-band p{ color:var(--steel-light); margin-bottom:1.4rem; }
   .p-cta-band .btn{ margin:0 0.4rem; }
 
+  .tldr{ background:var(--bg-soft); border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.4rem 1.6rem; margin:1.8rem 0 0; max-width:760px; }
+  .tldr-label{ font-family:'Inter',sans-serif; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange-deep); margin-bottom:0.6rem; display:block; }
+  .tldr ul{ margin:0; padding-left:1.2rem; }
+  .tldr li{ font-size:0.94rem; color:var(--text); margin-bottom:0.35rem; }
+  .tldr li:last-child{ margin-bottom:0; }
+  .share-btn{ display:inline-flex; align-items:center; gap:0.4rem; background:none; border:1.5px solid var(--steel-light); border-radius:var(--radius-pill); padding:0.5rem 1rem; font-family:'Inter',sans-serif; font-weight:600; font-size:0.85rem; color:var(--ink); cursor:pointer; }
+  .share-btn:hover{ background:var(--bg-soft); }
+  .p-related{ padding:2.4rem 0; border-top:1px solid var(--steel-light); }
+  .p-related h2{ font-size:1.1rem; margin-bottom:1rem; }
+  .p-related-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+  .p-related-card{ display:block; background:#fff; border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.2rem 1.4rem; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
+  .p-related-card:hover{ box-shadow:0 10px 24px rgba(32,35,43,0.08); transform:translateY(-2px); }
+  .p-related-card strong{ display:block; font-size:0.98rem; margin-bottom:0.3rem; }
+  .p-related-card span{ font-size:0.85rem; color:var(--steel); }
+  @media (max-width:600px){ .p-related-grid{ grid-template-columns:1fr; } }
   .p-faq{ padding:3rem 0 3.5rem; }
   .faq-list{ max-width:760px; }
   details{
@@ -416,7 +444,7 @@
   <div class="wrap p-hero-grid">
     <div>
       <span class="eyebrow">Disponible</span>
-      <h1>Servicio de Elaboración de Presupuestos</h1>
+      <h1>Presupuestos técnicos confiables, para cualquier tipo de obra en Colombia</h1>
       <p class="lead">En Escuela de Contratistas y Noventa Grados elaboramos presupuestos técnicos para obra pública y privada, en cualquier sector: edificaciones, infraestructura, adecuaciones, urbanismo, proyectos comerciales o institucionales.</p>
 
       <div class="price-block">
@@ -438,6 +466,22 @@
     </div>
   </div>
 </section>
+
+<div class="wrap">
+  <div class="tldr">
+    <span class="tldr-label">En resumen</span>
+    <ul>
+      <li>Presupuestos técnicos elaborados junto con Noventa Grados, para obra pública y privada en cualquier sector.</li>
+      <li>Desde $5.000 por ítem de APU — el valor final depende del alcance y la magnitud de tu proyecto.</li>
+      <li>Podemos entregar el mismo día según el alcance, una vez confirmada la cotización.</li>
+      <li>Solo nos compartes planos, alcance, ubicación y fecha límite por WhatsApp para empezar.</li>
+    </ul>
+  </div>
+  <button type="button" class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard.writeText(location.href);this.textContent='Enlace copiado';}">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-3.9M8.6 13.5l6.8 3.9"/></svg>
+    Compartir
+  </button>
+</div>
 
 <div class="cota-section">
   <div class="cota">
@@ -591,6 +635,22 @@
     <a href="https://wa.me/573123305755?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20del%20servicio%20de%20elaboraci%C3%B3n%20de%20presupuestos" class="btn btn-primary" target="_blank" rel="noopener">Solicitar cotización</a>
   </div>
 </div>
+
+<section class="p-related">
+  <div class="wrap">
+    <h2>También te puede interesar</h2>
+    <div class="p-related-grid">
+      <a href="producto-apu-2026.html" class="p-related-card">
+        <strong>Base de Datos de APU 2026 + Cotizador</strong>
+        <span>¿Prefieres hacerlo tú mismo? Más de 2.200 APU con cotizador integrado en Excel.</span>
+      </a>
+      <a href="producto-elaborador-presupuestos.html" class="p-related-card">
+        <strong>Elaborador de Presupuestos Completo</strong>
+        <span>La herramienta que automatiza cantidades, APU y presupuesto final. Próximamente.</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">

@@ -41,6 +41,16 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Cuándo estará disponible?", "acceptedAnswer": {"@type": "Answer", "text": "Estamos en desarrollo activo. Si te registras para probarla primero, te avisamos apenas esté lista."}},
+    {"@type": "Question", "name": "¿Reemplaza la Base de Datos de APU 2026?", "acceptedAnswer": {"@type": "Answer", "text": "No, la complementa: se conecta directamente con la base de datos para automatizar todo el flujo de presupuesto."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -262,6 +272,21 @@
   .p-cta-band p{ color:var(--steel-light); margin-bottom:1.4rem; }
   .p-cta-band .btn{ margin:0 0.4rem; }
 
+  .tldr{ background:var(--bg-soft); border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.4rem 1.6rem; margin:1.8rem 0 0; max-width:760px; }
+  .tldr-label{ font-family:'Inter',sans-serif; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange-deep); margin-bottom:0.6rem; display:block; }
+  .tldr ul{ margin:0; padding-left:1.2rem; }
+  .tldr li{ font-size:0.94rem; color:var(--text); margin-bottom:0.35rem; }
+  .tldr li:last-child{ margin-bottom:0; }
+  .share-btn{ display:inline-flex; align-items:center; gap:0.4rem; background:none; border:1.5px solid var(--steel-light); border-radius:var(--radius-pill); padding:0.5rem 1rem; font-family:'Inter',sans-serif; font-weight:600; font-size:0.85rem; color:var(--ink); cursor:pointer; }
+  .share-btn:hover{ background:var(--bg-soft); }
+  .p-related{ padding:2.4rem 0; border-top:1px solid var(--steel-light); }
+  .p-related h2{ font-size:1.1rem; margin-bottom:1rem; }
+  .p-related-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+  .p-related-card{ display:block; background:#fff; border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.2rem 1.4rem; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
+  .p-related-card:hover{ box-shadow:0 10px 24px rgba(32,35,43,0.08); transform:translateY(-2px); }
+  .p-related-card strong{ display:block; font-size:0.98rem; margin-bottom:0.3rem; }
+  .p-related-card span{ font-size:0.85rem; color:var(--steel); }
+  @media (max-width:600px){ .p-related-grid{ grid-template-columns:1fr; } }
   .p-faq{ padding:3rem 0 3.5rem; }
   .faq-list{ max-width:760px; }
   details{
@@ -359,7 +384,7 @@
   <div class="wrap p-hero-grid">
     <div>
       <span class="eyebrow">Próximamente</span>
-      <h1>Elaborador de Presupuestos Completo</h1>
+      <h1>La herramienta que automatiza tu presupuesto de principio a fin</h1>
       <p class="lead">La herramienta que estamos construyendo para automatizar el presupuesto completo de tu obra: cantidades, APU y presupuesto final en un solo flujo, sin depender de armar todo a mano en Excel.</p>
       <div class="p-hero-ctas">
         <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20ser%20de%20los%20primeros%20en%20probar%20el%20Elaborador%20de%20Presupuestos" class="btn btn-dark" target="_blank" rel="noopener">Quiero probarlo primero</a>
@@ -374,6 +399,22 @@
     </div>
   </div>
 </section>
+
+<div class="wrap">
+  <div class="tldr">
+    <span class="tldr-label">En resumen</span>
+    <ul>
+      <li>Herramienta en desarrollo que calcula cantidades, APU y presupuesto final en un solo flujo.</li>
+      <li>Se conecta directamente con la Base de Datos de APU 2026, sin depender de armar todo a mano en Excel.</li>
+      <li>Construida por el mismo equipo detrás de la Base de Datos de APU 2026, ya usada por +1.500 contratistas.</li>
+      <li>Puedes registrarte para probarla primero apenas esté lista.</li>
+    </ul>
+  </div>
+  <button type="button" class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard.writeText(location.href);this.textContent='Enlace copiado';}">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-3.9M8.6 13.5l6.8 3.9"/></svg>
+    Compartir
+  </button>
+</div>
 
 <section class="p-features">
   <div class="wrap">
@@ -417,6 +458,22 @@
     <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20ser%20de%20los%20primeros%20en%20probar%20el%20Elaborador%20de%20Presupuestos" class="btn btn-primary" target="_blank" rel="noopener">Quiero probarlo primero</a>
   </div>
 </div>
+
+<section class="p-related">
+  <div class="wrap">
+    <h2>También te puede interesar</h2>
+    <div class="p-related-grid">
+      <a href="producto-apu-2026.html" class="p-related-card">
+        <strong>Base de Datos de APU 2026 + Cotizador</strong>
+        <span>Más de 2.200 APU con cotizador integrado en Excel, disponible ahora.</span>
+      </a>
+      <a href="producto-servicio-presupuestos.html" class="p-related-card">
+        <strong>Servicio de Elaboración de Presupuestos</strong>
+        <span>¿Prefieres que te lo hagamos nosotros? Cotiza tu presupuesto con nuestro equipo.</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">

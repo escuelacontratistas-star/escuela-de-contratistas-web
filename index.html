@@ -450,6 +450,20 @@
   }
   .trust-strip svg{ color:var(--orange); flex-shrink:0; }
 
+  .share-btn{ display:inline-flex; align-items:center; gap:0.4rem; background:none; border:1.5px solid var(--steel-light); border-radius:var(--radius-pill); padding:0.5rem 1rem; font-family:'Inter',sans-serif; font-weight:600; font-size:0.85rem; color:var(--ink); cursor:pointer; margin-top:1.2rem; }
+  .share-btn:hover{ background:var(--bg-soft); }
+
+  .sticky-cta{ display:none; }
+  @media (max-width:760px){
+    .sticky-cta{
+      display:flex; gap:0.6rem; position:fixed; left:0; right:0; bottom:0; z-index:200;
+      background:#fff; padding:0.7rem 0.9rem; border-top:1px solid var(--steel-light);
+      box-shadow:0 -4px 14px rgba(0,0,0,0.1);
+    }
+    .sticky-cta .btn{ flex:1; justify-content:center; font-size:0.78rem; padding:0.8rem 0.6rem; }
+    body{ padding-bottom:64px; }
+  }
+
   /* ---------- PQRS ---------- */
   .pqrs{ padding:1rem 0 3rem; }
   .pqrs-layout{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:2.6rem; align-items:start; }
@@ -535,6 +549,10 @@
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Presencia en todo el territorio nacional</span>
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Soporte técnico 24/7</span>
       </div>
+      <button type="button" class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard.writeText(location.href);this.textContent='Enlace copiado';}">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-3.9M8.6 13.5l6.8 3.9"/></svg>
+        Compartir
+      </button>
     </div>
     <div class="hero-media">
       <img src="images/mascota-confianza-v3.webp" alt="Mascota de Escuela de Contratistas, un contratista con casco dando el visto bueno">
@@ -852,6 +870,11 @@
     </div>
   </div>
 </footer>
+
+<div class="sticky-cta">
+  <a href="#productos" class="btn btn-primary">Ver productos</a>
+  <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20hablar%20con%20Escuela%20de%20Contratistas" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 
 </body>
 </html>
