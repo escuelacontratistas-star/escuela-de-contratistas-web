@@ -26,7 +26,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   "name": "Escuela de Contratistas",
   "url": "https://escueladecontratistas.co/",
   "logo": "https://escueladecontratistas.co/images/logo-escuela-de-contratistas.webp",
@@ -34,6 +34,17 @@
   "email": "contacto@escueladecontratistas.co",
   "telephone": "+573143415975",
   "areaServed": "CO",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressCountry": "CO"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "sameAs": [
     "https://www.instagram.com/escuelacontratistas/",
     "https://www.facebook.com/profile.php?id=61578532108345",
