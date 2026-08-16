@@ -10,6 +10,17 @@
 
   gtag('config', 'G-ZSZ5BQLMPS');
 </script>
+<script>
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a || !a.href || typeof gtag !== 'function') return;
+    if(a.href.indexOf('wa.me') !== -1){
+      gtag('event', 'contacto_whatsapp', {event_category:'engagement', event_label:a.href});
+    } else if(a.href.indexOf('checkout.wompi.co') !== -1){
+      gtag('event', 'begin_checkout', {event_category:'ecommerce', event_label:a.href});
+    }
+  });
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Servicio de Elaboración de Presupuestos | Escuela de Contratistas</title>
