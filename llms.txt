@@ -10,6 +10,12 @@ Escuela de Contratistas no vende un solo producto: combina herramientas descarga
 - [Servicio de Elaboración de Presupuestos](https://escueladecontratistas.co/producto-servicio-presupuestos): elaboración de presupuestos técnicos a la medida, en alianza con Noventa Grados, para obra pública y privada en cualquier sector de Colombia. Desde $5.000 por ítem de APU.
 - [Elaborador de Presupuestos Completo](https://escueladecontratistas.co/producto-elaborador-presupuestos): herramienta en desarrollo (próximamente) que automatiza cantidades, APU y presupuesto final en un solo flujo, conectada con la Base de Datos de APU 2026.
 
+## Blog
+
+- [Cómo hacer un Análisis de Precios Unitarios (APU) paso a paso](https://escueladecontratistas.co/blog/como-hacer-analisis-precios-unitarios-apu): qué es un APU, sus componentes y el proceso completo para construirlo, incluido el AIU.
+- [5 errores comunes al presupuestar una obra en Colombia](https://escueladecontratistas.co/blog/errores-comunes-presupuestar-obra-colombia): los errores más frecuentes al presupuestar y cómo evitarlos.
+- [Guía de Contratación de Obra Pública en Colombia](https://escueladecontratistas.co/blog/guia-contratacion-obra-publica-colombia): resumen de la guía oficial de Colombia Compra Eficiente (fases del proceso, garantías, criterios ambientales) y por qué el presupuesto técnico es clave en la fase precontractual.
+
 ## Empresa
 
 - [Página principal](https://escueladecontratistas.co/): quiénes somos, productos, Red de Contratistas y sección de PQRS.
