@@ -8,7 +8,7 @@ Escuela de Contratistas no vende un solo producto: combina herramientas descarga
 
 - [Base de Datos de APU 2026 + Cotizador](https://escueladecontratistas.co/producto-apu-2026): más de 2.200 análisis de precios unitarios actualizados a 2026, con cotizador integrado en Excel que calcula el presupuesto a partir de las cantidades de la obra. Pago único, entrega inmediata.
 - [Servicio de Elaboración de Presupuestos](https://escueladecontratistas.co/producto-servicio-presupuestos): elaboración de presupuestos técnicos a la medida, en alianza con Noventa Grados, para obra pública y privada en cualquier sector de Colombia. Desde $5.000 por ítem de APU.
-- [Elaborador de Presupuestos Completo](https://escueladecontratistas.co/producto-elaborador-presupuestos): herramienta en desarrollo (próximamente) que automatiza cantidades, APU y presupuesto final en un solo flujo, conectada con la Base de Datos de APU 2026.
+- [Presupuestador PRO 2026](https://escueladecontratistas.co/producto-elaborador-presupuestos): Excel que genera el presupuesto de obra automáticamente, con resumen de recursos, base de datos y editor de más de 2.200 APU, especificaciones técnicas, memorias de cálculo enlazadas y programación de obra automática. $99.000, pago único.
 - [Presencia Digital para Contratistas y Constructoras](https://escueladecontratistas.co/producto-presencia-digital): implementación de página web, redes sociales, CRM y un agente de IA para atención de clientes, con estrategia de marketing digital. Paquetes desde $500.000, según el alcance.
 
 ## Blog
