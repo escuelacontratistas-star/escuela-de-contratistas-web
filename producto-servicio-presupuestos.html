@@ -315,11 +315,12 @@
   .share-btn:hover{ background:var(--bg-soft); }
   .p-related{ padding:2.4rem 0; border-top:1px solid var(--steel-light); }
   .p-related h2{ font-size:1.1rem; margin-bottom:1rem; }
-  .p-related-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+  .p-related-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
   .p-related-card{ display:block; background:#fff; border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.2rem 1.4rem; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
   .p-related-card:hover{ box-shadow:0 10px 24px rgba(32,35,43,0.08); transform:translateY(-2px); }
   .p-related-card strong{ display:block; font-size:0.98rem; margin-bottom:0.3rem; }
   .p-related-card span{ font-size:0.85rem; color:var(--steel); }
+  @media (max-width:1080px){ .p-related-grid{ grid-template-columns:1fr 1fr 1fr; } }
   @media (max-width:900px){ .p-related-grid{ grid-template-columns:1fr 1fr; } }
   @media (max-width:600px){ .p-related-grid{ grid-template-columns:1fr; } }
   .p-faq{ padding:3rem 0 3.5rem; }
@@ -684,6 +685,10 @@
       <a href="producto-presencia-digital.html" class="p-related-card">
         <strong>Presencia Digital para Contratistas</strong>
         <span>Página web, redes sociales, CRM y agente de IA para tu negocio.</span>
+      </a>
+      <a href="producto-polizas-seguros.html" class="p-related-card">
+        <strong>Pólizas y Garantías para Contratistas</strong>
+        <span>Cumplimiento, todo riesgo, RCE y ARL, con Grupo A3 Seguros.</span>
       </a>
     </div>
   </div>
