@@ -77,9 +77,14 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {"@type": "Question", "name": "¿Necesito saber usar Excel avanzado?", "acceptedAnswer": {"@type": "Answer", "text": "No. Todo el trabajo de diagramación lo hace el archivo. Tú solo llenas datos en celdas normales y haces clic en botones — el archivo calcula el zoom de impresión y acomoda las fotos por ti."}},
     {"@type": "Question", "name": "¿Cómo recibo la plantilla?", "acceptedAnswer": {"@type": "Answer", "text": "Después del pago, recibes el archivo de Excel por WhatsApp o correo, listo para usar."}},
-    {"@type": "Question", "name": "¿En qué programa funciona?", "acceptedAnswer": {"@type": "Answer", "text": "Es un archivo de Excel con macros (.xlsm). Funciona en Excel de escritorio (Windows); al tener macros, no es compatible con Google Sheets ni con Excel Online."}},
+    {"@type": "Question", "name": "¿En qué programa funciona?", "acceptedAnswer": {"@type": "Answer", "text": "Es un libro de Excel macro-habilitado (.xlsm). Funciona en Excel de escritorio en Windows, versión 2016 en adelante o Microsoft 365, con macros habilitadas. No requiere internet ni complementos adicionales."}},
+    {"@type": "Question", "name": "¿Funciona en Excel para Mac o en el celular?", "acceptedAnswer": {"@type": "Answer", "text": "No está garantizado. Fue diseñada y probada para Excel de escritorio en Windows; las macros en VBA tienen soporte limitado o nulo en Excel Online, Google Sheets y Excel para Mac."}},
     {"@type": "Question", "name": "¿Puedo elegir cuántas fotos por página?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Puedes configurar 2, 4, 6 u 8 fotos por página, en tamaño A4, Carta u Oficio, vertical u horizontal."}},
+    {"@type": "Question", "name": "¿Qué pasa si cambio el tamaño de hoja o las fotos por página después de cargar las fotos?", "acceptedAnswer": {"@type": "Answer", "text": "El botón \"Aplicar Config. Página\" ajusta el informe ya generado a la nueva configuración, sin tener que volver a cargar las fotos."}},
+    {"@type": "Question", "name": "¿Qué formatos de imagen acepta?", "acceptedAnswer": {"@type": "Answer", "text": "JPG, JPEG, PNG y BMP."}},
+    {"@type": "Question", "name": "¿Puedo usarla en varios proyectos?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, sin límite. Puedes guardar una copia del archivo por proyecto, o limpiar el registro entre un proyecto y otro."}},
     {"@type": "Question", "name": "¿Tienen garantía de devolución?", "acceptedAnswer": {"@type": "Answer", "text": "Al ser un archivo digital que se entrega de inmediato, no manejamos devoluciones de dinero. Lo que sí tienes es soporte directo y real: si te queda alguna duda o algo no te funciona, nos escribes por WhatsApp y te ayudamos hasta resolverlo."}}
   ]
 }
@@ -473,7 +478,7 @@
     <div>
       <span class="eyebrow">Disponible</span>
       <h1>El registro fotográfico de tu obra, listo para imprimir en minutos</h1>
-      <p class="lead">Plantilla de Excel que genera automáticamente las páginas de tu registro fotográfico: cargas las fotos y el archivo arma el reporte completo, con portada, firmas y numeración, listo para imprimir o exportar a PDF.</p>
+      <p class="lead">Todo contrato de obra exige entregar informes fotográficos de avance. Esta plantilla de Excel con macros convierte esa tarea en tres clics: cargas las fotos, completas los datos del proyecto una sola vez, y el archivo arma solo el informe, numerado, con firmas y listo para imprimir o exportar a PDF.</p>
 
       <div class="price-block">
         <span class="price-new">$25.000</span>
@@ -500,10 +505,10 @@
   <div class="tldr">
     <span class="tldr-label">En resumen</span>
     <ul>
-      <li>Genera tu registro fotográfico de obra automáticamente, listo para imprimir.</li>
-      <li>Configurable en tamaño de papel (A4, Carta u Oficio), orientación y fotos por página (2, 4, 6 u 8).</li>
-      <li>Incluye portada con tu logo, datos del proyecto y hasta 3 bloques de firma.</li>
-      <li>Pago único de $25.000.</li>
+      <li>Pasa de horas a minutos armando el informe fotográfico de tu obra.</li>
+      <li>Configurable en tamaño de hoja (A4, Carta u Oficio), orientación y fotos por página (2, 4, 6 u 8).</li>
+      <li>Incluye datos del proyecto, logo y hasta 3 firmas, repetidos automáticamente en cada página.</li>
+      <li>Reutilizable sin límite en todos tus proyectos futuros. Pago único de $25.000.</li>
     </ul>
   </div>
   <button type="button" class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard.writeText(location.href);this.textContent='Enlace copiado';}" style="margin-top:1rem;">
@@ -524,14 +529,53 @@
   <div class="wrap">
     <h2>Qué incluye</h2>
     <ul class="p-feature-list">
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Carga múltiples fotos de una vez y genera las páginas automáticamente</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Configurable: 2, 4, 6 u 8 fotos por página</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Tamaño de papel A4, Carta u Oficio, en vertical u horizontal</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Portada con tu logo y datos del proyecto (contrato, contratista, interventoría, supervisión)</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Hasta 3 bloques de firma (nombre, cargo y entidad)</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Numeración, descripción y ubicación editables por foto</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Botón para actualizar el registro sin tener que volver a cargar las fotos</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Carga múltiple de fotos con un clic (JPG, JPEG, PNG, BMP)</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Acomoda automáticamente 2, 4, 6 u 8 fotos por página</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Tamaño de hoja A4, Carta u Oficio, en vertical u horizontal</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Numeración automática de fotos, con número inicial editable</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Etiqueta de foto personalizable (por defecto "IMAGEN")</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Encabezado con los datos del proyecto (contrato, contratista, interventoría, supervisión, objeto del contrato) que se repite automáticamente en cada página</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Espacio para 3 firmas (imagen, nombre, cargo y entidad), pensadas para residente de obra, interventoría y supervisión</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Botón "Actualizar Registro" para cambiar etiqueta o numeración sin recargar las fotos</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Botón "Aplicar Config. Página" para ajustar tamaño u orientación al informe ya generado</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Inserción del logo del contratista, ajustado automáticamente a su recuadro</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Motor interno que calcula el zoom de impresión para que ninguna foto quede cortada entre páginas</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Reutilizable sin límite en todos tus proyectos futuros</li>
     </ul>
+  </div>
+</section>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Para quién es</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
+<section class="p-subsection">
+  <div class="wrap">
+    <h2>Para quién es</h2>
+    <p>Contratistas independientes, residentes de obra, constructoras pequeñas y medianas, e interventorías que deben entregar informes fotográficos periódicos como parte de sus obligaciones contractuales — con una entidad pública, una interventoría o un cliente privado.</p>
+  </div>
+</section>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Requisitos técnicos</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
+<section class="p-subsection">
+  <div class="wrap">
+    <h2>Requisitos técnicos</h2>
+    <ul class="p-feature-list">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Excel de escritorio en Windows, versión 2016 en adelante o Microsoft 365, con macros habilitadas</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>No requiere internet ni complementos adicionales — funciona 100% local</li>
+    </ul>
+    <p style="margin-top:1.2rem; font-size:0.92rem;">No está garantizada de forma confiable en Excel Online, Google Sheets ni Excel para Mac — las macros en VBA tienen soporte limitado o nulo en esos entornos. Fue diseñada y probada para Excel de escritorio en Windows.</p>
   </div>
 </section>
 
@@ -547,16 +591,36 @@
   <div class="wrap">
     <div class="faq-list">
       <details open>
+        <summary>¿Necesito saber usar Excel avanzado?</summary>
+        <p>No. Todo el trabajo de diagramación lo hace el archivo. Tú solo llenas datos en celdas normales y haces clic en botones — el archivo calcula el zoom de impresión y acomoda las fotos por ti.</p>
+      </details>
+      <details>
         <summary>¿Cómo recibo la plantilla?</summary>
         <p>Después del pago, recibes el archivo de Excel por WhatsApp o correo, listo para usar.</p>
       </details>
       <details>
         <summary>¿En qué programa funciona?</summary>
-        <p>Es un archivo de Excel con macros (.xlsm). Funciona en Excel de escritorio (Windows); al tener macros, no es compatible con Google Sheets ni con Excel Online.</p>
+        <p>Es un libro de Excel macro-habilitado (.xlsm). Funciona en Excel de escritorio en Windows, versión 2016 en adelante o Microsoft 365, con macros habilitadas. No requiere internet ni complementos adicionales.</p>
+      </details>
+      <details>
+        <summary>¿Funciona en Excel para Mac o en el celular?</summary>
+        <p>No está garantizado. Fue diseñada y probada para Excel de escritorio en Windows; las macros en VBA tienen soporte limitado o nulo en Excel Online, Google Sheets y Excel para Mac.</p>
       </details>
       <details>
         <summary>¿Puedo elegir cuántas fotos por página?</summary>
         <p>Sí. Puedes configurar 2, 4, 6 u 8 fotos por página, en tamaño A4, Carta u Oficio, vertical u horizontal.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si cambio el tamaño de hoja o las fotos por página después de cargar las fotos?</summary>
+        <p>El botón "Aplicar Config. Página" ajusta el informe ya generado a la nueva configuración, sin tener que volver a cargar las fotos.</p>
+      </details>
+      <details>
+        <summary>¿Qué formatos de imagen acepta?</summary>
+        <p>JPG, JPEG, PNG y BMP.</p>
+      </details>
+      <details>
+        <summary>¿Puedo usarla en varios proyectos?</summary>
+        <p>Sí, sin límite. Puedes guardar una copia del archivo por proyecto, o limpiar el registro entre un proyecto y otro.</p>
       </details>
       <details>
         <summary>¿Tienen garantía de devolución?</summary>
