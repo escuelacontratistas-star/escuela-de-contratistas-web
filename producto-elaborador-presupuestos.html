@@ -366,6 +366,14 @@
   .p-subsection h2{ font-size:1.4rem; margin-bottom:0.9rem; }
   .p-subsection p{ color:var(--steel); margin-bottom:0.8rem; }
 
+  .p-gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin:0; }
+  .p-gallery-item{ display:block; border:1px solid var(--steel-light); border-radius:var(--radius); overflow:hidden; background:#fff; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
+  .p-gallery-item:hover{ box-shadow:0 10px 24px rgba(32,35,43,0.1); transform:translateY(-2px); }
+  .p-gallery-item img{ width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top left; display:block; background:var(--bg-soft); }
+  .p-gallery-item span{ display:block; padding:0.8rem 1rem; font-size:0.88rem; font-weight:600; }
+  @media (max-width:900px){ .p-gallery{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:600px){ .p-gallery{ grid-template-columns:1fr; } }
+
   .p-cta-band{
     background:var(--ink); color:var(--cream); padding:2.6rem 0; text-align:center;
   }
@@ -541,6 +549,34 @@
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Fórmulas protegidas contra edición accidental, hasta 100 actividades por proyecto</li>
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Modo avanzado para editar la base de datos técnica cuando lo necesites</li>
     </ul>
+  </div>
+</section>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Así se ve por dentro</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
+<section class="p-subsection">
+  <div class="wrap">
+    <h2>Así se ve por dentro</h2>
+    <div class="p-gallery">
+      <a href="images/presupuestador-pro-apu.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/presupuestador-pro-apu.png" alt="Base de datos de análisis de precios unitarios (APU) de Presupuestador PRO 2026, con desglose de materiales, equipo y mano de obra" loading="lazy">
+        <span>Base de datos de APU, con desglose de materiales, equipo y mano de obra</span>
+      </a>
+      <a href="images/presupuestador-pro-memorias.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/presupuestador-pro-memorias.png" alt="Memorias de cantidad de Presupuestador PRO 2026, con el cálculo de largo por ancho por alto por veces para cada actividad" loading="lazy">
+        <span>Memorias de cantidad: largo × ancho × alto × veces, por actividad</span>
+      </a>
+      <a href="images/presupuestador-pro-insumos.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/presupuestador-pro-insumos.png" alt="Resumen de insumos de Presupuestador PRO 2026, generado automáticamente a partir del presupuesto" loading="lazy">
+        <span>Resumen de insumos, generado automáticamente con un clic</span>
+      </a>
+    </div>
   </div>
 </section>
 
