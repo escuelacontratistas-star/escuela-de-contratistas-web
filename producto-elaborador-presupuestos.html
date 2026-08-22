@@ -86,7 +86,8 @@
     {"@type": "Question", "name": "¿Puedo dañar las fórmulas sin querer?", "acceptedAnswer": {"@type": "Answer", "text": "No. Las fórmulas quedan protegidas contra edición accidental; solo son editables las celdas que le corresponde llenar al usuario, como la selección de actividades, medidas y fechas."}},
     {"@type": "Question", "name": "¿Qué entrego al final?", "acceptedAnswer": {"@type": "Answer", "text": "Presupuesto, análisis de precios unitarios, especificaciones técnicas, cronograma de obra y resumen de insumos. Los documentos se exportan en PDF con un clic."}},
     {"@type": "Question", "name": "¿Aplica para cualquier tipo de obra?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Cubre 28 categorías típicas de obra civil, urbanización, redes e instalaciones, y acabados. Toda la base de precios es editable, así que puedes ajustarla a tus precios regionales o agregar precios propios de cualquier especialidad."}},
-    {"@type": "Question", "name": "¿Tienen garantía de devolución?", "acceptedAnswer": {"@type": "Answer", "text": "Al ser un archivo digital que se entrega de inmediato, no manejamos devoluciones de dinero. Lo que sí tienes es soporte directo y real: si te queda alguna duda o algo no te funciona, nos escribes por WhatsApp y te ayudamos hasta resolverlo."}}
+    {"@type": "Question", "name": "¿Tienen garantía de devolución?", "acceptedAnswer": {"@type": "Answer", "text": "Al ser un archivo digital que se entrega de inmediato, no manejamos devoluciones de dinero. Lo que sí tienes es soporte directo y real: si te queda alguna duda o algo no te funciona, nos escribes por WhatsApp y te ayudamos hasta resolverlo."}},
+    {"@type": "Question", "name": "¿Tienen manual de uso?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El manual completo explica qué hace cada una de las 13 hojas del archivo, cada botón del menú y el flujo de trabajo recomendado, de principio a fin. Puedes consultarlo aquí: escueladecontratistas.co/manual-presupuestador-pro-2026."}}
   ]
 }
 </script>
@@ -368,6 +369,29 @@
   .p-subsection h2{ font-size:1.4rem; margin-bottom:0.9rem; }
   .p-subsection p{ color:var(--steel); margin-bottom:0.8rem; }
 
+  .p-manual-banner{
+    display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap;
+    background:linear-gradient(135deg, var(--grad-3), var(--grad-1));
+    border:1px solid var(--accent-line, #EFC7A6);
+    border-radius:var(--radius);
+    padding:1.6rem 1.8rem;
+    text-decoration:none;
+    transition:box-shadow .15s, transform .15s;
+  }
+  .p-manual-banner:hover{ box-shadow:0 14px 30px rgba(217,117,10,0.16); transform:translateY(-2px); }
+  .p-manual-banner-icon{
+    width:52px; height:52px; flex-shrink:0; border-radius:14px;
+    background:#fff; color:var(--orange-deep);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 12px rgba(217,117,10,0.15);
+  }
+  .p-manual-banner-body{ flex:1; min-width:220px; }
+  .p-manual-banner-body .eyebrow{ margin-bottom:0.3rem; }
+  .p-manual-banner-body h3{ font-size:1.15rem; margin:0 0 0.35rem; }
+  .p-manual-banner-body p{ color:var(--ink); opacity:0.75; margin:0; font-size:0.92rem; }
+  .p-manual-banner-cta{ flex-shrink:0; }
+  @media (max-width:600px){ .p-manual-banner{ padding:1.4rem; } .p-manual-banner-cta{ width:100%; justify-content:center; } }
+
   .p-gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin:0; }
   .p-gallery-item{ display:block; border:1px solid var(--steel-light); border-radius:var(--radius); overflow:hidden; background:#fff; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
   .p-gallery-item:hover{ box-shadow:0 10px 24px rgba(32,35,43,0.1); transform:translateY(-2px); }
@@ -583,6 +607,22 @@
   </div>
 </section>
 
+<section class="p-subsection">
+  <div class="wrap">
+    <a href="manual-presupuestador-pro-2026.html" class="p-manual-banner">
+      <div class="p-manual-banner-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17.5H6.5A2.5 2.5 0 0 0 4 22V4.5Z"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>
+      </div>
+      <div class="p-manual-banner-body">
+        <span class="eyebrow">Documentación completa</span>
+        <h3>Manual de uso de Presupuestador PRO 2026</h3>
+        <p>Qué hace cada una de las 13 hojas del archivo, cada botón del menú y el flujo de trabajo recomendado, de principio a fin.</p>
+      </div>
+      <span class="btn btn-primary p-manual-banner-cta">Ver manual completo →</span>
+    </a>
+  </div>
+</section>
+
 <div class="cota-section">
   <div class="cota">
     <div class="cota-line left"></div>
@@ -669,6 +709,10 @@
         <summary>¿Tienen garantía de devolución?</summary>
         <p>Al ser un archivo digital que se entrega de inmediato, no manejamos devoluciones de dinero. Lo que sí tienes es soporte directo y real: si te queda alguna duda o algo no te funciona, nos escribes por WhatsApp y te ayudamos hasta resolverlo.</p>
       </details>
+      <details>
+        <summary>¿Tienen manual de uso?</summary>
+        <p>Sí. El <a href="manual-presupuestador-pro-2026.html" style="color:var(--orange-deep); font-weight:600;">manual completo</a> explica qué hace cada una de las 13 hojas del archivo, cada botón del menú y el flujo de trabajo recomendado, de principio a fin.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -686,6 +730,10 @@
   <div class="wrap">
     <h2>También te puede interesar</h2>
     <div class="p-related-grid">
+      <a href="manual-presupuestador-pro-2026.html" class="p-related-card">
+        <strong>Manual de uso de Presupuestador PRO 2026</strong>
+        <span>Qué hace cada hoja, cada botón del menú y el flujo de trabajo recomendado.</span>
+      </a>
       <a href="producto-apu-2026.html" class="p-related-card">
         <strong>Base de Datos de APU 2026 + Cotizador</strong>
         <span>Más de 2.200 APU con cotizador integrado en Excel, disponible ahora.</span>

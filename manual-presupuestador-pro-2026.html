@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSZ5BQLMPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZSZ5BQLMPS');
+</script>
+<script>
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a || !a.href || typeof gtag !== 'function') return;
+    if(a.href.indexOf('wa.me') !== -1){
+      gtag('event', 'contacto_whatsapp', {event_category:'engagement', event_label:a.href});
+    } else if(a.href.indexOf('checkout.wompi.co') !== -1){
+      gtag('event', 'begin_checkout', {event_category:'ecommerce', event_label:a.href});
+    }
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Uso — Presupuestador PRO 2026 | Escuela de Contratistas</title>
+<meta name="description" content="Manual completo de Presupuestador PRO 2026: qué hace cada hoja, cada botón del menú y el flujo de trabajo recomendado para armar tu presupuesto de principio a fin.">
+<link rel="canonical" href="https://escueladecontratistas.co/manual-presupuestador-pro-2026">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon.png" sizes="480x480">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Escuela de Contratistas">
+<meta property="og:locale" content="es_CO">
+<meta property="og:url" content="https://escueladecontratistas.co/manual-presupuestador-pro-2026">
+<meta property="og:title" content="Manual de Uso — Presupuestador PRO 2026 | Escuela de Contratistas">
+<meta property="og:description" content="Manual completo de Presupuestador PRO 2026: qué hace cada hoja, cada botón del menú y el flujo de trabajo recomendado para armar tu presupuesto de principio a fin.">
+<meta property="og:image" content="https://escueladecontratistas.co/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manual de Uso — Presupuestador PRO 2026 | Escuela de Contratistas">
+<meta name="twitter:description" content="Manual completo de Presupuestador PRO 2026: qué hace cada hoja, cada botón del menú y el flujo de trabajo recomendado para armar tu presupuesto de principio a fin.">
+<meta name="twitter:image" content="https://escueladecontratistas.co/images/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "name": "Escuela de Contratistas",
+  "url": "https://escueladecontratistas.co/",
+  "logo": "https://escueladecontratistas.co/images/logo-escuela-de-contratistas.webp",
+  "image": "https://escueladecontratistas.co/images/og-image.jpg",
+  "email": "contacto@escueladecontratistas.co",
+  "telephone": "+573143415975",
+  "areaServed": "CO",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressCountry": "CO"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://www.instagram.com/escuelacontratistas/",
+    "https://www.facebook.com/profile.php?id=61578532108345",
+    "https://www.youtube.com/@EscuelaContratistas"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Manual de Uso — Presupuestador PRO 2026",
+  "description": "Guía completa del archivo de presupuestos, programación y análisis de precios unitarios de Escuela de Contratistas: qué hace cada hoja, cada botón, y el flujo de trabajo recomendado de principio a fin.",
+  "inLanguage": "es-CO",
+  "url": "https://escueladecontratistas.co/manual-presupuestador-pro-2026",
+  "about": {
+    "@type": "Product",
+    "name": "Presupuestador PRO 2026",
+    "url": "https://escueladecontratistas.co/producto-elaborador-presupuestos"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Escuela de Contratistas",
+    "url": "https://escueladecontratistas.co/"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#20232B;
+    --text:#20232B;
+    --orange:#F98E1C;
+    --orange-deep:#D9750A;
+    --cream:#F5EFE2;
+    --paper:#FFFFFF;
+    --bg-soft:#F6F5FB;
+    --steel:#6B7280;
+    --steel-light:#E4E3EC;
+    --white:#FFFFFF;
+    --max:1180px;
+    --radius:22px;
+    --radius-pill:999px;
+    --grad-1:#FFDCC0;
+    --grad-2:#FFC89B;
+    --grad-3:#FFEFD6;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    margin:0 0 0.5em 0;
+    line-height:1.15;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 1.5rem;}
+  .eyebrow{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:0.8rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--orange-deep);
+    margin-bottom:0.6rem;
+    display:inline-block;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.94rem;
+    text-decoration:none;
+    padding:0.85rem 1.7rem;
+    border-radius:var(--radius-pill);
+    border:1.5px solid transparent;
+    transition:transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .btn-primary{ background:var(--orange); color:#fff; }
+  .btn-primary:hover{ background:var(--orange-deep); transform:translateY(-2px); box-shadow:0 10px 24px rgba(217,117,10,0.28);}
+  .btn-dark{ background:var(--ink); color:#fff; }
+  .btn-dark:hover{ background:#000; transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,0.22);}
+  .btn-outline{ background:#fff; color:var(--ink); border-color:var(--steel-light);}
+  .btn-outline:hover{ background:var(--bg-soft); transform:translateY(-2px);}
+  .btn-outline-dark{ background:transparent; color:#fff; border-color:rgba(255,255,255,0.55);}
+  .btn-outline-dark:hover{ background:rgba(255,255,255,0.12); transform:translateY(-2px);}
+  .btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:3px solid var(--orange-deep); outline-offset:2px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--steel-light);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0.7rem 1.5rem;
+    max-width:var(--max); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:0.7rem; text-decoration:none; color:var(--ink);}
+  .brand img{height:44px; width:auto;}
+  .brand-name{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    line-height:1.2;
+    color:var(--ink);
+  }
+  .flag-co{ border-radius:2px; flex-shrink:0; }
+  .nav-links{
+    display:flex; align-items:center; gap:1.8rem;
+    list-style:none; margin:0; padding:0;
+  }
+  .nav-links a{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:0.9rem;
+    font-family:'Inter', sans-serif;
+    font-weight:500;
+    opacity:0.75;
+    transition:opacity 0.15s, color 0.15s;
+  }
+  .nav-links a:hover{ opacity:1; color:var(--orange-deep);}
+  .nav-cta{
+    background:var(--orange); color:#fff !important; opacity:1 !important;
+    padding:0.55rem 1.2rem; border-radius:var(--radius-pill);
+  }
+  .nav-cta:hover{ background:var(--orange-deep) !important; color:#fff !important;}
+  .burger{
+    display:none; background:none; border:none; color:var(--ink); font-size:1.6rem; cursor:pointer;
+  }
+  #nav-toggle{ display:none; }
+
+  @media (max-width: 860px){
+    .burger{display:block;}
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0;
+      background:#fff;
+      flex-direction:column; align-items:flex-start;
+      padding:1.2rem 1.5rem 1.5rem;
+      gap:1.1rem;
+      display:none;
+      border-bottom:1px solid var(--steel-light);
+    }
+    #nav-toggle:checked ~ .nav-links{display:flex;}
+  }
+
+  /* ---------- COTA / dimension-line divider (signature element) ---------- */
+  .cota{
+    display:flex; align-items:center; gap:1rem;
+    max-width:var(--max); margin:0 auto; padding:0 1.5rem;
+  }
+  .cota-line{ flex:1; height:1px; background:var(--steel-light); position:relative; }
+  .cota-line::before{
+    content:''; position:absolute; top:-5px; width:1px; height:11px; background:var(--steel-light);
+  }
+  .cota-line.left::before{ right:0; }
+  .cota-line.right::before{ left:0; }
+  .cota-label{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.75rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--steel);
+    white-space:nowrap;
+  }
+  .cota-section{ padding:2.6rem 0; }
+
+  section{ scroll-margin-top:80px; }
+
+  .social-icon{ color:var(--cream); opacity:0.85; transition:opacity 0.15s, color 0.15s; display:inline-flex; }
+  .social-icon:hover{ opacity:1; color:var(--orange); }
+
+  /* ---------- SOCIAL RAIL (barra lateral fija) ---------- */
+  .social-rail{
+    position:fixed; left:1.4rem; top:50%; transform:translateY(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:1.1rem;
+    z-index:90;
+  }
+  .social-rail a{ color:var(--steel); display:inline-flex; transition:color 0.15s, transform 0.15s; }
+  .social-rail a:hover{ color:var(--orange-deep); transform:translateY(-2px); }
+  .social-rail-line{ width:1px; height:56px; background:var(--steel-light); margin-top:0.3rem; }
+  @media (max-width:1150px){ .social-rail{ display:none; } }
+
+  .breadcrumb{ padding:1.4rem 0 0; font-family:'Inter', sans-serif; font-size:0.85rem; }
+  .breadcrumb a{ color:var(--steel); text-decoration:none; }
+  .breadcrumb a:hover{ color:var(--orange-deep); }
+
+  .p-cta-band{
+    background:var(--ink); color:var(--cream); padding:2.6rem 0; text-align:center;
+  }
+  .p-cta-band h2{ color:#fff; font-size:1.5rem; margin-bottom:0.6rem; font-family:'Inter', sans-serif; }
+  .p-cta-band p{ color:var(--steel-light); margin-bottom:1.4rem; }
+  .p-cta-band .btn{ margin:0.3rem 0.4rem; }
+
+  .p-related{ padding:3rem 0; border-top:1px solid var(--steel-light); }
+  .p-related h2{ font-size:1.1rem; margin-bottom:1rem; }
+  .p-related-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+  .p-related-card{ display:block; background:#fff; border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.2rem 1.4rem; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
+  .p-related-card:hover{ box-shadow:0 10px 24px rgba(32,35,43,0.08); transform:translateY(-2px); }
+  .p-related-card strong{ display:block; font-size:0.98rem; margin-bottom:0.3rem; }
+  .p-related-card span{ font-size:0.85rem; color:var(--steel); }
+  @media (max-width:900px){ .p-related-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:600px){ .p-related-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background:var(--ink); color:var(--steel-light); padding:3rem 0 1.6rem; }
+  .foot-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:2rem; padding-bottom:2rem; border-bottom:1px solid #383B45; }
+  .foot-brand{ display:flex; align-items:center; gap:0.7rem; }
+  .foot-brand img{ height:38px; }
+  .foot-brand span{ font-family:'Inter', sans-serif; font-weight:700; color:#fff; font-size:0.95rem; }
+  .foot-cta p{ margin:0 0 0.8rem; font-size:0.9rem; }
+  .foot-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.6rem;
+    padding-top:1.4rem; font-size:0.78rem; font-family:'Inter', sans-serif; color:var(--steel-light); opacity:0.7;
+  }
+
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .sticky-cta{ display:none; }
+  @media (max-width:760px){
+    .sticky-cta{
+      display:flex; gap:0.6rem; position:fixed; left:0; right:0; bottom:0; z-index:200;
+      background:#fff; padding:0.7rem 0.9rem; border-top:1px solid var(--steel-light);
+      box-shadow:0 -4px 14px rgba(0,0,0,0.1);
+    }
+    .sticky-cta .btn{ flex:1; justify-content:center; font-size:0.78rem; padding:0.8rem 0.6rem; }
+    body{ padding-bottom:64px; }
+  }
+
+  /* ==================================================================
+     MANUAL DOC — contenido del manual, todo escopado bajo .manual-doc
+     Tipografía y maquetación del documento original; solo se ajustaron
+     los colores para usar la paleta de marca (naranja) en vez de navy/azul.
+     ================================================================== */
+  .manual-doc{
+    background:var(--bg-soft);
+    font-family:"IBM Plex Sans", system-ui, sans-serif;
+    font-size:15.5px;
+    line-height:1.65;
+    color:var(--ink);
+    padding-bottom:8px;
+  }
+  .manual-doc h1, .manual-doc h2, .manual-doc h3{
+    font-family:"Source Serif 4", Georgia, serif;
+    font-weight:600;
+    letter-spacing:normal;
+    text-transform:none;
+    color:var(--ink);
+    text-wrap:balance;
+    line-height:1.2;
+    margin:0;
+  }
+  .manual-doc-wrap{ max-width:900px; margin:0 auto; padding:0 28px 60px; }
+
+  /* ---------- portada ---------- */
+  .manual-doc .cover{
+    background:linear-gradient(155deg, var(--ink) 0%, var(--orange-deep) 100%);
+    color:#fff;
+    padding:56px 28px 44px;
+    margin-bottom:8px;
+  }
+  .manual-doc .cover-inner{ max-width:900px; margin:0 auto; }
+  .manual-doc .cover .eyebrow{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    opacity:.75;
+    margin:0 0 14px;
+    color:#fff;
+  }
+  .manual-doc .cover h1{
+    color:#fff;
+    font-size:2.5rem;
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  .manual-doc .cover p.sub{
+    font-size:1.05rem;
+    max-width:56ch;
+    opacity:.92;
+    margin:0 0 28px;
+    color:#fff;
+  }
+  .manual-doc .cover .meta{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    font-size:13px;
+    opacity:.85;
+    border-top:1px solid rgba(255,255,255,.25);
+    padding-top:18px;
+  }
+  .manual-doc .cover .meta div b{ display:block; font-weight:600; opacity:1; color:#fff; font-size:13.5px; margin-bottom:2px; }
+
+  /* ---------- toc ---------- */
+  .manual-doc .toc{
+    background:var(--paper);
+    border:1px solid var(--steel-light);
+    border-radius:10px;
+    padding:20px 24px;
+    margin:-32px 0 40px;
+    box-shadow:0 1px 2px rgba(32,35,43,.06), 0 8px 24px -12px rgba(32,35,43,.15);
+    position:relative;
+  }
+  .manual-doc .toc h2{ font-size:.95rem; font-family:"IBM Plex Sans"; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--orange-deep); margin:0 0 12px; }
+  .manual-doc .toc ol{ margin:0; padding:0; list-style:none; columns:2; column-gap:32px; }
+  .manual-doc .toc li{ break-inside:avoid; margin-bottom:6px; }
+  .manual-doc .toc a{ color:var(--steel); text-decoration:none; font-size:14px; display:flex; gap:8px; }
+  .manual-doc .toc a:hover{ color:var(--orange-deep); }
+  .manual-doc .toc a .n{ font-family:"IBM Plex Mono"; color:var(--steel); opacity:0.7; font-size:12.5px; min-width:1.4em; }
+
+  /* ---------- sections ---------- */
+  .manual-doc section{ margin:48px 0; scroll-margin-top:80px; }
+  .manual-doc section.intro{ margin-top:0; }
+  .manual-doc .section-num{ font-family:"IBM Plex Mono", monospace; color:var(--orange-deep); font-size:13px; font-weight:500; letter-spacing:.08em; }
+  .manual-doc h2{ font-size:1.5rem; font-weight:600; margin:2px 0 6px; }
+  .manual-doc h2 .section-num{ display:block; margin-bottom:6px; }
+  .manual-doc .lede{ color:var(--steel); font-size:1.02rem; max-width:66ch; margin:0 0 22px; }
+  .manual-doc h3{ font-size:1.1rem; font-weight:600; margin:26px 0 10px; color:var(--orange-deep); }
+  .manual-doc p{ margin:0 0 14px; max-width:70ch; }
+  .manual-doc strong{ color:var(--ink); font-weight:600; }
+  .manual-doc a{ color:var(--orange-deep); }
+  .manual-doc ul, .manual-doc ol{ padding-left:1.3em; margin:0 0 16px; max-width:68ch; }
+  .manual-doc li{ margin-bottom:6px; }
+  .manual-doc code{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.86em;
+    background:var(--grad-3);
+    border:1px solid var(--steel-light);
+    padding:1px 6px;
+    border-radius:5px;
+    color:var(--orange-deep);
+  }
+
+  /* ---------- callouts ---------- */
+  .manual-doc .callout{ border-radius:10px; padding:16px 18px; margin:20px 0; display:flex; gap:12px; font-size:14.5px; max-width:70ch; }
+  .manual-doc .callout .icon{ font-size:16px; line-height:1.5; flex-shrink:0; }
+  .manual-doc .callout p{ margin:0; }
+  .manual-doc .callout p + p{ margin-top:8px; }
+  .manual-doc .callout.tip{ background:var(--grad-3); border:1px solid var(--steel-light); }
+  .manual-doc .callout.tip .icon{ color:var(--orange-deep); }
+  .manual-doc .callout.warn{ background:#fbf1de; border:1px solid #e7cd9c; }
+  .manual-doc .callout.warn .icon, .manual-doc .callout.warn strong{ color:#a15c07; }
+  .manual-doc .callout.ok{ background:#e8f3ec; border:1px solid #cfe6d8; }
+  .manual-doc .callout.ok .icon, .manual-doc .callout.ok strong{ color:#1f6d4a; }
+
+  /* ---------- sheet map ---------- */
+  .manual-doc .sheetgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; margin:20px 0; }
+  .manual-doc .sheetcard{ border:1px solid var(--steel-light); background:var(--paper); border-radius:10px; padding:14px 16px; box-shadow:0 1px 2px rgba(32,35,43,.06); }
+  .manual-doc .sheetcard .tag{
+    font-family:"IBM Plex Mono"; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--orange-deep); background:var(--grad-3); border:1px solid var(--steel-light);
+    display:inline-block; padding:2px 7px; border-radius:5px; margin-bottom:8px;
+  }
+  .manual-doc .sheetcard .tag.oculta{ color:var(--steel); background:var(--bg-soft); }
+  .manual-doc .sheetcard h4{ margin:0 0 4px; font-size:14.5px; font-weight:600; font-family:"IBM Plex Sans"; color:var(--ink); }
+  .manual-doc .sheetcard p{ margin:0; font-size:13px; color:var(--steel); }
+
+  /* ---------- flow steps ---------- */
+  .manual-doc .flow{ counter-reset:step; margin:24px 0; }
+  .manual-doc .step{ display:grid; grid-template-columns:40px 1fr; gap:16px; padding:0 0 22px; position:relative; }
+  .manual-doc .step:not(:last-child)::before{
+    content:""; position:absolute; left:19px; top:38px; bottom:0; width:1px; background:var(--steel-light);
+  }
+  .manual-doc .step .num{
+    counter-increment:step;
+    width:38px; height:38px; border-radius:50%;
+    background:var(--orange-deep); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-family:"IBM Plex Mono"; font-weight:500; font-size:14px;
+    flex-shrink:0;
+  }
+  .manual-doc .step .num::before{ content:counter(step); }
+  .manual-doc .step h4{ margin:6px 0 4px; font-size:15.5px; font-weight:600; font-family:"IBM Plex Sans"; color:var(--ink); }
+  .manual-doc .step p{ font-size:14px; color:var(--steel); margin:0; }
+
+  /* ---------- button chip ---------- */
+  .manual-doc .btnchip{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--orange-deep); color:#fff;
+    font-family:"IBM Plex Sans"; font-weight:600; font-size:12.5px;
+    padding:5px 12px; border-radius:6px;
+    white-space:nowrap;
+  }
+
+  /* ---------- button table ---------- */
+  .manual-doc .btnlist{ display:flex; flex-direction:column; gap:0; margin:20px 0; border:1px solid var(--steel-light); border-radius:10px; overflow:hidden; background:var(--paper); }
+  .manual-doc .btnrow{ display:grid; grid-template-columns:230px 1fr; gap:18px; padding:16px 18px; border-bottom:1px solid var(--steel-light); align-items:start; }
+  .manual-doc .btnrow:last-child{ border-bottom:none; }
+  .manual-doc .btnrow .label{ padding-top:2px; }
+  .manual-doc .btnrow p{ margin:0; font-size:13.8px; color:var(--steel); }
+  .manual-doc .btnrow .where{ display:block; margin-top:6px; font-size:12px; color:var(--steel); opacity:0.75; font-family:"IBM Plex Mono"; }
+
+  /* ---------- table ---------- */
+  .manual-doc .tblwrap{ overflow-x:auto; margin:20px 0; border:1px solid var(--steel-light); border-radius:10px; }
+  .manual-doc table{ border-collapse:collapse; width:100%; font-size:13.5px; background:var(--paper); }
+  .manual-doc th{
+    background:var(--orange-deep); color:#fff; text-align:left;
+    font-weight:600; font-size:12px; letter-spacing:.02em;
+    padding:10px 14px; white-space:nowrap;
+    font-family:"IBM Plex Sans";
+  }
+  .manual-doc td{ padding:10px 14px; border-top:1px solid var(--steel-light); color:var(--steel); vertical-align:top; }
+  .manual-doc tr:nth-child(even) td{ background:var(--grad-3); }
+  .manual-doc td strong{ color:var(--ink); }
+  .manual-doc td code{ white-space:nowrap; }
+
+  /* ---------- faq ---------- */
+  .manual-doc .faq{ border:1px solid var(--steel-light); border-radius:10px; overflow:hidden; background:var(--paper); }
+  .manual-doc .qa{ padding:16px 18px; border-bottom:1px solid var(--steel-light); }
+  .manual-doc .qa:last-child{ border-bottom:none; }
+  .manual-doc .qa .q{ font-weight:600; color:var(--ink); margin-bottom:6px; font-size:14.5px; font-family:"IBM Plex Sans"; }
+  .manual-doc .qa .a{ color:var(--steel); font-size:14px; margin:0; }
+
+  .manual-doc hr.div{ border:none; border-top:1px solid var(--steel-light); margin:48px 0; }
+
+  .manual-doc-foot{
+    max-width:900px; margin:0 auto; padding:20px 28px 40px;
+    color:var(--steel); font-size:12.5px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+    font-family:"IBM Plex Sans";
+  }
+
+  @media (max-width:640px){
+    .manual-doc .toc ol{ columns:1; }
+    .manual-doc .btnrow{ grid-template-columns:1fr; }
+    .manual-doc .cover h1{ font-size:2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="social-rail">
+  <a href="https://www.instagram.com/escuelacontratistas/" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61578532108345" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
+  </a>
+  <a href="https://www.youtube.com/@EscuelaContratistas" target="_blank" rel="noopener" aria-label="YouTube">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a href="mailto:contacto@escueladecontratistas.co" aria-label="Correo">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+  </a>
+  <span class="social-rail-line"></span>
+</div>
+<header>
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="images/logo-escuela-de-contratistas.webp" alt="Escuela de Contratistas">
+      <span class="brand-name">Escuela de<br>Contratistas</span>
+      <svg width="22" height="15" viewBox="0 0 22 15" class="flag-co" aria-label="Colombia" role="img"><rect width="22" height="15" fill="#FCD116"/><rect y="7.5" width="22" height="3.75" fill="#003893"/><rect y="11.25" width="22" height="3.75" fill="#CE1126"/></svg>
+    </a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="burger">☰</label>
+    <ul class="nav-links">
+      <li><a href="index.html#quienes-somos">Quiénes somos</a></li>
+      <li><a href="index.html#productos">Productos y servicios</a></li>
+      <li><a href="index.html#red">Red de contratistas</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="https://crm.escueladecontratistas.co" target="_blank" rel="noopener">Portal</a></li>
+      <li><a href="https://wa.me/573143415975?text=Hola%2C%20tengo%20una%20duda%20sobre%20el%20manual%20de%20Presupuestador%20PRO%202026" class="nav-cta" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="wrap breadcrumb"><a href="producto-elaborador-presupuestos.html">&larr; Volver a Presupuestador PRO 2026</a></div>
+
+<div class="manual-doc">
+  <div class="cover">
+    <div class="cover-inner">
+      <p class="eyebrow">Manual de funciones y uso</p>
+      <h1>Presupuestador PRO 2026</h1>
+      <p class="sub">Guía completa del archivo de presupuestos, programación y análisis de precios unitarios de Escuela de Contratistas — qué hace cada hoja, cada botón, y el flujo de trabajo recomendado de principio a fin.</p>
+      <div class="meta">
+        <div><b>Escuela de Contratistas</b>Gestión de proyectos de obra</div>
+        <div><b>Archivo</b>PRESUPUESTADOR PRO 2026.xlsm</div>
+        <div><b>Capacidad</b>Hasta 100 actividades por presupuesto</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="manual-doc-wrap">
+
+    <nav class="toc">
+      <h2>Contenido</h2>
+      <ol>
+        <li><a href="#que-es"><span class="n">01</span>Qué es este archivo</a></li>
+        <li><a href="#mapa"><span class="n">02</span>Mapa de hojas</a></li>
+        <li><a href="#flujo"><span class="n">03</span>Flujo de trabajo</a></li>
+        <li><a href="#presupuesto"><span class="n">04</span>Hoja Presupuesto</a></li>
+        <li><a href="#derivadas"><span class="n">05</span>Hojas generadas</a></li>
+        <li><a href="#menu"><span class="n">06</span>Botones del Menú</a></li>
+        <li><a href="#avanzado"><span class="n">07</span>Modo avanzado</a></li>
+        <li><a href="#reglas"><span class="n">08</span>Reglas y protecciones</a></li>
+        <li><a href="#faq"><span class="n">09</span>Preguntas frecuentes</a></li>
+      </ol>
+    </nav>
+
+    <section class="intro" id="que-es">
+      <div class="section-num">01 — Introducción</div>
+      <h2>Qué es este archivo</h2>
+      <p class="lede">El Presupuestador PRO 2026 es un libro de Excel con macros que arma el presupuesto de una obra a partir de una base de datos interna de más de 2.200 actividades de construcción con su Análisis de Precios Unitarios (APU) ya calculado. Usted arma el presupuesto seleccionando actividades de una lista; el archivo genera automáticamente la programación de obra, el resumen de insumos, las fichas de APU y las especificaciones técnicas del proyecto.</p>
+
+      <div class="callout tip">
+        <div class="icon">💡</div>
+        <p><strong>Idea central:</strong> usted casi nunca escribe fórmulas ni cantidades base — selecciona actividades y cantidades en <strong>PRESUPUESTO</strong>, y el resto del archivo (programación, insumos, APU del proyecto, especificaciones) se genera solo con los botones del <strong>MENÚ</strong>.</p>
+      </div>
+
+      <p>El archivo tiene dos capas:</p>
+      <ul>
+        <li><strong>Hojas de trabajo del proyecto</strong> (siempre visibles): donde usted arma y consulta el presupuesto de la obra actual.</li>
+        <li><strong>Base de datos maestra</strong> (oculta por defecto): el catálogo de actividades, materiales y precios unitarios del que se alimenta todo. Se accede con el botón <span class="btnchip">Modo avanzado</span> solo cuando se necesita editar o ampliar el catálogo.</li>
+      </ul>
+    </section>
+
+    <section id="mapa">
+      <div class="section-num">02 — Estructura</div>
+      <h2>Mapa de hojas</h2>
+      <p class="lede">El libro tiene 13 hojas. Siete quedan visibles siempre; las otras seis forman la base de datos y solo aparecen en modo avanzado.</p>
+
+      <h3>Hojas de trabajo (siempre visibles)</h3>
+      <div class="sheetgrid">
+        <div class="sheetcard"><span class="tag">01</span><h4>MENU</h4><p>Panel de botones — punto de partida de cada sesión.</p></div>
+        <div class="sheetcard"><span class="tag">02</span><h4>PRESUPUESTO</h4><p>Donde se arma el presupuesto: datos del contrato y tabla de actividades.</p></div>
+        <div class="sheetcard"><span class="tag">03</span><h4>MEMORIAS DE CANTIDADES</h4><p>Memoria de cálculo de cada actividad presupuestada, para imprimir.</p></div>
+        <div class="sheetcard"><span class="tag">04</span><h4>PROGRAMACION</h4><p>Cronograma tipo Gantt generado a partir del presupuesto.</p></div>
+        <div class="sheetcard"><span class="tag">05</span><h4>RESUMEN DE INSUMOS</h4><p>Cantidad total de cada material/insumo que requiere la obra.</p></div>
+        <div class="sheetcard"><span class="tag">06</span><h4>APU PROYECTO</h4><p>Ficha de Análisis de Precios Unitarios de cada actividad del presupuesto.</p></div>
+        <div class="sheetcard"><span class="tag">07</span><h4>ESPECIFICACIONES PROYECTO</h4><p>Ficha técnica de cada actividad presupuestada.</p></div>
+      </div>
+
+      <h3>Base de datos maestra (modo avanzado)</h3>
+      <div class="sheetgrid">
+        <div class="sheetcard"><span class="tag oculta">oculta</span><h4>ACTIVIDADES</h4><p>Catálogo completo de actividades con su código y precio.</p></div>
+        <div class="sheetcard"><span class="tag oculta">oculta</span><h4>APU</h4><p>Análisis de precio unitario maestro de cada actividad del catálogo.</p></div>
+        <div class="sheetcard"><span class="tag oculta">oculta</span><h4>APU AUXILIARES</h4><p>APU de composiciones auxiliares (cuadrillas, equipos compuestos, etc.) usadas dentro de otros APU.</p></div>
+        <div class="sheetcard"><span class="tag oculta">oculta</span><h4>MATERIALES</h4><p>Catálogo de insumos: materiales, equipo, herramienta y mano de obra con su precio.</p></div>
+        <div class="sheetcard"><span class="tag oculta">oculta</span><h4>ESPECIFICACIONES TECNICAS</h4><p>Ficha técnica maestra de cada actividad del catálogo.</p></div>
+        <div class="sheetcard"><span class="tag oculta">oculta interna</span><h4>LISTAS</h4><p>Tabla auxiliar para las listas desplegables. No se edita nunca a mano.</p></div>
+      </div>
+    </section>
+
+    <section id="flujo">
+      <div class="section-num">03 — Flujo de trabajo</div>
+      <h2>Cómo armar un presupuesto de principio a fin</h2>
+      <p class="lede">Este es el orden recomendado para un proyecto nuevo. Cada paso corresponde a un botón del MENÚ o de la hoja correspondiente.</p>
+
+      <div class="flow">
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h4>Complete los datos del contrato en PRESUPUESTO</h4>
+            <p>N° de contrato, tipo, objeto, contratista, interventoría, supervisión y fecha de inicio. Estos datos alimentan automáticamente los encabezados de todas las demás hojas.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h4>Seleccione las actividades de la obra</h4>
+            <p>En la columna <strong>ACTIVIDAD</strong> de la tabla, busque y elija cada actividad por su nombre (lista desplegable). El código, unidad y precio unitario se completan solos. Escriba la cantidad. Use <span class="btnchip">+ FILA</span> / <span class="btnchip">− FILA</span> para agregar o quitar actividades.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h4>Genere la programación de obra</h4>
+            <p>Desde el MENÚ, pulse <span class="btnchip">Generar programación</span>. Se crea el Gantt con una fila por actividad, en el mismo orden y cantidad que en PRESUPUESTO. Ajuste allí las duraciones y fechas si lo necesita.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h4>Genere el resumen de insumos</h4>
+            <p>Pulse <span class="btnchip">Generar resumen de insumos</span> para obtener el listado consolidado de materiales, equipo y mano de obra que necesita toda la obra, con las cantidades totales.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h4>Genere el APU y las especificaciones del proyecto</h4>
+            <p>Pulse <span class="btnchip">Ver APU del proyecto</span>. Se arma automáticamente la ficha de APU y la ficha técnica de cada actividad presupuestada, listas para revisar o imprimir.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h4>Exporte a PDF</h4>
+            <p>Pulse <span class="btnchip">Exportar todo (PDF)</span>, elija una carpeta de destino y el archivo genera 6 PDF (presupuesto, memorias, programación, insumos, APU y especificaciones) listos para entregar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout warn">
+        <div class="icon">⚠</div>
+        <p><strong>Importante:</strong> si después de generar programación/insumos/APU usted vuelve a cambiar actividades o cantidades en PRESUPUESTO, debe volver a pulsar los botones de generación correspondientes (o <span class="btnchip">ACTUALIZAR</span> dentro de cada hoja) para que reflejen el cambio. No se actualizan solas.</p>
+      </div>
+    </section>
+
+    <section id="presupuesto">
+      <div class="section-num">04 — Hoja principal</div>
+      <h2>Hoja PRESUPUESTO en detalle</h2>
+      <p class="lede">Es el punto de partida de todo el archivo. Tiene dos zonas: los datos generales del contrato (parte superior) y la tabla de actividades.</p>
+
+      <h3>Datos del contrato</h3>
+      <div class="tblwrap">
+        <table>
+          <thead><tr><th>Campo</th><th>Uso</th></tr></thead>
+          <tbody>
+            <tr><td><strong>N° Contrato / Tipo</strong></td><td>Identifican el proyecto; se repiten en el encabezado de todas las hojas y en los PDF exportados.</td></tr>
+            <tr><td><strong>Objeto del contrato</strong></td><td>Texto libre y de longitud amplia — la celda ya está preparada para textos largos con salto de línea automático.</td></tr>
+            <tr><td><strong>Contratista / Interventoría / Supervisión</strong></td><td>Datos de las partes del contrato, se muestran en los encabezados de MEMORIAS, PROGRAMACION, RESUMEN DE INSUMOS, APU PROYECTO y ESPECIFICACIONES PROYECTO.</td></tr>
+            <tr><td><strong>Inicio / Fin</strong></td><td>Fecha real de inicio de obra. La fecha de fin y la duración total se calculan solas en PROGRAMACION a partir de las actividades programadas.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Tabla de actividades</h3>
+      <div class="tblwrap">
+        <table>
+          <thead><tr><th>Columna</th><th>Qué hacer</th></tr></thead>
+          <tbody>
+            <tr><td><strong>N.°</strong></td><td>Numeración automática — no se edita.</td></tr>
+            <tr><td><strong>CÓDIGO</strong></td><td>Se completa solo al elegir la actividad. No se escribe a mano.</td></tr>
+            <tr><td><strong>ACTIVIDAD</strong></td><td>Lista desplegable — busque y seleccione la actividad <strong>por su nombre</strong>. Escriba las primeras letras para filtrar la lista.</td></tr>
+            <tr><td><strong>UNIDAD / VR UNITARIO</strong></td><td>Se completan solos según la actividad elegida.</td></tr>
+            <tr><td><strong>CANTIDAD</strong></td><td>Único valor numérico que usted digita — la cantidad de obra a ejecutar en esa actividad.</td></tr>
+            <tr><td><strong>VR PARCIAL</strong></td><td>Cantidad × Vr unitario, automático.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>El total de actividades, el valor total del presupuesto y el porcentaje de fichas técnicas completas se muestran en la franja resumen justo encima de la tabla.</p>
+
+      <div class="callout tip">
+        <div class="icon">✎</div>
+        <p>La hoja permite ajustar libremente nombres, formatos y colores de las etiquetas (fila de encabezados, títulos) sin dañar las macros — solo las celdas que dependen de fórmulas quedan protegidas contra edición accidental.</p>
+      </div>
+    </section>
+
+    <section id="derivadas">
+      <div class="section-num">05 — Salidas automáticas</div>
+      <h2>Hojas que se generan solas</h2>
+      <p class="lede">Estas cinco hojas no se llenan a mano: se reconstruyen por completo cada vez que usted pulsa el botón correspondiente, tomando como fuente PRESUPUESTO. Todas incluyen un encabezado con los datos del contrato que se repite en cada página al imprimir.</p>
+
+      <div class="tblwrap">
+        <table>
+          <thead><tr><th>Hoja</th><th>Se genera con</th><th>Contenido</th></tr></thead>
+          <tbody>
+            <tr><td><strong>MEMORIAS DE CANTIDADES</strong></td><td><code>ACTUALIZAR</code> (en la hoja)</td><td>Una memoria de cálculo por actividad presupuestada, con espacio para el detalle de cómo se obtuvo la cantidad.</td></tr>
+            <tr><td><strong>PROGRAMACION</strong></td><td><span class="btnchip">Generar programación</span></td><td>Gantt con una fila por actividad presupuestada (mismo orden y cantidad de filas que PRESUPUESTO, sincronizado automáticamente). Al final: fecha de inicio, fecha fin estimada y duración total del proyecto, calculadas.</td></tr>
+            <tr><td><strong>RESUMEN DE INSUMOS</strong></td><td><span class="btnchip">Generar resumen de insumos</span></td><td>Consolidado de materiales, equipo y mano de obra necesarios para toda la obra, con cantidad y valor total por insumo.</td></tr>
+            <tr><td><strong>APU PROYECTO</strong></td><td><span class="btnchip">Ver APU del proyecto</span></td><td>Ficha de Análisis de Precios Unitarios de cada actividad presupuestada, copiada del catálogo maestro. El precio de cada insumo es un hipervínculo que lleva directo a su fila en MATERIALES.</td></tr>
+            <tr><td><strong>ESPECIFICACIONES PROYECTO</strong></td><td><span class="btnchip">Ver APU del proyecto</span></td><td>Ficha técnica de cada actividad presupuestada, copiada del catálogo maestro, salto de página por actividad.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout ok">
+        <div class="icon">🔗</div>
+        <p><strong>Insumos con enlace directo:</strong> en cualquier ficha de APU (proyecto o base de datos), haga clic sobre el precio de un insumo (columna PRECIO UNITARIO) y Excel lo lleva directo a esa fila en MATERIALES. Así puede revisar o corregir el precio sin buscarlo manualmente.</p>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-num">06 — Panel de control</div>
+      <h2>Botones del MENÚ</h2>
+      <p class="lede">Todos los botones del menú tienen el mismo diseño. Desde cualquier hoja de trabajo puede volver aquí con el botón <span class="btnchip">MENU</span> en la esquina superior.</p>
+
+      <div class="btnlist">
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Ver APU del proyecto</span><span class="where">GenerarVistasProyecto</span></div>
+          <p>Reconstruye APU PROYECTO y ESPECIFICACIONES PROYECTO a partir de las actividades presupuestadas. Es el botón que trae al proyecto las fichas técnicas del catálogo maestro.</p>
+        </div>
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Actualizar base de datos</span><span class="where">ActualizarBaseDeDatos</span></div>
+          <p>Sincroniza la hoja ACTIVIDADES con los precios actuales de APU: refresca el valor unitario de las actividades existentes y agrega al final cualquier código nuevo que exista en APU pero no en ACTIVIDADES.</p>
+        </div>
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Crear nuevo APU</span><span class="where">CrearNuevoAPU</span></div>
+          <p>Agrega al final de la hoja APU (base de datos) un bloque nuevo en blanco, con el mismo formato que los existentes, listo para diligenciar. Pide código, descripción y unidad.</p>
+        </div>
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Crear nuevo insumo</span><span class="where">CrearNuevoInsumo</span></div>
+          <p>Agrega una fila nueva a MATERIALES (descripción, unidad, precio y tipo). El insumo queda disponible de inmediato en la lista desplegable de cualquier APU.</p>
+        </div>
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Generar programación</span><span class="where">GenerarProgramacion</span></div>
+          <p>Reconstruye el Gantt de PROGRAMACION a partir de las actividades y cantidades actuales de PRESUPUESTO.</p>
+        </div>
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Generar resumen de insumos</span><span class="where">GenerarResumenInsumos</span></div>
+          <p>Reconstruye RESUMEN DE INSUMOS sumando los insumos de todos los APU de las actividades presupuestadas.</p>
+        </div>
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Exportar todo (PDF)</span><span class="where">ExportarTodo</span></div>
+          <p>Genera 6 archivos PDF (uno por hoja de trabajo) en la carpeta que usted elija. Antes de exportar, avisa si hay fichas técnicas pendientes en las actividades presupuestadas.</p>
+        </div>
+        <div class="btnrow">
+          <div class="label"><span class="btnchip">Modo avanzado</span><span class="where">AlternarModoAvanzado</span></div>
+          <p>Muestra u oculta las hojas de la base de datos maestra (ACTIVIDADES, APU, APU AUXILIARES, MATERIALES, ESPECIFICACIONES TECNICAS). Vuelva a pulsarlo para ocultarlas de nuevo cuando termine.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="avanzado">
+      <div class="section-num">07 — Catálogo maestro</div>
+      <h2>Modo avanzado: editar la base de datos</h2>
+      <p class="lede">Active <span class="btnchip">Modo avanzado</span> desde el MENÚ solo cuando necesite corregir un precio del catálogo, ajustar un rendimiento, o revisar un APU maestro completo. Todas estas hojas quedan editables directamente — no hace falta desproteger nada.</p>
+
+      <h3>Qué puede editar sin romper nada</h3>
+      <ul>
+        <li><strong>Precios en MATERIALES</strong> (columna PRECIO UNITARIO): se propaga solo a todos los APU que usan ese insumo, sin importar en cuántas actividades aparezca.</li>
+        <li><strong>Rendimientos en APU / APU AUXILIARES</strong> (columna CANT/REND): edítelo directamente en la fila del insumo dentro del bloque de la actividad.</li>
+        <li><strong>Nombres, unidades y textos</strong> de ACTIVIDADES, siempre que no borre el código de la columna A (es la clave que conecta todo).</li>
+      </ul>
+
+      <h3>Qué evitar</h3>
+      <ul>
+        <li>No mueva ni borre filas completas dentro de un bloque de APU (encabezado, categorías, subtotal, VR COSTO DIRECTO) — desalinea las fórmulas del bloque.</li>
+        <li>No cambie el código de una actividad ya usada en un presupuesto activo: quedaría sin coincidencia y PRESUPUESTO no la encontraría.</li>
+        <li>Al terminar, vuelva a pulsar <span class="btnchip">Modo avanzado</span> para ocultar estas hojas — mantiene el archivo limpio para el uso diario.</li>
+      </ul>
+
+      <div class="callout tip">
+        <div class="icon">i</div>
+        <p>Después de editar precios o agregar insumos/APU nuevos en modo avanzado, vuelva a MENÚ y pulse <span class="btnchip">Actualizar base de datos</span> y luego regenere programación/insumos/APU del proyecto si ya tenía un presupuesto armado, para que los cambios se reflejen ahí.</p>
+      </div>
+    </section>
+
+    <section id="reglas">
+      <div class="section-num">08 — Cómo está protegido</div>
+      <h2>Reglas y protecciones del archivo</h2>
+
+      <div class="tblwrap">
+        <table>
+          <thead><tr><th>Regla</th><th>Motivo</th></tr></thead>
+          <tbody>
+            <tr><td>Las hojas de trabajo están protegidas contra edición de fórmulas, pero permiten cambiar formato, colores y nombres de etiquetas libremente.</td><td>Evita borrar por accidente una fórmula, sin impedirle personalizar la apariencia.</td></tr>
+            <tr><td>El presupuesto admite hasta <strong>100 actividades</strong>.</td><td>Límite fijo de la tabla; si lo alcanza, el botón <span class="btnchip">+ FILA</span> avisa que ya no hay espacio.</td></tr>
+            <tr><td>Use siempre <span class="btnchip">+ FILA</span> / <span class="btnchip">− FILA</span> para agregar o quitar actividades, nunca insertar/borrar filas de Excel manualmente.</td><td>Esas filas ya están vinculadas 1 a 1 con PROGRAMACION; insertar filas manualmente rompe esa sincronía.</td></tr>
+            <tr><td>La hoja LISTAS nunca se edita directamente.</td><td>Es una tabla auxiliar interna que alimenta las listas desplegables de actividades.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="section-num">09 — Dudas comunes</div>
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        <div class="qa">
+          <div class="q">Agregué una actividad nueva en PRESUPUESTO pero PROGRAMACION no la muestra.</div>
+          <p class="a">Pulse <span class="btnchip">Generar programación</span> (o <span class="btnchip">ACTUALIZAR</span> dentro de la hoja PROGRAMACION) — las hojas generadas no se actualizan solas al editar PRESUPUESTO.</p>
+        </div>
+        <div class="qa">
+          <div class="q">No encuentro una actividad en la lista desplegable de PRESUPUESTO.</div>
+          <p class="a">La búsqueda es por nombre: escriba una palabra clave de la actividad. Si de verdad no existe en el catálogo, actívela en Modo avanzado sobre la hoja APU con <span class="btnchip">Crear nuevo APU</span>, y luego <span class="btnchip">Actualizar base de datos</span> para que aparezca en ACTIVIDADES y en la lista.</p>
+        </div>
+        <div class="qa">
+          <div class="q">Cambié un precio en MATERIALES, ¿se actualiza el presupuesto solo?</div>
+          <p class="a">El valor del APU (maestro y de proyecto) sí se recalcula automáticamente porque es fórmula. El valor de la tabla de PRESUPUESTO también, si la actividad quedó vinculada por código. Si algo no cuadra, pulse <span class="btnchip">Actualizar base de datos</span> y vuelva a generar APU del proyecto.</p>
+        </div>
+        <div class="qa">
+          <div class="q">¿Dónde quedan los PDF exportados?</div>
+          <p class="a">En la carpeta que usted seleccione al pulsar <span class="btnchip">Exportar todo (PDF)</span> — el archivo se lo pregunta cada vez, no hay una ruta fija.</p>
+        </div>
+        <div class="qa">
+          <div class="q">Hice clic en un precio de insumo dentro del APU y no pasó nada.</div>
+          <p class="a">El hipervínculo solo existe en insumos de tipo MATERIAL vinculados directamente a MATERIALES; las líneas de EQUIPO y MANO DE OBRA se calculan desde APU AUXILIARES y no llevan enlace directo por diseño.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="manual-doc-foot">
+    <span>Presupuestador PRO 2026 — Escuela de Contratistas</span>
+    <span>Manual de funciones y uso</span>
+  </div>
+</div>
+
+<div class="p-cta-band">
+  <div class="wrap">
+    <h2>¿Aún no tienes Presupuestador PRO 2026?</h2>
+    <p>Pago único de $99.000. Recíbelo hoy mismo por WhatsApp o correo.</p>
+    <a href="https://checkout.wompi.co/l/26jFHu" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
+    <a href="https://wa.me/573143415975?text=Hola%2C%20quiero%20comprar%20Presupuestador%20PRO%202026" class="btn btn-outline-dark" target="_blank" rel="noopener">Comprar por WhatsApp</a>
+  </div>
+</div>
+
+<section class="p-related">
+  <div class="wrap">
+    <h2>También te puede interesar</h2>
+    <div class="p-related-grid">
+      <a href="producto-elaborador-presupuestos.html" class="p-related-card">
+        <strong>Presupuestador PRO 2026</strong>
+        <span>Vuelve a la ficha completa del producto: qué incluye, precio y preguntas frecuentes.</span>
+      </a>
+      <a href="producto-apu-2026.html" class="p-related-card">
+        <strong>Base de Datos de APU 2026 + Cotizador</strong>
+        <span>Más de 2.200 APU con cotizador integrado en Excel, disponible ahora.</span>
+      </a>
+      <a href="productos.html" class="p-related-card">
+        <strong>Ver todos los productos</strong>
+        <span>Herramientas descargables, listas para usar hoy.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="images/logo-escuela-de-contratistas.webp" alt="Escuela de Contratistas">
+        <span>Escuela de<br>Contratistas</span>
+      </div>
+      <div class="foot-cta">
+        <p>¿Tienes dudas sobre el manual o el producto? Escríbenos.</p>
+        <a href="https://wa.me/573143415975?text=Hola%2C%20tengo%20una%20duda%20sobre%20el%20manual%20de%20Presupuestador%20PRO%202026" class="btn btn-primary" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+      </div>
+      <div class="foot-social">
+        <p style="margin:0 0 0.6rem; font-size:0.85rem;">Síguenos</p>
+        <div style="display:flex; gap:0.9rem; align-items:center;">
+          <a href="https://www.instagram.com/escuelacontratistas/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61578532108345" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.2h2.4l.4-2.8h-2.8V9.6c0-.8.2-1.4 1.4-1.4h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7v2.2H8.6v2.8h2.4v7.2" fill="none"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@EscuelaContratistas" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5.5" width="20" height="13" rx="4"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="mailto:contacto@escueladecontratistas.co" aria-label="Correo" class="social-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+          </a>
+        </div>
+        <p style="margin:0.9rem 0 0; font-size:0.85rem;"><a href="mailto:contacto@escueladecontratistas.co" style="color:var(--cream);">contacto@escueladecontratistas.co</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Escuela de Contratistas. Todos los derechos reservados.</span>
+      <span>Hecho en Colombia, desde la obra.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="producto-elaborador-presupuestos.html" class="btn btn-outline" target="_blank" rel="noopener">Ver producto</a>
+  <a href="https://checkout.wompi.co/l/26jFHu" class="btn btn-primary" target="_blank" rel="noopener">Comprar ahora</a>
+</div>
+</body>
+</html>
