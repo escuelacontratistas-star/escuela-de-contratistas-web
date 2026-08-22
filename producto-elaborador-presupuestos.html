@@ -78,14 +78,15 @@
   "@type": "FAQPage",
   "mainEntity": [
     {"@type": "Question", "name": "¿Cómo recibo Presupuestador PRO 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Después del pago, recibes el archivo de Excel por WhatsApp o correo, listo para usar."}},
-    {"@type": "Question", "name": "¿Qué diferencia tiene con la Base de Datos de APU 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Presupuestador PRO 2026 incluye todo lo de la Base de Datos de APU 2026 —más de 2.200 precios unitarios— y además genera el presupuesto completo de forma automática, con especificaciones técnicas, memorias de cálculo enlazadas y programación de obra."}},
+    {"@type": "Question", "name": "¿Qué diferencia tiene con la Base de Datos de APU 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Presupuestador PRO 2026 incluye todo lo de la Base de Datos de APU 2026 —más de 2.200 precios unitarios— y además genera el presupuesto completo de forma automática, con especificaciones técnicas, memorias de cantidades enlazadas y programación de obra."}},
     {"@type": "Question", "name": "¿Cómo compro Presupuestador PRO 2026?", "acceptedAnswer": {"@type": "Answer", "text": "De dos formas: haz clic en \"Comprar ahora\" y paga en línea de forma segura con Wompi (tarjeta, PSE, Nequi u otros medios), o haz clic en \"Comprar por WhatsApp\" y coordinamos el pago directamente contigo. En ambos casos recibes el archivo de inmediato."}},
     {"@type": "Question", "name": "¿En qué programa funciona?", "acceptedAnswer": {"@type": "Answer", "text": "Es un libro de Excel habilitado para macros (.xlsm). Corre en Excel de escritorio en Windows, con macros habilitadas; no requiere internet ni instalar nada adicional. Al abrirlo por primera vez solo hay que habilitar el contenido con macros."}},
     {"@type": "Question", "name": "¿Necesito saber Excel avanzado para usarlo?", "acceptedAnswer": {"@type": "Answer", "text": "No. La interfaz funciona con botones y menús, como un programa. La base de datos técnica queda oculta por defecto hasta que se necesite editarla."}},
     {"@type": "Question", "name": "¿Cuántas actividades soporta un presupuesto?", "acceptedAnswer": {"@type": "Answer", "text": "Hasta 100 actividades por proyecto."}},
     {"@type": "Question", "name": "¿Puedo dañar las fórmulas sin querer?", "acceptedAnswer": {"@type": "Answer", "text": "No. Las fórmulas quedan protegidas contra edición accidental; solo son editables las celdas que le corresponde llenar al usuario, como la selección de actividades, medidas y fechas."}},
-    {"@type": "Question", "name": "¿Qué entrego al final?", "acceptedAnswer": {"@type": "Answer", "text": "Presupuesto, análisis de precios unitarios, especificaciones técnicas, cronograma de obra y resumen de insumos. Los documentos se exportan en PDF con un clic."}},
+    {"@type": "Question", "name": "¿Qué entrego al final?", "acceptedAnswer": {"@type": "Answer", "text": "Seis documentos en PDF, generados con un clic: presupuesto, memorias de cantidades, programación de obra, resumen de insumos, análisis de precios unitarios (APU) y especificaciones técnicas."}},
     {"@type": "Question", "name": "¿Aplica para cualquier tipo de obra?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Cubre 28 categorías típicas de obra civil, urbanización, redes e instalaciones, y acabados. Toda la base de precios es editable, así que puedes ajustarla a tus precios regionales o agregar precios propios de cualquier especialidad."}},
+    {"@type": "Question", "name": "¿Qué pasa si necesito una actividad que no está en la base de datos?", "acceptedAnswer": {"@type": "Answer", "text": "La creas con el asistente \"Crear nuevo APU\": agrega un análisis de precio nuevo con el mismo formato de los existentes y queda disponible de inmediato en la lista desplegable, para ese proyecto y los siguientes."}},
     {"@type": "Question", "name": "¿Tienen garantía de devolución?", "acceptedAnswer": {"@type": "Answer", "text": "Al ser un archivo digital que se entrega de inmediato, no manejamos devoluciones de dinero. Lo que sí tienes es soporte directo y real: si te queda alguna duda o algo no te funciona, nos escribes por WhatsApp y te ayudamos hasta resolverlo."}},
     {"@type": "Question", "name": "¿Tienen manual de uso?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El manual completo explica qué hace cada una de las 13 hojas del archivo, cada botón del menú y el flujo de trabajo recomendado, de principio a fin. Puedes consultarlo aquí: escueladecontratistas.co/manual-presupuestador-pro-2026."}}
   ]
@@ -369,6 +370,17 @@
   .p-subsection h2{ font-size:1.4rem; margin-bottom:0.9rem; }
   .p-subsection p{ color:var(--steel); margin-bottom:0.8rem; }
 
+  .p-flow{ display:flex; flex-direction:column; gap:1.3rem; max-width:640px; }
+  .p-flow-step{ display:grid; grid-template-columns:36px 1fr; gap:1rem; align-items:start; }
+  .p-flow-num{
+    width:36px; height:36px; border-radius:50%; flex-shrink:0;
+    background:var(--orange-deep); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Inter', sans-serif; font-weight:800; font-size:0.95rem;
+  }
+  .p-flow-step h4{ font-size:1rem; margin:0 0 0.25rem; }
+  .p-flow-step p{ color:var(--steel); margin:0; font-size:0.92rem; }
+
   .p-manual-banner{
     display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap;
     background:linear-gradient(135deg, var(--grad-3), var(--grad-1));
@@ -565,7 +577,7 @@
   <div class="wrap">
     <h2>Qué incluye</h2>
     <ul class="p-feature-list">
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Generador de presupuesto automático, con tablero de indicadores en vivo y cálculo de AIU (administración, imprevistos y utilidad) e IVA</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Generador de presupuesto automático, con tablero de indicadores en vivo: total de actividades, valor del presupuesto y porcentaje de fichas técnicas completas</li>
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Base de datos y editor de 2.288 análisis de precios unitarios (APU) y 2.148 insumos, en 28 categorías de construcción</li>
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Memorias de cantidad que alimentan el presupuesto automáticamente — no se digitan cantidades a mano</li>
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Programación de obra automática, tipo Gantt semanal, calculada desde el rendimiento real de cada cuadrilla</li>
@@ -575,7 +587,66 @@
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Exportación en PDF con un clic: presupuesto, APU, especificaciones, cronograma e insumos</li>
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Fórmulas protegidas contra edición accidental, hasta 100 actividades por proyecto</li>
       <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Modo avanzado para editar la base de datos técnica cuando lo necesites</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Organizado en 13 hojas: 7 de trabajo del proyecto (siempre visibles) y 6 de base de datos maestra, en modo avanzado</li>
     </ul>
+  </div>
+</section>
+
+<div class="cota-section">
+  <div class="cota">
+    <div class="cota-line left"></div>
+    <span class="cota-label">Cómo funciona</span>
+    <div class="cota-line right"></div>
+  </div>
+</div>
+
+<section class="p-subsection">
+  <div class="wrap">
+    <h2>De cero al presupuesto listo, en 6 pasos</h2>
+    <div class="p-flow">
+      <div class="p-flow-step">
+        <span class="p-flow-num">1</span>
+        <div>
+          <h4>Completa los datos del contrato</h4>
+          <p>N° de contrato, objeto, contratista, interventoría y fecha de inicio. Se repiten solos en el encabezado de todas las hojas.</p>
+        </div>
+      </div>
+      <div class="p-flow-step">
+        <span class="p-flow-num">2</span>
+        <div>
+          <h4>Selecciona las actividades de la obra</h4>
+          <p>Búscalas por nombre en la lista desplegable. El código, la unidad y el precio se completan solos; tú solo escribes la cantidad.</p>
+        </div>
+      </div>
+      <div class="p-flow-step">
+        <span class="p-flow-num">3</span>
+        <div>
+          <h4>Genera la programación de obra</h4>
+          <p>Un clic crea el cronograma tipo Gantt, con una fila por actividad, en el mismo orden del presupuesto.</p>
+        </div>
+      </div>
+      <div class="p-flow-step">
+        <span class="p-flow-num">4</span>
+        <div>
+          <h4>Genera el resumen de insumos</h4>
+          <p>Obtén el listado consolidado de materiales, equipo y mano de obra que necesita toda la obra.</p>
+        </div>
+      </div>
+      <div class="p-flow-step">
+        <span class="p-flow-num">5</span>
+        <div>
+          <h4>Genera el APU y las especificaciones</h4>
+          <p>Se arma automáticamente la ficha técnica de cada actividad presupuestada, lista para revisar o imprimir.</p>
+        </div>
+      </div>
+      <div class="p-flow-step">
+        <span class="p-flow-num">6</span>
+        <div>
+          <h4>Exporta todo a PDF</h4>
+          <p>Elige una carpeta y el archivo genera los 6 documentos finales, listos para entregar a tu cliente.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -591,17 +662,29 @@
   <div class="wrap">
     <h2>Así se ve por dentro</h2>
     <div class="p-gallery">
-      <a href="images/presupuestador-pro-apu.png" target="_blank" rel="noopener" class="p-gallery-item">
-        <img src="images/presupuestador-pro-apu.png" alt="Base de datos de análisis de precios unitarios (APU) de Presupuestador PRO 2026, con desglose de materiales, equipo y mano de obra" loading="lazy">
-        <span>Base de datos de APU, con desglose de materiales, equipo y mano de obra</span>
+      <a href="images/manual/shot-01.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/manual/shot-01.png" alt="Hoja PRESUPUESTO de Presupuestador PRO 2026, con datos del contrato y tabla de actividades" loading="lazy">
+        <span>Hoja PRESUPUESTO: datos del contrato y tabla de actividades</span>
       </a>
-      <a href="images/presupuestador-pro-memorias.png" target="_blank" rel="noopener" class="p-gallery-item">
-        <img src="images/presupuestador-pro-memorias.png" alt="Memorias de cantidad de Presupuestador PRO 2026, con el cálculo de largo por ancho por alto por veces para cada actividad" loading="lazy">
-        <span>Memorias de cantidad: largo × ancho × alto × veces, por actividad</span>
+      <a href="images/manual/shot-08.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/manual/shot-08.png" alt="Hoja MENU de Presupuestador PRO 2026, con los 8 botones de acción" loading="lazy">
+        <span>Los 8 botones del MENÚ: toda la automatización en un panel</span>
       </a>
-      <a href="images/presupuestador-pro-insumos.png" target="_blank" rel="noopener" class="p-gallery-item">
-        <img src="images/presupuestador-pro-insumos.png" alt="Resumen de insumos de Presupuestador PRO 2026, generado automáticamente a partir del presupuesto" loading="lazy">
+      <a href="images/manual/shot-03.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/manual/shot-03.png" alt="Hoja PROGRAMACION de Presupuestador PRO 2026, con el cronograma tipo Gantt generado" loading="lazy">
+        <span>Programación de obra generada automáticamente, tipo Gantt</span>
+      </a>
+      <a href="images/manual/shot-06.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/manual/shot-06.png" alt="Hoja APU PROYECTO de Presupuestador PRO 2026, con hipervínculos en los precios de insumos" loading="lazy">
+        <span>APU del proyecto, con hipervínculos directos a cada insumo</span>
+      </a>
+      <a href="images/manual/shot-05.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/manual/shot-05.png" alt="Hoja RESUMEN DE INSUMOS de Presupuestador PRO 2026" loading="lazy">
         <span>Resumen de insumos, generado automáticamente con un clic</span>
+      </a>
+      <a href="images/manual/shot-02.png" target="_blank" rel="noopener" class="p-gallery-item">
+        <img src="images/manual/shot-02.png" alt="Hoja MEMORIAS DE CANTIDADES de Presupuestador PRO 2026" loading="lazy">
+        <span>Memorias de cantidades: largo × ancho × alto × veces, por actividad</span>
       </a>
     </div>
   </div>
@@ -675,7 +758,7 @@
       </details>
       <details>
         <summary>¿Qué diferencia tiene con la Base de Datos de APU 2026?</summary>
-        <p>Presupuestador PRO 2026 incluye todo lo de la Base de Datos de APU 2026 —más de 2.200 precios unitarios— y además genera el presupuesto completo de forma automática, con especificaciones técnicas, memorias de cálculo enlazadas y programación de obra.</p>
+        <p>Presupuestador PRO 2026 incluye todo lo de la Base de Datos de APU 2026 —más de 2.200 precios unitarios— y además genera el presupuesto completo de forma automática, con especificaciones técnicas, memorias de cantidades enlazadas y programación de obra.</p>
       </details>
       <details>
         <summary>¿Cómo compro Presupuestador PRO 2026?</summary>
@@ -699,11 +782,15 @@
       </details>
       <details>
         <summary>¿Qué entrego al final?</summary>
-        <p>Presupuesto, análisis de precios unitarios, especificaciones técnicas, cronograma de obra y resumen de insumos. Los documentos se exportan en PDF con un clic.</p>
+        <p>Seis documentos en PDF, generados con un clic: presupuesto, memorias de cantidades, programación de obra, resumen de insumos, análisis de precios unitarios (APU) y especificaciones técnicas.</p>
       </details>
       <details>
         <summary>¿Aplica para cualquier tipo de obra?</summary>
         <p>Sí. Cubre 28 categorías típicas de obra civil, urbanización, redes e instalaciones, y acabados. Toda la base de precios es editable, así que puedes ajustarla a tus precios regionales o agregar precios propios de cualquier especialidad.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si necesito una actividad que no está en la base de datos?</summary>
+        <p>La creas con el asistente "Crear nuevo APU": agrega un análisis de precio nuevo con el mismo formato de los existentes y queda disponible de inmediato en la lista desplegable, para ese proyecto y los siguientes.</p>
       </details>
       <details>
         <summary>¿Tienen garantía de devolución?</summary>
