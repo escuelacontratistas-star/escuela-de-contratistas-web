@@ -94,7 +94,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#20232B;
@@ -324,16 +324,16 @@
      ================================================================== */
   .manual-doc{
     background:var(--bg-soft);
-    font-family:"IBM Plex Sans", system-ui, sans-serif;
+    font-family:'Inter', sans-serif;
     font-size:15.5px;
     line-height:1.65;
     color:var(--ink);
     padding-bottom:8px;
   }
   .manual-doc h1, .manual-doc h2, .manual-doc h3{
-    font-family:"Source Serif 4", Georgia, serif;
-    font-weight:600;
-    letter-spacing:normal;
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    letter-spacing:-0.02em;
     text-transform:none;
     color:var(--ink);
     text-wrap:balance;
@@ -351,9 +351,9 @@
   }
   .manual-doc .cover-inner{ max-width:900px; margin:0 auto; }
   .manual-doc .cover .eyebrow{
-    font-family:"IBM Plex Mono", monospace;
+    font-family:'Inter', sans-serif;
     font-size:12px;
-    font-weight:500;
+    font-weight:700;
     letter-spacing:.14em;
     text-transform:uppercase;
     opacity:.75;
@@ -363,7 +363,8 @@
   .manual-doc .cover h1{
     color:#fff;
     font-size:2.5rem;
-    font-weight:600;
+    font-weight:800;
+    letter-spacing:-0.02em;
     margin:0 0 10px;
   }
   .manual-doc .cover p.sub{
@@ -394,29 +395,30 @@
     box-shadow:0 1px 2px rgba(32,35,43,.06), 0 8px 24px -12px rgba(32,35,43,.15);
     position:relative;
   }
-  .manual-doc .toc h2{ font-size:.95rem; font-family:"IBM Plex Sans"; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--orange-deep); margin:0 0 12px; }
+  .manual-doc .toc h2{ font-size:.95rem; font-family:'Inter', sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--orange-deep); margin:0 0 12px; }
   .manual-doc .toc ol{ margin:0; padding:0; list-style:none; columns:2; column-gap:32px; }
   .manual-doc .toc li{ break-inside:avoid; margin-bottom:6px; }
   .manual-doc .toc a{ color:var(--steel); text-decoration:none; font-size:14px; display:flex; gap:8px; }
   .manual-doc .toc a:hover{ color:var(--orange-deep); }
-  .manual-doc .toc a .n{ font-family:"IBM Plex Mono"; color:var(--steel); opacity:0.7; font-size:12.5px; min-width:1.4em; }
+  .manual-doc .toc a .n{ font-family:'Inter', sans-serif; font-weight:700; color:var(--steel); opacity:0.7; font-size:12.5px; min-width:1.4em; }
 
   /* ---------- sections ---------- */
   .manual-doc section{ margin:48px 0; scroll-margin-top:80px; }
   .manual-doc section.intro{ margin-top:0; }
-  .manual-doc .section-num{ font-family:"IBM Plex Mono", monospace; color:var(--orange-deep); font-size:13px; font-weight:500; letter-spacing:.08em; }
-  .manual-doc h2{ font-size:1.5rem; font-weight:600; margin:2px 0 6px; }
+  .manual-doc .section-num{ font-family:'Inter', sans-serif; color:var(--orange-deep); font-size:13px; font-weight:700; letter-spacing:.08em; }
+  .manual-doc h2{ font-size:1.5rem; font-weight:800; letter-spacing:-0.02em; margin:2px 0 6px; }
   .manual-doc h2 .section-num{ display:block; margin-bottom:6px; }
   .manual-doc .lede{ color:var(--steel); font-size:1.02rem; max-width:66ch; margin:0 0 22px; }
-  .manual-doc h3{ font-size:1.1rem; font-weight:600; margin:26px 0 10px; color:var(--orange-deep); }
+  .manual-doc h3{ font-size:1.1rem; font-weight:700; letter-spacing:normal; margin:26px 0 10px; color:var(--orange-deep); }
   .manual-doc p{ margin:0 0 14px; max-width:70ch; }
   .manual-doc strong{ color:var(--ink); font-weight:600; }
   .manual-doc a{ color:var(--orange-deep); }
   .manual-doc ul, .manual-doc ol{ padding-left:1.3em; margin:0 0 16px; max-width:68ch; }
   .manual-doc li{ margin-bottom:6px; }
   .manual-doc code{
-    font-family:"IBM Plex Mono", monospace;
+    font-family:'Inter', sans-serif;
     font-size:.86em;
+    font-weight:600;
     background:var(--grad-3);
     border:1px solid var(--steel-light);
     padding:1px 6px;
@@ -440,12 +442,12 @@
   .manual-doc .sheetgrid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; margin:20px 0; }
   .manual-doc .sheetcard{ border:1px solid var(--steel-light); background:var(--paper); border-radius:10px; padding:14px 16px; box-shadow:0 1px 2px rgba(32,35,43,.06); }
   .manual-doc .sheetcard .tag{
-    font-family:"IBM Plex Mono"; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+    font-family:'Inter', sans-serif; font-weight:700; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
     color:var(--orange-deep); background:var(--grad-3); border:1px solid var(--steel-light);
     display:inline-block; padding:2px 7px; border-radius:5px; margin-bottom:8px;
   }
   .manual-doc .sheetcard .tag.oculta{ color:var(--steel); background:var(--bg-soft); }
-  .manual-doc .sheetcard h4{ margin:0 0 4px; font-size:14.5px; font-weight:600; font-family:"IBM Plex Sans"; color:var(--ink); }
+  .manual-doc .sheetcard h4{ margin:0 0 4px; font-size:14.5px; font-weight:700; font-family:'Inter', sans-serif; color:var(--ink); }
   .manual-doc .sheetcard p{ margin:0; font-size:13px; color:var(--steel); }
 
   /* ---------- flow steps ---------- */
@@ -459,18 +461,18 @@
     width:38px; height:38px; border-radius:50%;
     background:var(--orange-deep); color:#fff;
     display:flex; align-items:center; justify-content:center;
-    font-family:"IBM Plex Mono"; font-weight:500; font-size:14px;
+    font-family:'Inter', sans-serif; font-weight:700; font-size:14px;
     flex-shrink:0;
   }
   .manual-doc .step .num::before{ content:counter(step); }
-  .manual-doc .step h4{ margin:6px 0 4px; font-size:15.5px; font-weight:600; font-family:"IBM Plex Sans"; color:var(--ink); }
+  .manual-doc .step h4{ margin:6px 0 4px; font-size:15.5px; font-weight:700; font-family:'Inter', sans-serif; color:var(--ink); }
   .manual-doc .step p{ font-size:14px; color:var(--steel); margin:0; }
 
   /* ---------- button chip ---------- */
   .manual-doc .btnchip{
     display:inline-flex; align-items:center; gap:6px;
     background:var(--orange-deep); color:#fff;
-    font-family:"IBM Plex Sans"; font-weight:600; font-size:12.5px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:12.5px;
     padding:5px 12px; border-radius:6px;
     white-space:nowrap;
   }
@@ -481,27 +483,48 @@
   .manual-doc .btnrow:last-child{ border-bottom:none; }
   .manual-doc .btnrow .label{ padding-top:2px; }
   .manual-doc .btnrow p{ margin:0; font-size:13.8px; color:var(--steel); }
-  .manual-doc .btnrow .where{ display:block; margin-top:6px; font-size:12px; color:var(--steel); opacity:0.75; font-family:"IBM Plex Mono"; }
+  .manual-doc .btnrow .where{ display:block; margin-top:6px; font-size:12px; color:var(--steel); opacity:0.75; font-family:'Inter', sans-serif; }
 
   /* ---------- table ---------- */
   .manual-doc .tblwrap{ overflow-x:auto; margin:20px 0; border:1px solid var(--steel-light); border-radius:10px; }
   .manual-doc table{ border-collapse:collapse; width:100%; font-size:13.5px; background:var(--paper); }
   .manual-doc th{
     background:var(--orange-deep); color:#fff; text-align:left;
-    font-weight:600; font-size:12px; letter-spacing:.02em;
+    font-weight:700; font-size:12px; letter-spacing:.02em;
     padding:10px 14px; white-space:nowrap;
-    font-family:"IBM Plex Sans";
+    font-family:'Inter', sans-serif;
   }
   .manual-doc td{ padding:10px 14px; border-top:1px solid var(--steel-light); color:var(--steel); vertical-align:top; }
   .manual-doc tr:nth-child(even) td{ background:var(--grad-3); }
   .manual-doc td strong{ color:var(--ink); }
   .manual-doc td code{ white-space:nowrap; }
 
+  /* ---------- screenshots ---------- */
+  .manual-doc figure.shot{
+    margin:20px 0;
+    border:1px solid var(--steel-light);
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--paper);
+    box-shadow:0 1px 2px rgba(32,35,43,.06), 0 8px 24px -12px rgba(32,35,43,.15);
+  }
+  .manual-doc figure.shot img{ display:block; width:100%; height:auto; }
+  .manual-doc figure.shot figcaption{
+    padding:10px 16px;
+    font-size:12.5px;
+    font-family:'Inter', sans-serif;
+    color:var(--steel);
+    border-top:1px solid var(--steel-light);
+    background:var(--grad-3);
+  }
+  .manual-doc .shot-pair{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:640px){ .manual-doc .shot-pair{ grid-template-columns:1fr; } }
+
   /* ---------- faq ---------- */
   .manual-doc .faq{ border:1px solid var(--steel-light); border-radius:10px; overflow:hidden; background:var(--paper); }
   .manual-doc .qa{ padding:16px 18px; border-bottom:1px solid var(--steel-light); }
   .manual-doc .qa:last-child{ border-bottom:none; }
-  .manual-doc .qa .q{ font-weight:600; color:var(--ink); margin-bottom:6px; font-size:14.5px; font-family:"IBM Plex Sans"; }
+  .manual-doc .qa .q{ font-weight:700; color:var(--ink); margin-bottom:6px; font-size:14.5px; font-family:'Inter', sans-serif; }
   .manual-doc .qa .a{ color:var(--steel); font-size:14px; margin:0; }
 
   .manual-doc hr.div{ border:none; border-top:1px solid var(--steel-light); margin:48px 0; }
@@ -510,7 +533,7 @@
     max-width:900px; margin:0 auto; padding:20px 28px 40px;
     color:var(--steel); font-size:12.5px;
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
-    font-family:"IBM Plex Sans";
+    font-family:'Inter', sans-serif;
   }
 
   @media (max-width:640px){
@@ -694,6 +717,11 @@
       <h2>Hoja PRESUPUESTO en detalle</h2>
       <p class="lede">Es el punto de partida de todo el archivo. Tiene dos zonas: los datos generales del contrato (parte superior) y la tabla de actividades.</p>
 
+      <figure class="shot">
+        <img src="images/manual/shot-01.png" alt="Hoja PRESUPUESTO con datos del contrato y tabla de actividades" loading="lazy">
+        <figcaption>Encabezado de contrato y tabla de actividades — captura real del archivo.</figcaption>
+      </figure>
+
       <h3>Datos del contrato</h3>
       <div class="tblwrap">
         <table>
@@ -748,6 +776,36 @@
         </table>
       </div>
 
+      <figure class="shot">
+        <img src="images/manual/shot-02.png" alt="Hoja MEMORIAS DE CANTIDADES con encabezado y primer bloque de memoria" loading="lazy">
+        <figcaption>MEMORIAS DE CANTIDADES — encabezado con datos del proyecto y memoria de la primera actividad.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/manual/shot-03.png" alt="Hoja PROGRAMACION con el Gantt generado" loading="lazy">
+        <figcaption>PROGRAMACION — encabezado del proyecto, tabla de actividades y diagrama de Gantt.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/manual/shot-04.png" alt="Resumen final de PROGRAMACION con fechas y duración" loading="lazy">
+        <figcaption>Resumen final de PROGRAMACION: fecha de inicio, fecha fin estimada y duración total, calculadas automáticamente.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/manual/shot-05.png" alt="Hoja RESUMEN DE INSUMOS" loading="lazy">
+        <figcaption>RESUMEN DE INSUMOS — consolidado de materiales con cantidad total y valor.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/manual/shot-06.png" alt="Hoja APU PROYECTO con hipervínculos en los precios de insumos" loading="lazy">
+        <figcaption>APU PROYECTO — los precios de MATERIALES (subrayados, en dorado) son hipervínculos directos a la hoja MATERIALES.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/manual/shot-07.png" alt="Hoja ESPECIFICACIONES PROYECTO" loading="lazy">
+        <figcaption>ESPECIFICACIONES PROYECTO — ficha técnica de la actividad, con encabezado del proyecto.</figcaption>
+      </figure>
+
       <div class="callout ok">
         <div class="icon">🔗</div>
         <p><strong>Insumos con enlace directo:</strong> en cualquier ficha de APU (proyecto o base de datos), haga clic sobre el precio de un insumo (columna PRECIO UNITARIO) y Excel lo lleva directo a esa fila en MATERIALES. Así puede revisar o corregir el precio sin buscarlo manualmente.</p>
@@ -758,6 +816,11 @@
       <div class="section-num">06 — Panel de control</div>
       <h2>Botones del MENÚ</h2>
       <p class="lede">Todos los botones del menú tienen el mismo diseño. Desde cualquier hoja de trabajo puede volver aquí con el botón <span class="btnchip">MENU</span> en la esquina superior.</p>
+
+      <figure class="shot">
+        <img src="images/manual/shot-08.png" alt="Hoja MENU con los 8 botones de acción" loading="lazy">
+        <figcaption>Los 8 botones de MENÚ, todos con el mismo diseño navy.</figcaption>
+      </figure>
 
       <div class="btnlist">
         <div class="btnrow">
@@ -799,6 +862,17 @@
       <div class="section-num">07 — Catálogo maestro</div>
       <h2>Modo avanzado: editar la base de datos</h2>
       <p class="lede">Active <span class="btnchip">Modo avanzado</span> desde el MENÚ solo cuando necesite corregir un precio del catálogo, ajustar un rendimiento, o revisar un APU maestro completo. Todas estas hojas quedan editables directamente — no hace falta desproteger nada.</p>
+
+      <div class="shot-pair">
+        <figure class="shot">
+          <img src="images/manual/shot-09.png" alt="Hoja APU (base de datos) en modo avanzado" loading="lazy">
+          <figcaption>APU (base de datos) — primer bloque, con hipervínculos a MATERIALES.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/manual/shot-10.png" alt="Hoja MATERIALES en modo avanzado" loading="lazy">
+          <figcaption>MATERIALES — catálogo de insumos con precio unitario editable.</figcaption>
+        </figure>
+      </div>
 
       <h3>Qué puede editar sin romper nada</h3>
       <ul>
