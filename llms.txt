@@ -20,6 +20,7 @@ Escuela de Contratistas no vende un solo producto: combina herramientas descarga
 
 ## Blog
 
+- [Cómo hacer la programación de obra (cronograma) paso a paso](https://escueladecontratistas.co/blog/como-hacer-programacion-de-obra-cronograma): cómo calcular la duración de cada actividad a partir del rendimiento, definir el orden y construir el cronograma.
 - [Cómo hacer un Análisis de Precios Unitarios (APU) paso a paso](https://escueladecontratistas.co/blog/como-hacer-analisis-precios-unitarios-apu): qué es un APU, sus componentes y el proceso completo para construirlo, incluido el AIU.
 - [5 errores comunes al presupuestar una obra en Colombia](https://escueladecontratistas.co/blog/errores-comunes-presupuestar-obra-colombia): los errores más frecuentes al presupuestar y cómo evitarlos.
 - [Guía de Contratación de Obra Pública en Colombia](https://escueladecontratistas.co/blog/guia-contratacion-obra-publica-colombia): resumen de la guía oficial de Colombia Compra Eficiente (fases del proceso, garantías, criterios ambientales) y por qué el presupuesto técnico es clave en la fase precontractual.
