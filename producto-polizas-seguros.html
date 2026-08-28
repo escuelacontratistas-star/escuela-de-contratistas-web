@@ -410,6 +410,19 @@
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.6rem;
     padding-top:1.4rem; font-size:0.78rem; font-family:'Inter', sans-serif; color:var(--steel-light); opacity:0.7;
   }
+
+  /* ---------- COOKIE BANNER ---------- */
+  .cookie-banner{
+    display:none; align-items:center; justify-content:center; gap:1.2rem; flex-wrap:wrap;
+    background:var(--ink); color:var(--steel-light);
+    padding:0.9rem 1.5rem; text-align:center;
+  }
+  .cookie-banner p{ margin:0; font-size:0.85rem; max-width:720px; }
+  .cookie-banner p a{ color:var(--orange); text-decoration:underline; }
+  .cookie-banner .btn{ flex-shrink:0; padding:0.6rem 1.3rem; font-size:0.85rem; }
+
+  /* ---------- FOOT LEGAL LINKS ---------- */
+  .foot-bottom a{ color:inherit; text-decoration:underline; }
 </style>
 </head>
 <body>
@@ -447,6 +460,17 @@
     </ul>
   </nav>
 </header>
+<div id="cookie-banner" class="cookie-banner">
+  <p>Usamos cookies propias y de terceros (Google Analytics, YouTube) para entender cómo se usa el sitio y mejorar tu experiencia. Al continuar navegando, aceptas su uso. <a href="/politica-de-privacidad">Más información</a>.</p>
+  <button type="button" class="btn btn-primary" onclick="document.getElementById('cookie-banner').style.display='none'; try{localStorage.setItem('ec-cookie-consent','1');}catch(e){}">Entendido</button>
+</div>
+<script>
+(function(){
+  try{ if(localStorage.getItem('ec-cookie-consent') === '1') return; }catch(e){}
+  var b = document.getElementById('cookie-banner');
+  if(b) b.style.display = 'flex';
+})();
+</script>
 
 <div class="wrap breadcrumb"><a href="/servicios">&larr; Volver a Servicios</a></div>
 
@@ -703,6 +727,7 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Escuela de Contratistas. Todos los derechos reservados.</span>
+      <span><a href="/politica-de-privacidad">Política de Privacidad</a> · <a href="/terminos-y-condiciones">Términos y Condiciones</a></span>
       <span>Hecho en Colombia, desde la obra.</span>
     </div>
   </div>

@@ -535,6 +535,14 @@
     outline:none; border-color:var(--orange);
   }
   .pqrs-field textarea{ resize:vertical; }
+  .pqrs-field .field-error{
+    display:none; color:#C43D3D; font-size:0.8rem; margin-top:0.4rem;
+    font-family:'Inter',sans-serif;
+  }
+  .pqrs-field.has-error input, .pqrs-field.has-error select, .pqrs-field.has-error textarea{
+    border-color:#C43D3D;
+  }
+  .pqrs-field.has-error .field-error{ display:block; }
   @media (max-width:600px){ .pqrs-grid{ grid-template-columns:1fr; } }
 
   /* ---------- STAT CALLOUT ---------- */
@@ -545,6 +553,19 @@
   }
   .stat-callout .num{ font-family:'Inter', sans-serif; font-weight:800; font-size:2rem; color:var(--orange-deep); line-height:1; }
   .stat-callout .label{ font-family:'Inter', sans-serif; font-weight:600; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.03em; color:var(--steel); max-width:160px; line-height:1.3; }
+
+  /* ---------- COOKIE BANNER ---------- */
+  .cookie-banner{
+    display:none; align-items:center; justify-content:center; gap:1.2rem; flex-wrap:wrap;
+    background:var(--ink); color:var(--steel-light);
+    padding:0.9rem 1.5rem; text-align:center;
+  }
+  .cookie-banner p{ margin:0; font-size:0.85rem; max-width:720px; }
+  .cookie-banner p a{ color:var(--orange); text-decoration:underline; }
+  .cookie-banner .btn{ flex-shrink:0; padding:0.6rem 1.3rem; font-size:0.85rem; }
+
+  /* ---------- FOOT LEGAL LINKS ---------- */
+  .foot-bottom a{ color:inherit; text-decoration:underline; }
 </style>
 </head>
 <body>
@@ -584,6 +605,17 @@
     </ul>
   </nav>
 </header>
+<div id="cookie-banner" class="cookie-banner">
+  <p>Usamos cookies propias y de terceros (Google Analytics, YouTube) para entender cómo se usa el sitio y mejorar tu experiencia. Al continuar navegando, aceptas su uso. <a href="/politica-de-privacidad">Más información</a>.</p>
+  <button type="button" class="btn btn-primary" onclick="document.getElementById('cookie-banner').style.display='none'; try{localStorage.setItem('ec-cookie-consent','1');}catch(e){}">Entendido</button>
+</div>
+<script>
+(function(){
+  try{ if(localStorage.getItem('ec-cookie-consent') === '1') return; }catch(e){}
+  var b = document.getElementById('cookie-banner');
+  if(b) b.style.display = 'flex';
+})();
+</script>
 
 <section id="inicio" class="hero">
   <div class="wrap hero-inner hero-grid">
@@ -814,17 +846,19 @@
           <h2>Peticiones, quejas, reclamos y sugerencias</h2>
           <p>¿Tienes una petición, queja, reclamo o sugerencia? Cuéntanos y te respondemos directamente a tu correo.</p>
         </div>
-        <form id="pqrs-form" class="pqrs-form">
+        <form id="pqrs-form" class="pqrs-form" novalidate>
           <div class="pqrs-grid">
-        <div class="pqrs-field">
+        <div class="pqrs-field" data-field="nombre">
           <label for="pqrs-nombre">Nombre completo</label>
           <input type="text" id="pqrs-nombre" name="nombre" required>
+          <span class="field-error">Escribe tu nombre completo.</span>
         </div>
-        <div class="pqrs-field">
+        <div class="pqrs-field" data-field="correo">
           <label for="pqrs-correo">Correo electrónico</label>
           <input type="email" id="pqrs-correo" name="correo" required>
+          <span class="field-error">Escribe un correo electrónico válido.</span>
         </div>
-        <div class="pqrs-field">
+        <div class="pqrs-field" data-field="tipo">
           <label for="pqrs-tipo">Tipo de solicitud</label>
           <select id="pqrs-tipo" name="tipo" required>
             <option value="Petición">Petición</option>
@@ -832,10 +866,12 @@
             <option value="Reclamo">Reclamo</option>
             <option value="Sugerencia">Sugerencia</option>
           </select>
+          <span class="field-error">Selecciona un tipo de solicitud.</span>
         </div>
-        <div class="pqrs-field pqrs-field-full">
+        <div class="pqrs-field pqrs-field-full" data-field="mensaje">
           <label for="pqrs-mensaje">Mensaje</label>
           <textarea id="pqrs-mensaje" name="mensaje" rows="5" required></textarea>
+          <span class="field-error">Escribe tu mensaje.</span>
         </div>
       </div>
           <button type="submit" class="btn btn-primary">Enviar</button>
@@ -847,8 +883,52 @@
 <script>
 (function(){
   var form = document.getElementById('pqrs-form');
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setError(fieldEl, hasError){
+    fieldEl.classList.toggle('has-error', hasError);
+  }
+
+  function validate(){
+    var ok = true;
+    var nombreEl = document.getElementById('pqrs-nombre');
+    var correoEl = document.getElementById('pqrs-correo');
+    var tipoEl = document.getElementById('pqrs-tipo');
+    var mensajeEl = document.getElementById('pqrs-mensaje');
+
+    var nombreValido = nombreEl.value.trim().length >= 2;
+    setError(nombreEl.closest('.pqrs-field'), !nombreValido);
+    ok = ok && nombreValido;
+
+    var correoValido = emailPattern.test(correoEl.value.trim());
+    setError(correoEl.closest('.pqrs-field'), !correoValido);
+    ok = ok && correoValido;
+
+    var tipoValido = tipoEl.value.trim().length > 0;
+    setError(tipoEl.closest('.pqrs-field'), !tipoValido);
+    ok = ok && tipoValido;
+
+    var mensajeValido = mensajeEl.value.trim().length >= 5;
+    setError(mensajeEl.closest('.pqrs-field'), !mensajeValido);
+    ok = ok && mensajeValido;
+
+    return ok;
+  }
+
+  form.querySelectorAll('input, select, textarea').forEach(function(el){
+    el.addEventListener('input', function(){
+      var field = el.closest('.pqrs-field');
+      if(field.classList.contains('has-error')) validate();
+    });
+  });
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
+    if(!validate()){
+      var firstError = form.querySelector('.pqrs-field.has-error input, .pqrs-field.has-error select, .pqrs-field.has-error textarea');
+      if(firstError) firstError.focus();
+      return;
+    }
     var nombre = document.getElementById('pqrs-nombre').value;
     var correo = document.getElementById('pqrs-correo').value;
     var tipo = document.getElementById('pqrs-tipo').value;
@@ -857,6 +937,7 @@
     var body = encodeURIComponent('Tipo: ' + tipo + '\n' + 'Nombre: ' + nombre + '\n' + 'Correo: ' + correo + '\n\n' + 'Mensaje:\n' + mensaje);
     window.location.href = 'mailto:contacto@escueladecontratistas.co?subject=' + subject + '&body=' + body;
     if(typeof gtag === 'function'){ gtag('event', 'generate_lead', {event_category:'pqrs', event_label:tipo}); }
+    setTimeout(function(){ window.location.href = '/gracias?de=pqrs'; }, 400);
   });
 })();
 </script>
@@ -893,6 +974,7 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Escuela de Contratistas. Todos los derechos reservados.</span>
+      <span><a href="/politica-de-privacidad">Política de Privacidad</a> · <a href="/terminos-y-condiciones">Términos y Condiciones</a></span>
       <span>Hecho en Colombia, desde la obra.</span>
     </div>
   </div>

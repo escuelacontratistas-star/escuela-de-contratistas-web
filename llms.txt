@@ -29,6 +29,8 @@ Escuela de Contratistas no vende un solo producto: combina herramientas descarga
 ## Empresa
 
 - [Página principal](https://escueladecontratistas.co/): quiénes somos, productos, Red de Contratistas y sección de PQRS.
+- [Política de Privacidad](https://escueladecontratistas.co/politica-de-privacidad): qué datos personales recopilamos y cómo los usamos.
+- [Términos y Condiciones](https://escueladecontratistas.co/terminos-y-condiciones): condiciones de compra, entrega y devoluciones.
 - Contacto: contacto@escueladecontratistas.co
 - WhatsApp: +57 314 341 5975
 - Cobertura: toda Colombia (areaServed: CO)

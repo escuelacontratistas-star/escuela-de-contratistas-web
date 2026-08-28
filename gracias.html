@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSZ5BQLMPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZSZ5BQLMPS');
+</script>
+<script>
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a || !a.href || typeof gtag !== 'function') return;
+    if(a.href.indexOf('wa.me') !== -1){
+      gtag('event', 'contacto_whatsapp', {event_category:'engagement', event_label:a.href});
+    }
+  });
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gracias por escribirnos | Escuela de Contratistas</title>
+<meta name="description" content="Recibimos tu mensaje. Te respondemos pronto a tu correo o por WhatsApp.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon.png" sizes="480x480">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#20232B; --text:#20232B; --orange:#F98E1C; --orange-deep:#D9750A; --cream:#F5EFE2;
+    --paper:#FFFFFF; --bg-soft:#F6F5FB; --steel:#6B7280; --steel-light:#E4E3EC; --white:#FFFFFF;
+    --max:1180px; --radius:22px; --radius-pill:999px; --grad-1:#FFDCC0; --grad-2:#FFC89B; --grad-3:#FFEFD6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--text); font-family:'Inter', sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2{ font-family:'Inter', sans-serif; font-weight:800; letter-spacing:-0.02em; margin:0 0 0.5em 0; line-height:1.15; }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 1.5rem;}
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:0.94rem; text-decoration:none;
+    padding:0.85rem 1.7rem; border-radius:var(--radius-pill); border:1.5px solid transparent;
+    transition:transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease; cursor:pointer; white-space:nowrap;
+  }
+  .btn-primary{ background:var(--orange); color:#fff; }
+  .btn-primary:hover{ background:var(--orange-deep); transform:translateY(-2px); box-shadow:0 10px 24px rgba(217,117,10,0.28);}
+  .btn-outline{ background:#fff; color:var(--ink); border-color:var(--steel-light);}
+  .btn-outline:hover{ background:var(--bg-soft); transform:translateY(-2px);}
+  .btn:focus-visible, a:focus-visible, button:focus-visible{ outline:3px solid var(--orange-deep); outline-offset:2px; }
+
+  header{ padding:1.2rem 0; border-bottom:1px solid var(--steel-light); }
+  .brand{ display:flex; align-items:center; gap:0.7rem; text-decoration:none; color:var(--ink); }
+  .brand img{ height:44px; width:auto; }
+  .brand-name{ font-family:'Inter', sans-serif; font-weight:700; font-size:1rem; line-height:1.2; color:var(--ink); }
+  .flag-co{ border-radius:2px; flex-shrink:0; }
+
+  .thanks{
+    min-height:calc(100vh - 320px); display:flex; align-items:center; justify-content:center;
+    padding:3.5rem 0; position:relative; overflow:hidden;
+  }
+  .thanks::before{
+    content:''; position:absolute; inset:-20%;
+    background:
+      radial-gradient(circle at 15% 20%, var(--grad-1) 0%, transparent 50%),
+      radial-gradient(circle at 85% 10%, var(--grad-3) 0%, transparent 50%);
+    filter:blur(70px); opacity:0.75; pointer-events:none; z-index:0;
+  }
+  .thanks-inner{ position:relative; z-index:1; text-align:center; max-width:560px; margin:0 auto; }
+  .thanks-icon{
+    width:72px; height:72px; border-radius:50%; background:#fff;
+    display:flex; align-items:center; justify-content:center; margin:0 auto 1.4rem;
+    box-shadow:0 14px 30px rgba(32,35,43,0.1); color:var(--orange-deep);
+  }
+  .thanks h1{ font-size:clamp(1.6rem,4vw,2.1rem); margin-bottom:0.9rem; }
+  .thanks p{ color:var(--steel); font-size:1.02rem; margin-bottom:1rem; }
+  .thanks-ctas{ display:flex; gap:0.8rem; flex-wrap:wrap; justify-content:center; margin-top:1.6rem; }
+
+  .callout{
+    background:var(--bg-soft); border:1px solid var(--steel-light); border-radius:var(--radius);
+    padding:1.1rem 1.3rem; margin:1.6rem 0; font-size:0.9rem; text-align:left; color:var(--steel);
+  }
+  .callout strong{ color:var(--ink); }
+
+  footer{ background:var(--ink); color:var(--steel-light); padding:2rem 0; text-align:center; font-size:0.78rem; }
+  footer a{ color:inherit; text-decoration:underline; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="/" class="brand">
+      <img src="images/logo-escuela-de-contratistas.webp" alt="Escuela de Contratistas">
+      <span class="brand-name">Escuela de<br>Contratistas</span>
+      <svg width="22" height="15" viewBox="0 0 22 15" class="flag-co" aria-label="Colombia" role="img"><rect width="22" height="15" fill="#FCD116"/><rect y="7.5" width="22" height="3.75" fill="#003893"/><rect y="11.25" width="22" height="3.75" fill="#CE1126"/></svg>
+    </a>
+  </div>
+</header>
+
+<section class="thanks">
+  <div class="wrap thanks-inner">
+    <div class="thanks-icon">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l6 6L20 6"/></svg>
+    </div>
+    <h1>¡Gracias por escribirnos!</h1>
+    <p>Tu cliente de correo debería haberse abierto con el mensaje ya redactado — solo dale <strong>enviar</strong> para completarlo.</p>
+    <div class="callout">
+      <p><strong>¿No se abrió tu programa de correo?</strong> Pasa a veces en el celular si no tienes una app de correo configurada. Sin problema: escríbenos directo a <a href="mailto:contacto@escueladecontratistas.co" style="color:var(--orange-deep); text-decoration:underline;">contacto@escueladecontratistas.co</a> o por WhatsApp, y te respondemos igual.</p>
+    </div>
+    <div class="thanks-ctas">
+      <a href="https://wa.me/573143415975?text=Hola%2C%20te%20escrib%C3%AD%20por%20el%20formulario%20de%20PQRS%20de%20la%20p%C3%A1gina" class="btn btn-primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a href="/" class="btn btn-outline">Volver al inicio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Escuela de Contratistas · <a href="/politica-de-privacidad">Política de Privacidad</a> · <a href="/terminos-y-condiciones">Términos y Condiciones</a>
+  </div>
+</footer>
+
+</body>
+</html>
