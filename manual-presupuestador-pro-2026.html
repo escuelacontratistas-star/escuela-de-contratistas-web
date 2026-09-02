@@ -614,8 +614,9 @@
       <div class="meta">
         <div><b>Escuela de Contratistas</b>Gestión de proyectos de obra</div>
         <div><b>Archivo</b>PRESUPUESTADOR PRO 2026 - ESCUELA DE CONTRATISTAS.xlsm</div>
-        <div><b>Versión actual</b>v10.0 (2026-08-26)</div>
+        <div><b>Versión actual</b>v10.7 (2026-08-30)</div>
         <div><b>Capacidad</b>Hasta 100 actividades por presupuesto</div>
+        <div><b>Requisitos</b>Windows + Microsoft Excel de escritorio (no compatible con Mac)</div>
       </div>
     </div>
   </div>
@@ -632,8 +633,9 @@
         <li><a href="#derivadas"><span class="n">05</span>Hojas generadas</a></li>
         <li><a href="#menu"><span class="n">06</span>Botones del Menú</a></li>
         <li><a href="#avanzado"><span class="n">07</span>Modo avanzado</a></li>
-        <li><a href="#reglas"><span class="n">08</span>Reglas y protecciones</a></li>
-        <li><a href="#faq"><span class="n">09</span>Preguntas frecuentes</a></li>
+        <li><a href="#problemas"><span class="n">08</span>Solución de problemas</a></li>
+        <li><a href="#reglas"><span class="n">09</span>Reglas y protecciones</a></li>
+        <li><a href="#faq"><span class="n">10</span>Preguntas frecuentes</a></li>
       </ol>
     </nav>
 
@@ -657,17 +659,18 @@
     <section id="mapa">
       <div class="section-num">02 — Estructura</div>
       <h2>Mapa de hojas</h2>
-      <p class="lede">El libro tiene 13 hojas. Siete quedan visibles siempre; las otras seis forman la base de datos y solo aparecen en modo avanzado.</p>
+      <p class="lede">El libro tiene 14 hojas. Ocho quedan visibles siempre; las otras seis forman la base de datos y solo aparecen en modo avanzado.</p>
 
       <h3>Hojas de trabajo (siempre visibles)</h3>
       <div class="sheetgrid">
-        <div class="sheetcard"><span class="tag">01</span><h4>MENU</h4><p>Panel de botones — punto de partida de cada sesión.</p></div>
-        <div class="sheetcard"><span class="tag">02</span><h4>PRESUPUESTO</h4><p>Donde se arma el presupuesto: datos del contrato y tabla de actividades.</p></div>
-        <div class="sheetcard"><span class="tag">03</span><h4>MEMORIAS DE CANTIDADES</h4><p>Memoria de cálculo de cada actividad presupuestada, para imprimir.</p></div>
-        <div class="sheetcard"><span class="tag">04</span><h4>PROGRAMACION</h4><p>Cronograma tipo Gantt generado a partir del presupuesto.</p></div>
-        <div class="sheetcard"><span class="tag">05</span><h4>RESUMEN DE INSUMOS</h4><p>Cantidad total de cada material/insumo que requiere la obra.</p></div>
-        <div class="sheetcard"><span class="tag">06</span><h4>APU PROYECTO</h4><p>Ficha de Análisis de Precios Unitarios de cada actividad del presupuesto.</p></div>
-        <div class="sheetcard"><span class="tag">07</span><h4>ESPECIFICACIONES PROYECTO</h4><p>Ficha técnica de cada actividad presupuestada.</p></div>
+        <div class="sheetcard"><span class="tag">01</span><h4>PRIMEROS PASOS</h4><p>Guía rápida de activación de macros — es la hoja que se ve al abrir el archivo por primera vez.</p></div>
+        <div class="sheetcard"><span class="tag">02</span><h4>MENU</h4><p>Panel de botones — punto de partida de cada sesión.</p></div>
+        <div class="sheetcard"><span class="tag">03</span><h4>PRESUPUESTO</h4><p>Donde se arma el presupuesto: datos del contrato y tabla de actividades.</p></div>
+        <div class="sheetcard"><span class="tag">04</span><h4>MEMORIAS DE CANTIDADES</h4><p>Memoria de cálculo de cada actividad presupuestada, para imprimir.</p></div>
+        <div class="sheetcard"><span class="tag">05</span><h4>PROGRAMACION</h4><p>Cronograma tipo Gantt generado a partir del presupuesto.</p></div>
+        <div class="sheetcard"><span class="tag">06</span><h4>RESUMEN DE INSUMOS</h4><p>Cantidad total de cada material/insumo que requiere la obra.</p></div>
+        <div class="sheetcard"><span class="tag">07</span><h4>APU PROYECTO</h4><p>Ficha de Análisis de Precios Unitarios de cada actividad del presupuesto.</p></div>
+        <div class="sheetcard"><span class="tag">08</span><h4>ESPECIFICACIONES PROYECTO</h4><p>Ficha técnica de cada actividad presupuestada.</p></div>
       </div>
 
       <h3>Base de datos maestra (modo avanzado)</h3>
@@ -767,7 +770,7 @@
           <tbody>
             <tr><td><strong>N.°</strong></td><td>Numeración automática — no se edita.</td></tr>
             <tr><td><strong>CÓDIGO</strong></td><td>Se completa solo al elegir la actividad. No se escribe a mano.</td></tr>
-            <tr><td><strong>ACTIVIDAD</strong></td><td>Lista desplegable — busque y seleccione la actividad <strong>por su nombre</strong>. Escriba las primeras letras para filtrar la lista.</td></tr>
+            <tr><td><strong>ACTIVIDAD</strong></td><td>Lista desplegable — busque y seleccione la actividad <strong>por su nombre</strong>. Con más de 2.200 actividades, lo más rápido es hacer <strong>doble clic</strong> sobre la celda: se abre una ventana de búsqueda donde escribe una palabra clave (por ejemplo "porcelanato" o "concreto") y la lista se filtra sola mientras escribe. Elija la actividad de la lista filtrada o presione Enter. El desplegable normal de la celda sigue funcionando igual si lo prefiere.</td></tr>
             <tr><td><strong>UNIDAD / VR UNITARIO</strong></td><td>Se completan solos según la actividad elegida.</td></tr>
             <tr><td><strong>CANTIDAD</strong></td><td>Único valor numérico que usted digita — la cantidad de obra a ejecutar en esa actividad.</td></tr>
             <tr><td><strong>VR PARCIAL</strong></td><td>Cantidad × Vr unitario, automático.</td></tr>
@@ -919,8 +922,41 @@
       </div>
     </section>
 
+    <section id="problemas">
+      <div class="section-num">08 — Si algo no funciona</div>
+      <h2>Solución de problemas</h2>
+      <p class="lede">Casi todos los casos de "el archivo no funciona" que hemos visto son de configuración del equipo del cliente, no fallas del archivo. Revise esto en orden antes de escribirnos.</p>
+
+      <h3>1. Aparece una barra roja de "Riesgo de seguridad" y no deja habilitar nada</h3>
+      <p>Esta barra roja (distinta de la amarilla normal) aparece cuando Windows marcó el archivo como descargado de internet y no confiable. No tiene botón de "Habilitar contenido" — solo "Obtener más información".</p>
+      <ol>
+        <li>Cierre el archivo por completo.</li>
+        <li>En el Explorador de Windows, clic derecho sobre el archivo → <strong>Propiedades</strong>.</li>
+        <li>Al pie del cuadro, si aparece la casilla <strong>"Desbloquear"</strong>, márquela → Aceptar.</li>
+        <li>Abra el archivo de nuevo — ya debería salir la barra amarilla normal.</li>
+      </ol>
+
+      <h3>2. Sale la barra amarilla "Se deshabilitó el contenido activo"</h3>
+      <p>Esta es la situación normal la primera vez que se abre el archivo. Solo debe dar clic en el botón <strong>"Habilitar contenido"</strong> de esa misma barra. La hoja PRIMEROS PASOS (la primera pestaña) trae estos mismos pasos dentro del archivo.</p>
+
+      <h3>3. No aparece ninguna barra y las macros simplemente no corren</h3>
+      <p>Puede que la configuración de macros del equipo esté en "Deshabilitar todas las macros sin notificación" (no avisa nada, solo no funcionan). Vaya a <strong>Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza → Configuración de macros</strong> y seleccione <strong>"Deshabilitar todas las macros con notificación"</strong>. Cierre el archivo y vuelva a abrirlo.</p>
+
+      <h3>4. Sale "No se puede ejecutar la macro..." al pulsar un botón</h3>
+      <div class="callout warn">
+        <div class="icon">⚠</div>
+        <p>Antes de asumir que es un problema del archivo, verifique <strong>qué programa lo está abriendo</strong>. Junto a "Autoguardado", en la esquina superior izquierda, debe verse el ícono verde de Microsoft Excel. Si en cambio ve un ícono distinto (con una barra roja "Nitro Pro" o similar en la cinta), es <strong>WPS Office</strong> u otro programa que imita a Excel — estos no ejecutan las macros VBA del archivo aunque el archivo esté perfectamente bien. La solución es abrirlo con Microsoft Excel real: clic derecho sobre el archivo → <strong>Abrir con → Elegir otra aplicación → Excel</strong>, y marcar "Usar siempre esta aplicación".</p>
+      </div>
+
+      <h3>5. El título de la ventana dice "Excel (Error de activación de productos)"</h3>
+      <p>Esto significa que el <strong>Office de ese equipo no está activado o la licencia venció</strong> — es un problema de la instalación de Office del cliente, no de nuestro archivo. Cuando Office no está activado, Microsoft lo pone en modo de funcionalidad reducida y <strong>las macros no corren aunque el archivo ya esté desbloqueado y con el contenido habilitado</strong>. El cliente necesita activar su Office con una cuenta de Microsoft válida, o renovar su suscripción de Microsoft 365. No hay nada que ajustar en el archivo para esto.</p>
+
+      <h3>6. Uso una Mac</h3>
+      <p>El archivo no es compatible con Mac. Usa macros VBA de Windows (ventanas emergentes, controles) que Excel para Mac no soporta igual. Se necesita Windows con Microsoft Excel de escritorio.</p>
+    </section>
+
     <section id="reglas">
-      <div class="section-num">08 — Cómo está protegido</div>
+      <div class="section-num">09 — Cómo está protegido</div>
       <h2>Reglas y protecciones del archivo</h2>
 
       <div class="tblwrap">
@@ -937,7 +973,7 @@
     </section>
 
     <section id="faq">
-      <div class="section-num">09 — Dudas comunes</div>
+      <div class="section-num">10 — Dudas comunes</div>
       <h2>Preguntas frecuentes</h2>
       <div class="faq">
         <div class="qa">
@@ -946,7 +982,7 @@
         </div>
         <div class="qa">
           <div class="q">No encuentro una actividad en la lista desplegable de PRESUPUESTO.</div>
-          <p class="a">La búsqueda es por nombre: escriba una palabra clave de la actividad. Si de verdad no existe en el catálogo, actívela en Modo avanzado sobre la hoja APU con <span class="btnchip">Crear nuevo APU</span>, y luego <span class="btnchip">Actualizar base de datos</span> para que aparezca en ACTIVIDADES y en la lista.</p>
+          <p class="a">Haga doble clic sobre la celda de ACTIVIDAD para abrir el buscador y escriba una palabra clave — filtra por cualquier parte del nombre, no solo el inicio. Si de verdad no existe en el catálogo, actívela en Modo avanzado sobre la hoja APU con <span class="btnchip">Crear nuevo APU</span>, y luego <span class="btnchip">Actualizar base de datos</span> para que aparezca en ACTIVIDADES y en la lista.</p>
         </div>
         <div class="qa">
           <div class="q">Cambié un precio en MATERIALES, ¿se actualiza el presupuesto solo?</div>
