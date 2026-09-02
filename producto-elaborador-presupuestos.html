@@ -380,11 +380,26 @@
   .p-feature-list li svg{ color:var(--orange-deep); flex-shrink:0; margin-top:0.25rem; }
   @media (max-width:700px){ .p-feature-list{ grid-template-columns:1fr; } }
 
+  /* ---------- SPEC GRID (ficha técnica) ---------- */
+  .spec-grid{ margin:0; display:grid; grid-template-columns:1fr; column-gap:2.4rem; }
+  @media (min-width:700px){ .spec-grid{ grid-template-columns:1fr 1fr; } }
+  .spec-row{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:0.75rem 0; border-bottom:1px dashed var(--steel-light); }
+  .spec-row dt{ margin:0; font-size:0.88rem; color:var(--steel); }
+  .spec-row dd{ margin:0; font-size:0.92rem; font-weight:700; color:var(--ink); text-align:right; white-space:nowrap; }
+  @media (max-width:480px){ .spec-row dd{ white-space:normal; } }
+
+  /* ---------- TAG GROUPS (para quién es) ---------- */
+  .tag-groups{ display:flex; flex-direction:column; gap:1.3rem; }
+  .tag-group-label{ display:block; font-family:'Inter',sans-serif; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--steel); margin-bottom:0.6rem; }
+  .tags{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .tag{ background:var(--bg-soft); border:1px solid var(--steel-light); border-radius:var(--radius-pill); padding:0.4rem 0.95rem; font-size:0.85rem; font-weight:500; color:var(--ink); }
+
   .p-subsection{ padding:0.5rem 0 2.6rem; }
   .p-subsection h2{ font-size:1.4rem; margin-bottom:0.9rem; }
   .p-subsection p{ color:var(--steel); margin-bottom:0.8rem; }
 
   .p-flow{ display:flex; flex-direction:column; gap:1.3rem; max-width:640px; }
+  @media (min-width:760px){ .p-flow{ display:grid; grid-template-columns:1fr 1fr; column-gap:2.2rem; row-gap:1.3rem; max-width:none; } }
   .p-flow-step{ display:grid; grid-template-columns:36px 1fr; gap:1rem; align-items:start; }
   .p-flow-num{
     width:36px; height:36px; border-radius:50%; flex-shrink:0;
@@ -433,11 +448,6 @@
   .p-cta-band p{ color:var(--steel-light); margin-bottom:1.4rem; }
   .p-cta-band .btn{ margin:0 0.4rem; }
 
-  .tldr{ background:var(--bg-soft); border:1px solid var(--steel-light); border-radius:var(--radius); padding:1.4rem 1.6rem; margin:1.8rem 0 0; max-width:760px; }
-  .tldr-label{ font-family:'Inter',sans-serif; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange-deep); margin-bottom:0.6rem; display:block; }
-  .tldr ul{ margin:0; padding-left:1.2rem; }
-  .tldr li{ font-size:0.94rem; color:var(--text); margin-bottom:0.35rem; }
-  .tldr li:last-child{ margin-bottom:0; }
   .share-btn{ display:inline-flex; align-items:center; gap:0.4rem; background:none; border:1.5px solid var(--steel-light); border-radius:var(--radius-pill); padding:0.5rem 1rem; font-family:'Inter',sans-serif; font-weight:600; font-size:0.85rem; color:var(--ink); cursor:pointer; }
   .share-btn:hover{ background:var(--bg-soft); }
   .p-related{ padding:2.4rem 0; border-top:1px solid var(--steel-light); }
@@ -595,16 +605,7 @@
   </div>
 </section>
 
-<div class="wrap">
-  <div class="tldr">
-    <span class="tldr-label">En resumen</span>
-    <ul>
-      <li>Elige actividades de una base de 2.288 APU y 2.148 insumos, en 28 categorías de construcción.</li>
-      <li>Las memorias de cantidad alimentan el presupuesto automáticamente — no se digitan cantidades a mano.</li>
-      <li>Genera programación de obra y resumen de insumos con un clic, hasta 100 actividades por proyecto.</li>
-      <li>Pago único de $99.000. Construido por el mismo equipo detrás de la Base de Datos de APU 2026.</li>
-    </ul>
-  </div>
+<div class="wrap" style="margin-top:0.6rem;">
   <button type="button" class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard.writeText(location.href);this.textContent='Enlace copiado';}">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-3.9M8.6 13.5l6.8 3.9"/></svg>
     Compartir
@@ -616,20 +617,23 @@
 
 <section class="p-features">
   <div class="wrap">
-    <h2>Qué incluye</h2>
-    <ul class="p-feature-list">
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Generador de presupuesto automático, con tablero de indicadores en vivo: total de actividades, valor del presupuesto y porcentaje de fichas técnicas completas</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Base de datos y editor de 2.288 análisis de precios unitarios (APU) y 2.148 insumos, en 28 categorías de construcción</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Memorias de cantidad que alimentan el presupuesto automáticamente — no se digitan cantidades a mano</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Programación de obra automática, tipo Gantt semanal, calculada desde el rendimiento real de cada cuadrilla</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Resumen de insumos: materiales, equipo y mano de obra de toda la obra, generado con un clic</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Especificaciones técnicas 100% diligenciadas para las 2.288 actividades: descripción, ejecución, materiales, herramienta, personal, ensayos y tolerancias</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Asistente "Crear nuevo APU" para cuando necesitas un precio que no está en la base</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Exportación en PDF con un clic: presupuesto, APU, especificaciones, cronograma e insumos</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Fórmulas protegidas contra edición accidental, hasta 100 actividades por proyecto</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Modo avanzado para editar la base de datos técnica cuando lo necesites</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Organizado en 13 hojas: 7 de trabajo del proyecto (siempre visibles) y 6 de base de datos maestra, en modo avanzado</li>
-    </ul>
+    <h2>Ficha técnica</h2>
+    <dl class="spec-grid">
+      <div class="spec-row"><dt>Actividades (APU)</dt><dd>2.288</dd></div>
+      <div class="spec-row"><dt>Insumos</dt><dd>2.148</dd></div>
+      <div class="spec-row"><dt>Categorías de obra</dt><dd>28</dd></div>
+      <div class="spec-row"><dt>Especificaciones técnicas</dt><dd>100% diligenciadas</dd></div>
+      <div class="spec-row"><dt>Memorias de cantidad</dt><dd>Enlazadas al presupuesto</dd></div>
+      <div class="spec-row"><dt>Programación de obra</dt><dd>Automática, tipo Gantt</dd></div>
+      <div class="spec-row"><dt>Resumen de insumos</dt><dd>Generado con 1 clic</dd></div>
+      <div class="spec-row"><dt>Actividades por proyecto</dt><dd>Hasta 100</dd></div>
+      <div class="spec-row"><dt>Hojas del archivo</dt><dd>13 (7 trabajo + 6 base de datos)</dd></div>
+      <div class="spec-row"><dt>Exportación</dt><dd>6 PDF con 1 clic</dd></div>
+      <div class="spec-row"><dt>Actividades nuevas</dt><dd>Asistente "Crear nuevo APU"</dd></div>
+      <div class="spec-row"><dt>Protección de fórmulas</dt><dd>Activada</dd></div>
+      <div class="spec-row"><dt>Indicadores en vivo</dt><dd>Actividades, valor, % fichas OK</dd></div>
+      <div class="spec-row"><dt>Formato</dt><dd>Excel .xlsm (macros)</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -648,43 +652,43 @@
       <div class="p-flow-step">
         <span class="p-flow-num">1</span>
         <div>
-          <h4>Completa los datos del contrato</h4>
-          <p>N° de contrato, objeto, contratista, interventoría y fecha de inicio. Se repiten solos en el encabezado de todas las hojas.</p>
+          <h4>Datos del contrato</h4>
+          <p>N° de contrato, objeto, contratista, interventoría y fecha de inicio.</p>
         </div>
       </div>
       <div class="p-flow-step">
         <span class="p-flow-num">2</span>
         <div>
-          <h4>Selecciona las actividades de la obra</h4>
-          <p>Búscalas por nombre en la lista desplegable. El código, la unidad y el precio se completan solos; tú solo escribes la cantidad.</p>
+          <h4>Selecciona actividades</h4>
+          <p>Búscalas en la lista desplegable; código, unidad y precio se completan solos.</p>
         </div>
       </div>
       <div class="p-flow-step">
         <span class="p-flow-num">3</span>
         <div>
-          <h4>Genera la programación de obra</h4>
-          <p>Un clic crea el cronograma tipo Gantt, con una fila por actividad, en el mismo orden del presupuesto. <a href="/blog/como-hacer-programacion-de-obra-cronograma" style="color:var(--orange-deep); font-weight:600;">Ver cómo se calcula paso a paso</a>.</p>
+          <h4>Genera la programación</h4>
+          <p>Un clic crea el Gantt, en el orden del presupuesto. <a href="/blog/como-hacer-programacion-de-obra-cronograma" style="color:var(--orange-deep); font-weight:600;">Ver cálculo paso a paso</a>.</p>
         </div>
       </div>
       <div class="p-flow-step">
         <span class="p-flow-num">4</span>
         <div>
           <h4>Genera el resumen de insumos</h4>
-          <p>Obtén el listado consolidado de materiales, equipo y mano de obra que necesita toda la obra.</p>
+          <p>Materiales, equipo y mano de obra, consolidados automáticamente.</p>
         </div>
       </div>
       <div class="p-flow-step">
         <span class="p-flow-num">5</span>
         <div>
-          <h4>Genera el APU y las especificaciones</h4>
-          <p>Se arma automáticamente la ficha técnica de cada actividad presupuestada, lista para revisar o imprimir.</p>
+          <h4>Genera APU y especificaciones</h4>
+          <p>Ficha técnica de cada actividad, lista para revisar o imprimir.</p>
         </div>
       </div>
       <div class="p-flow-step">
         <span class="p-flow-num">6</span>
         <div>
           <h4>Exporta todo a PDF</h4>
-          <p>Elige una carpeta y el archivo genera los 6 documentos finales, listos para entregar a tu cliente.</p>
+          <p>Los 6 documentos finales, listos para entregar al cliente.</p>
         </div>
       </div>
     </div>
@@ -758,8 +762,26 @@
 <section class="p-subsection">
   <div class="wrap">
     <h2>Para quién es</h2>
-    <p>Contratistas independientes de obra civil y acabados, constructoras pequeñas y medianas, arquitectos e ingenieros que cotizan directamente, y estudiantes o egresados que arrancan su propia práctica.</p>
-    <p>Sirve para cotizar una obra nueva para un cliente, presupuestar un proyecto propio antes de arrancar, generar la programación para contratar cuadrillas, o sacar la lista de materiales para cotizar con proveedores.</p>
+    <div class="tag-groups">
+      <div class="tag-group">
+        <span class="tag-group-label">Perfil</span>
+        <div class="tags">
+          <span class="tag">Contratistas independientes</span>
+          <span class="tag">Constructoras pequeñas y medianas</span>
+          <span class="tag">Arquitectos e ingenieros</span>
+          <span class="tag">Estudiantes y practicantes</span>
+        </div>
+      </div>
+      <div class="tag-group">
+        <span class="tag-group-label">Casos de uso</span>
+        <div class="tags">
+          <span class="tag">Cotizar obra nueva para un cliente</span>
+          <span class="tag">Presupuestar un proyecto propio</span>
+          <span class="tag">Programar cuadrillas</span>
+          <span class="tag">Cotizar materiales con proveedores</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -774,11 +796,8 @@
 <section class="p-subsection">
   <div class="wrap">
     <h2>Requisitos técnicos</h2>
-    <ul class="p-feature-list">
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>Libro de Excel habilitado para macros (.xlsm), para Excel de escritorio en Windows</li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>No requiere internet ni licencias de software externas — funciona 100% local</li>
-    </ul>
-    <p style="margin-top:1.2rem; font-size:0.92rem;">Al abrirlo por primera vez, Excel pide habilitar el contenido con macros — es el único paso de configuración. No está garantizado en Excel Online, Google Sheets ni Excel para Mac: las macros en VBA tienen soporte limitado o nulo en esos entornos. Fue diseñado y probado para Excel de escritorio en Windows.</p>
+    <p>Excel de escritorio en Windows, con macros habilitadas (.xlsm). No requiere internet ni software adicional — funciona 100% local. Al abrirlo por primera vez, solo hay que habilitar el contenido con macros.</p>
+    <p style="font-size:0.88rem; color:var(--steel);">Soporte limitado o nulo en Excel Online, Google Sheets y Excel para Mac: fue diseñado y probado para Excel de escritorio en Windows.</p>
   </div>
 </section>
 
